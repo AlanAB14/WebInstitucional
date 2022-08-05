@@ -1,0 +1,139 @@
+/* Tabs container */
+.r-tabs {
+  position: relative;
+  background: darken(@color-fondo, 20%);
+  border-radius: 1rem;
+  border: 1px darken(@color-fondo, 20%) solid;
+  overflow: hidden;
+
+  // Menú de tabs
+  .r-tabs-nav {
+    display: flex;
+    margin: 0 !important;
+
+    .r-tabs-tab {
+      position: relative;
+
+      .r-tabs-anchor {
+        display: block;
+        padding: 1rem 1.5rem;
+        font-weight: bold;
+        background: fade(#000, 10%);
+        color: #fff;
+      }
+
+      &.r-tabs-state-active {
+        .r-tabs-anchor {
+          background: #fff;
+          color: @color-azul;
+        }
+      }
+    }
+  }
+
+  // Acordeón
+  .r-tabs-accordion-title {
+    display: none;
+    padding: 1rem;
+    font-weight: bold;
+
+    .r-tabs-anchor {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &::after {
+        right: 2rem;
+        top: 2rem;
+        .transition(all 0.3s @easing-default);
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        content: "\f067";
+      }
+    }
+
+    &.r-tabs-state-active {
+      background: #fff;
+      border-bottom: 1px darken(@color-fondo, 20%) solid;
+
+      .r-tabs-anchor {
+        color: @color-azul;
+
+        &::after {
+          .transform(rotate(45deg));
+        }
+      }
+    }
+  }
+  // Contenido de tabs
+  .r-tabs-panel {
+    display: none;
+    background-color: #fff;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+
+    &.r-tabs-state-active {
+      display: block;
+    }
+
+    // Contenidos
+
+    h2,
+    h3 {
+      color: @color-azul;
+    }
+
+    a {
+      color: @color-azul;
+      text-decoration: underline;
+    }
+
+    // Estilo de listas por defecto
+
+    ul,
+    ul li {
+      list-style-type: disc !important;
+      list-style-position: outside !important;
+      margin-left: 1rem;
+    }
+    ol,
+    ol li {
+      list-style-type: decimal !important;
+      list-style-position: outside !important;
+      margin-left: 1rem;
+    }
+    ul ul,
+    ol ul {
+      list-style-type: circle !important;
+      list-style-position: inside !important;
+      margin-left: 15px !important;
+    }
+    ol ol,
+    ul ol {
+      list-style-type: lower-latin !important;
+      list-style-position: inside !important;
+      margin-left: 15px !important;
+    }
+  }
+
+  /* Accordion responsive breakpoint */
+  @media only screen and (max-width: @wrap) {
+    padding: 0 !important;
+    margin: 0 1rem;
+
+    .r-tabs-nav,
+    .r-tabs-panel {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  @media only screen and (max-width: @screen-medium) {
+    .r-tabs-nav {
+      display: none;
+    }
+
+    .r-tabs-accordion-title {
+      display: block;
+    }
+  }
+}

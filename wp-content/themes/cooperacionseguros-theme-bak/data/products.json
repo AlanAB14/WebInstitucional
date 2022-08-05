@@ -1,0 +1,1488 @@
+{
+  "products": [
+    {
+      "title": "Vehículos",
+      "slug": "vehiculos",
+      "subtitle": "Autos, pick ups, motos, embarcaciones...",
+      "products": [
+        {
+          "title": "Autos y Pick-ups",
+          "keywords": "coches, camionetas, chatas",
+          "questions": [
+            "separadorVehiculo",
+            "marca",
+            "modelo",
+            "ano",
+            "version",
+            "gnc",
+            "ubicacion",
+            "separadorPersona",
+            "nombre",
+            "email"
+          ],
+          "pagetitle": "Seguro para Autos y Pick-ups",
+          "slug": "seguro-de-autos-y-pick-ups",
+          "coopid": "3",
+          "coopname": "Cod RC: 01-02-22-32",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Inicia tu cotización",
+              "slug": "inicio",
+              "private": true
+            },
+            {
+              "id": 2,
+              "title": "Datos del Vehículo",
+              "slug": "datos-vehiculo",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "Imágenes",
+              "slug": "fotos-vehiculo",
+              "private": false
+            },
+            {
+              "id": 4,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 5,
+              "title": "Asesores",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 6,
+              "title": "Confirma",
+              "slug": "resumen",
+              "private": false
+            },
+            {
+              "id": 7,
+              "title": "Pago",
+              "slug": "pago",
+              "private": true
+            },
+            {
+              "id": 8,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Motos",
+          "keywords": "motocicletas, scooter, ciclomotores, cuatriciclos",
+          "questions": [
+            "separadorVehiculo",
+            "marca",
+            "ano",
+            "version",
+            "ubicacion",
+            "separadorPersona",
+            "nombre",
+            "email"
+          ],
+          "pagetitle": "Seguro para Motos",
+          "slug": "seguro-de-motos",
+          "coopid": "27",
+          "coopname": "Cod RC: 73-74-76",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Inicia tu cotización",
+              "slug": "inicio",
+              "private": true
+            },
+            {
+              "id": 2,
+              "title": "Datos del Vehículo",
+              "slug": "datos-vehiculo",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "Imágenes",
+              "slug": "fotos-vehiculo",
+              "private": false
+            },
+            {
+              "id": 4,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 5,
+              "title": "Asesores",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 6,
+              "title": "Confirma",
+              "slug": "resumen",
+              "private": false
+            },
+            {
+              "id": 7,
+              "title": "Pago",
+              "slug": "pago",
+              "private": true
+            },
+            {
+              "id": 8,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Embarcaciones de Placer",
+          "keywords": "lanchas, barcos, yates, botes",
+          "questions": [],
+          "pagetitle": "Seguro para Embarcaciones de Placer",
+          "slug": "seguro-de-embarcaciones-de-placer",
+          "coopid": "23",
+          "coopname": "Emb. placer",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Aeronaves",
+          "keywords": "avionetas, helicópteros, planeador, fumigador",
+          "questions": [],
+          "pagetitle": "Seguro de Aeronavegación",
+          "slug": "seguro-de-aeronavegacion",
+          "coopid": "24",
+          "coopname": "Aero",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Accidentes a pasajeros",
+          "keywords": "ocupantes, transportados, terceros",
+          "questions": [],
+          "pagetitle": "Seguro de Accidentes a Pasajeros",
+          "slug": "seguro-de-accidentes-a-pasajeros",
+          "coopid": "14",
+          "coopname": "Acc. Pasajeros",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hogar",
+      "slug": "hogar",
+      "subtitle": "Viviendas y consorcios.",
+      "products": [
+        {
+          "title": "Hogar protegido",
+          "keywords": "vivienda, casa, departamento, hogar, bicicleta, electrónicos",
+          "questions": [],
+          "pagetitle": "Seguro de Hogar Protegido",
+          "slug": "seguro-de-hogar-protegido",
+          "coopid": "12",
+          "coopname": "Hog. Protegido",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Consorcios",
+          "keywords": "edificios, departamentos",
+          "questions": [],
+          "pagetitle": "Seguro de Consorcios",
+          "slug": "seguro-de-consorcios",
+          "coopid": "20",
+          "coopname": "Consorcios",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Personas",
+      "slug": "personas",
+      "subtitle": "Seguros de vida y de accidentes.",
+      "products": [
+        {
+          "title": "Vida individual",
+          "keywords": "vida",
+          "questions": ["ubicacion", "nombre", "edad", "suma", "email"],
+          "pagetitle": "Seguro de Vida Individual",
+          "slug": "seguro-de-vida-individual",
+          "coopid": "25",
+          "coopname": "Vid. Individual",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Inicio",
+              "slug": "inicio",
+              "private": true
+            },
+            {
+              "id": 2,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 3,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 4,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Vida colectivo",
+          "keywords": "contingente, grupal",
+          "questions": [],
+          "pagetitle": "Seguro de Vida Colectivo",
+          "slug": "seguro-de-vida-colectivo",
+          "coopid": "15",
+          "coopname": "Vid. Colectivo",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Accidentes personales",
+          "keywords": "empleado, trabajador, relación de dependencia",
+          "questions": [],
+          "pagetitle": "Seguro de Accidentes Personales",
+          "slug": "seguro-de-accidentes-personales",
+          "coopid": "4",
+          "coopname": "Acc. Personales",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tiempo libre",
+      "slug": "tiempo-libre",
+      "subtitle": "Deportes y viajes",
+      "products": [
+        {
+          "title": "Embarcaciones de Placer",
+          "keywords": "lanchas, semirrígido, yate, moto de agua",
+          "questions": [],
+          "pagetitle": "Seguro de Embarcaciones de Placer",
+          "slug": "seguro-de-embarcaciones-de-placer",
+          "coopid": "23",
+          "coopname": "Emb. placer",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Accidentes personales: Deportistas",
+          "keywords": "amateurs, institución, escuela",
+          "questions": [],
+          "pagetitle": "Seguro de Accidentes Personales para Deportistas",
+          "slug": "seguro-de-accidentes-personales-deportistas",
+          "coopid": "4",
+          "coopname": "Acc. Deportistas",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Accidentes personales: Turistas",
+          "keywords": "contingentes, salida grupal",
+          "questions": [],
+          "pagetitle": "Seguro de Accidentes Personales para Turistas",
+          "slug": "seguro-de-accidentes-personales-turistas",
+          "coopid": "4",
+          "coopname": "Acc. Turistas",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Casas Rodantes",
+          "keywords": "casas, motorhome",
+          "questions": [],
+          "pagetitle": "Seguro para Motorhomes y Casas Rodantes",
+          "slug": "seguro-de-casas-rodantes",
+          "coopid": "3",
+          "coopname": "Cod RC: 66-67-80",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": false
+              }
+            },
+            {
+              "id": 2,
+              "title": "Tu asesor",
+              "slug": "asesores",
+              "private": false
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Empresas",
+      "slug": "empresas",
+      "subtitle": "Riesgos y caución, maquinaria y accidentes, objetos, transportes...",
+      "products": [
+        {
+          "title": "Grandes Empresas",
+          "slug": "grandes-empresas",
+          "subtitle": "",
+          "products": [
+            {
+              "title": "Accidentes personales",
+              "keywords": "empleados, trabajadores",
+              "questions": [],
+              "pagetitle": "Seguro de Accidentes Personales",
+              "slug": "seguro-de-empresas-accidentes-personales",
+              "coopid": "4",
+              "coopname": "Empresa Acc. Personales",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Aeronavegación",
+              "keywords": "avionetas, helicópteros, planeador, fumigador",
+              "questions": [],
+              "pagetitle": "Seguro de Aeronavegación",
+              "slug": "seguro-de-aeronavegacion",
+              "coopid": "24",
+              "coopname": "Empresa Aero",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Caución",
+              "keywords": "garantías",
+              "questions": [],
+              "pagetitle": "Seguro de Caución",
+              "slug": "seguro-de-caucion",
+              "coopid": "19",
+              "coopname": "Empresa Cau. Caución",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Incendio",
+              "keywords": "fuego, rayo, explosión, humo",
+              "questions": [],
+              "pagetitle": "Seguro de Incendio",
+              "slug": "seguro-de-incendio",
+              "coopid": "2",
+              "coopname": "Empresa Incendio",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Integral",
+              "keywords": "mercadería, comercios, locales",
+              "questions": [],
+              "pagetitle": "Seguro Integral de Empresas",
+              "slug": "seguro-de-empresas-integral",
+              "coopid": "13",
+              "coopname": "Empresa Int. Empresas",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Responsabilidad civil",
+              "keywords": "civil",
+              "questions": [],
+              "pagetitle": "Seguro de Responsabilidad Civil",
+              "slug": "seguro-de-empresa-responsabilidad-civil",
+              "coopid": "8",
+              "coopname": "Empresa Resp. Civil",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Todo Riesgo Construcción",
+              "keywords": "riesgo",
+              "questions": [],
+              "pagetitle": "Seguro de Todo Riesgo Construcción",
+              "slug": "seguro-de-todo-riesgo-construccion",
+              "coopid": "2",
+              "coopname": "Empresa TR. Construcción",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Todo Riesgo Operativo",
+              "keywords": "industrias, comercios, mobiliario",
+              "questions": [],
+              "pagetitle": "Seguro de Todo Riesgo Operativo",
+              "slug": "seguro-de-todo-riego-operativo",
+              "coopid": "2",
+              "coopname": "Empresa TR. Operativo",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Transporte",
+              "keywords": "traslados, cargas, camiones",
+              "questions": [],
+              "pagetitle": "Seguro de Transporte de Mercaderías",
+              "slug": "seguro-de-empresas-transporte",
+              "coopid": "9",
+              "coopname": "Empresa Transporte",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Vida (obligaciones patronales)",
+              "keywords": "vida",
+              "questions": [],
+              "pagetitle": "Seguro de Obligaciones PAtronales",
+              "slug": "seguro-de-vida-obligaciones-patronales",
+              "coopid": "10",
+              "coopname": "Empresa Vid. Patronales",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Técnico",
+              "keywords": "contratistas, autoelevador, montacargas",
+              "questions": [],
+              "pagetitle": "Seguro Técnico",
+              "slug": "seguro-de-empresa-tecnico",
+              "coopid": "16",
+              "coopname": "Empresa Seg. Técnico",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Autos y Pick-ups",
+              "keywords": "coches, camionetas, chatas",
+              "questions": [],
+              "pagetitle": "Seguro para Autos y Pick-ups",
+              "slug": "seguro-de-autos-y-pick-ups-grandes-empresas",
+              "coopid": "3",
+              "coopname": "Empresa Cod RC: 01-02-22-32",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "PYMEs y Comercios",
+          "slug": "pymes-y-comercios",
+          "subtitle": "",
+          "products": [
+            {
+              "title": "Accidentes personales",
+              "keywords": "empleados, trabajadores",
+              "questions": [],
+              "pagetitle": "Seguro de Accidentes Personales",
+              "slug": "seguro-de-empresas-accidentes-personales-pymes",
+              "coopid": "4",
+              "coopname": "Empresa Acc. Personales",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Incendio",
+              "keywords": "fuego, rayo, explosión, humo",
+              "questions": [],
+              "pagetitle": "Seguro de Incendio PYMEs y Comercios",
+              "slug": "seguro-de-incendio-pymes",
+              "coopid": "2",
+              "coopname": "Empresa Incendio",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Integral",
+              "keywords": "mercadería, comercios, locales",
+              "questions": ["nombre", "email", "integral"],
+              "pagetitle": "Seguro Integral para PYMEs y Comercios",
+              "slug": "seguro-de-empresas-integral-pymes",
+              "coopid": "13",
+              "coopname": "Empresa Int. Empresas",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Responsabilidad civil",
+              "keywords": "civil",
+              "questions": [],
+              "pagetitle": "Seguro de Responsabilidad Civil PYMEs y Comercios",
+              "slug": "seguro-de-empresa-responsabilidad-civil-pymes",
+              "coopid": "8",
+              "coopname": "Empresa Resp. Civil",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Transporte",
+              "keywords": "traslados, cargas, camiones",
+              "questions": [],
+              "pagetitle": "Seguro de Transporte de Mercaderías",
+              "slug": "seguro-de-empresas-transporte-pymes",
+              "coopid": "9",
+              "coopname": "Empresa Transporte",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Vida (obligaciones patronales)",
+              "keywords": "vida",
+              "questions": [],
+              "pagetitle": "Seguro de Obligaciones Patronales",
+              "slug": "seguro-de-vida-obligaciones-patronales-pymes",
+              "coopid": "10",
+              "coopname": "Empresa Vid. Patronales",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Técnico",
+              "keywords": "contratistas, autoelevador, montacargas",
+              "questions": [],
+              "pagetitle": "Seguro Técnico",
+              "slug": "seguro-de-empresa-tecnico-pymes",
+              "coopid": "16",
+              "coopname": "Empresa Seg. Técnico",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Autos y Pick-ups",
+              "keywords": "coches, camionetas, chatas",
+              "questions": [],
+              "pagetitle": "Seguro para Autos y Pick-ups",
+              "slug": "seguro-de-autos-y-pick-ups-pymes",
+              "coopid": "3",
+              "coopname": "Empresa Cod RC: 01-02-22-32",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Trabajadores Autónomos",
+          "slug": "trabajadores-autonomos",
+          "subtitle": "",
+          "products": [
+            {
+              "title": "Accidentes personales",
+              "keywords": "empleados, trabajadores",
+              "questions": [],
+              "pagetitle": "Seguro de Accidentes Personales",
+              "slug": "seguro-de-empresas-accidentes-personales-autonomos",
+              "coopid": "4",
+              "coopname": "Empresa Acc. Personales",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+
+            {
+              "title": "Técnico",
+              "keywords": "contratistas, autoelevador, montacargas",
+              "questions": [],
+              "pagetitle": "Seguro Técnico",
+              "slug": "seguro-de-empresa-tecnico-autonomos",
+              "coopid": "16",
+              "coopname": "Empresa Seg. Técnico",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            },
+            {
+              "title": "Autos y Pick-ups",
+              "keywords": "coches, camionetas, chatas",
+              "questions": [],
+              "pagetitle": "Seguro para Autos y Pick-ups",
+              "slug": "seguro-de-autos-y-pick-ups-autonomos",
+              "coopid": "3",
+              "coopname": "Empresa Cod RC: 01-02-22-32",
+              "steps": [
+                {
+                  "id": 1,
+                  "title": "Tus datos",
+                  "slug": "datos-solicitante",
+                  "private": false,
+                  "options": {
+                    "naturalPerson": true,
+                    "legalPerson": true
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "¡Listo!",
+                  "slug": "finalizado",
+                  "private": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Agro",
+      "slug": "agro",
+      "subtitle": "Maquinaria, vehículos, transporte…",
+      "products": [
+        {
+          "title": "Maquinarias e implementos",
+          "keywords": "cosechadoras, tractores, cabezales, plataformas, sembradoras, fumigador, arrastre,autopropulsada, pulverizadora",
+          "questions": [
+            "agroTipo",
+            "agroMarca",
+            "agroModelo",
+            "agroAno",
+            "ubicacion",
+            "nombre",
+            "email"
+          ],
+          "pagetitle": "Seguro para Maquinaria e Implementos agrícolas",
+          "slug": "seguro-de-maquinaria-e-implementos",
+          "coopid": "3",
+          "coopname": "Cod RC: 68-69-70",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Inicio",
+              "slug": "inicio",
+              "private": true
+            },
+            {
+              "id": 2,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 3,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Integral agropecuario",
+          "keywords": "sementera, silo, hangar, campo, rural, casco, cultivo, maquinaria, implementos, cosechadoras, tractores, cabezales, plataformas, sembradoras, fumigador, arrastre, autopropulsada, pulverizadora",
+          "questions": [],
+          "pagetitle": "Seguro Integral Agropecuario",
+          "slug": "seguro-de-agro-integral-agropecuario",
+          "coopid": "18",
+          "coopname": "Empresa Agropecuario",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Transporte",
+          "keywords": "traslados, cargas, camiones, semillas, fertilizantes",
+          "questions": [],
+          "pagetitle": "Seguro para Transporte de Mercaderías",
+          "slug": "seguro-de-agro-transporte",
+          "coopid": "9",
+          "coopname": "Empresa Transporte",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Aeronavegación",
+          "keywords": "avionetas, helicópteros, planeador, fumigador",
+          "questions": [],
+          "pagetitle": "Seguro de Aeronavegación",
+          "slug": "seguro-de-agro-aeronavegacion",
+          "coopid": "24",
+          "coopname": "Empresa Aero",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Pick-ups",
+          "keywords": "chatas, camionetas",
+          "questions": [],
+          "pagetitle": "Seguro para Pick-ups",
+          "slug": "seguro-de-agro-pick-ups",
+          "coopid": "3",
+          "coopname": "Empresa Cod RC: 01-02-22-32",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Camiones",
+          "keywords": "tolva, baranda, volcador, tractor, jaulas",
+          "questions": [],
+          "pagetitle": "Seguro para Camiones",
+          "slug": "seguro-de-agro-camiones",
+          "coopid": "3",
+          "coopname": "Empresa Cod RC: 50-52-57-59",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Silo Bolsa",
+          "keywords": "silo",
+          "questions": [],
+          "pagetitle": "Seguro para Silo Bolsa",
+          "slug": "seguro-de-silo-bolsa",
+          "coopid": "0",
+          "coopname": "Empresa Silo",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Empleados Rurales",
+          "keywords": "empleados",
+          "questions": [],
+          "pagetitle": "Seguro para Empleados Rurales",
+          "slug": "seguro-de-empleados-rurales",
+          "coopid": "0",
+          "coopname": "Empresa empleados-rurales",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        },
+        {
+          "title": "Granizo",
+          "keywords": "granizo, piedra, temporal, lluvia, incendio de cultivos, rastrojo, planchado de suelos, vientos, heladas, campo",
+          "questions": [],
+          "pagetitle": "Seguro de Granizo",
+          "slug": "seguro-de-granizo",
+          "coopid": "5",
+          "coopname": "Granizo",
+          "steps": [
+            {
+              "id": 1,
+              "title": "Tus datos",
+              "slug": "datos-solicitante",
+              "private": false,
+              "options": {
+                "naturalPerson": true,
+                "legalPerson": true
+              }
+            },
+            {
+              "id": 2,
+              "title": "¡Listo!",
+              "slug": "finalizado",
+              "private": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

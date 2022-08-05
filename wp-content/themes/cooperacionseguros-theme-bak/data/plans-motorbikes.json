@@ -1,0 +1,89 @@
+{
+  "coverages": [
+    "Responsabilidad Civil",
+    "Pérdida total por incendio",
+    "Pérdida parcial por incendio",
+    "Pérdida total por robo y/o hurto",
+    "Pérdida parcial por robo y/o hurto",
+    "Destrucción total por accidente",
+    "Daños parciales por accidente con franquicia del 5% del valor de la unidad"
+  ],
+  "benefits": [
+    "Cobertura en Mercosur",
+    "Cláusula de ajuste automática 20%",
+    "Servicio de auxilio mecánico",
+    "Reposición a nuevo de la unidad"
+  ],
+  "plans": {
+    "A": {
+      "intro": "",
+      "coverages": {
+        "Responsabilidad Civil": true
+      },
+      "benefits": {
+        "Cobertura en Mercosur": true,
+        "Servicio de auxilio mecánico": "50"
+      }
+    },
+    "B1": {
+      "intro": "",
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida total por robo y/o hurto": true
+      },
+      "benefits": {
+        "Cobertura en Mercosur": true,
+        "Cláusula de ajuste automática 20%": true,
+        "Servicio de auxilio mecánico": "50"
+      }
+    },
+    "B": {
+      "intro": "",
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida total por robo y/o hurto": true,
+        "Destrucción total por accidente": true
+      },
+      "benefits": {
+        "Cobertura en Mercosur": true,
+        "Cláusula de ajuste automática 20%": true,
+        "Servicio de auxilio mecánico": "50"
+      }
+    },
+    "B4": {
+      "intro": "",
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida total por robo y/o hurto": true,
+        "Destrucción total por accidente": true
+      },
+      "benefits": {
+        "Cobertura en Mercosur": true,
+        "Cláusula de ajuste automática 20%": true,
+        "Servicio de auxilio mecánico": "400",
+        "Reposición a nuevo de la unidad": true
+      }
+    },
+    "J": {
+      "intro": "",
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida parcial por incendio": true,
+        "Pérdida total por robo y/o hurto": true,
+        "Pérdida parcial por robo y/o hurto": true,
+        "Destrucción total por accidente": true,
+        "Daños parciales por accidente con franquicia del 5% del valor de la unidad": true
+      },
+      "benefits": {
+        "Cobertura en Mercosur": true,
+        "Cláusula de ajuste automática 20%": true,
+        "Servicio de auxilio mecánico": "400",
+        "Reposición a nuevo de la unidad": true
+      }
+    }
+  }
+}

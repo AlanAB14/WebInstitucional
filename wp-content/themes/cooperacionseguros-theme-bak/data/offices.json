@@ -1,0 +1,110 @@
+{
+  "SantaFe": {
+    "Casa Central": {
+      "latitud": "-33.7443351",
+      "longitud": "-61.96413",
+      "direccion": "25 de Mayo 530, Venado Tuerto",
+      "telefono": "03462-435100 / 435200 y líneas rotativas",
+      "email": "info@cooperacionseguros.com.ar",
+      "imagen": "casacentral.jpg"
+    },
+    "Oficina Venado Tuerto": {
+      "latitud": "-33.743696",
+      "longitud": "-61.963692",
+      "direccion": "25 de Mayo 469, Venado Tuerto",
+      "telefono": "003462-406300",
+      "email": "venadotuerto@cooperacionseguros.com.ar",
+      "imagen": "of_vt.jpg"
+    }
+  },
+  "Cordoba": {
+    "Oficina Córdoba": {
+      "latitud": "-31.360429",
+      "longitud": "-64.2496155",
+      "direccion": "Jacobo Joule 5353, COMPLEJO QUADRA 54, 2° Piso, Oficina 201, B° Villa Belgrano, Córdoba",
+      "telefono": "03543 420113/420128",
+      "email": "cordoba@cooperacionseguros.com.ar",
+      "imagen": "of_cba.jpg"
+    },
+    "Oficina Río Cuarto": {
+      "latitud": "-33.1208195",
+      "longitud": "-64.3558469",
+      "direccion": "Cabrera 814 Planta Alta, Río Cuarto",
+      "telefono": "0358 4643830/4641169",
+      "email": "riocuarto@cooperacionseguros.com.ar",
+      "imagen": "of-rio4.jpg"
+    },
+    "Oficina San Francisco": {
+      "latitud": "-31.431017",
+      "longitud": "-62.0945123",
+      "direccion": "Juan B. Justo 226, San Francisco",
+      "telefono": "03564 435625",
+      "email": "sanfrancisco@cooperacionseguros.com.ar",
+      "imagen": "of-sanfrancisco.jpg"
+    }
+  },
+  "BuenosAires": {
+    "Oficina Bahía Blanca": {
+      "latitud": "-38.7122954",
+      "longitud": "-62.2639607",
+      "direccion": "Av. Alem 237, Bahía Blanca",
+      "telefono": "0291 4510920",
+      "email": "bahiablanca@cooperacionseguros.com.ar",
+      "imagen": "of-b-blanca.jpg"
+    },
+    "Oficina Junín": {
+      "latitud": "-34.594894",
+      "longitud": "-60.9519128",
+      "direccion": "Benito de Miguel 182, Junín",
+      "telefono": "0236-4428508 / 4428363",
+      "email": "junin@cooperacionseguros.com.ar",
+      "imagen": "of-junin.jpg"
+    },
+    "Oficina Olavarría": {
+      "latitud": "-36.883119",
+      "longitud": "-60.3078618",
+      "direccion": "Av. de los Trabajadores 2991, Olavarría",
+      "telefono": "02284 424867",
+      "email": "olavarria@cooperacionseguros.com.ar",
+      "imagen": "of-olavarria.jpg"
+    },
+    "Oficina Pergamino": {
+      "latitud": "-33.8874287",
+      "longitud": "-60.5786116",
+      "direccion": "Boulevard Alsina 1171, Pergamino",
+      "telefono": "02477 426891/426924/431619",
+      "email": "pergamino@cooperacionseguros.com.ar",
+      "imagen": "of-pergamino.jpg"
+    }
+  },
+  "SanJuan": {
+    "Oficina San Juan": {
+      "latitud": "-31.5299328",
+      "longitud": "-68.5300779",
+      "direccion": "Entre Ríos 347 Norte Planta Baja, San Juan",
+      "telefono": "0264 4219972",
+      "email": "sanjuan@cooperacionseguros.com.ar",
+      "imagen": "of_sanjuan.jpg"
+    }
+  },
+  "LaPampa": {
+    "Oficina General Pico": {
+      "latitud": "-35.6555519",
+      "longitud": "-63.7559801",
+      "direccion": "Calle 7 N º 1109, General Pico",
+      "telefono": "02302 334113 / 334114",
+      "email": "generalpico@cooperacionseguros.com.ar",
+      "imagen": "of-pico.jpg"
+    }
+  },
+  "EntreRios": {
+    "Oficina Paraná": {
+      "latitud": "-31.728863",
+      "longitud": "-60.5151648",
+      "direccion": "Av. Francisco Ramírez 1256, Paraná",
+      "telefono": "0343 4310482/ 4840269",
+      "email": "parana@cooperacionseguros.com.ar",
+      "imagen": "of-parana.jpg"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+// Theme URL
+@theme-url: "/wp-content/themes/cooperacionseguros-theme/";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700&display=swap");
+@base-font-size: 16px;
+@base-font-family: "Titillium Web", sans-serif;
+
+// Iconos
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+// Tamaños
+@wrap: 1100px;
+
+// Colores
+@color-texto: #222;
+@color-fondo: #f7f8fb;
+@color1: @color-azul;
+// @color-azul: #19284b;
+@color-azul: #185286;
+@color-celeste: #73d0f6;
+@color-naranja: #f9a12d;
+@color-texto-grisado: #595f6f;
+
+@color-ok: #3cbe5a;
+@color-error: #86181b;
+
+// Media queries
+@screen-small: 480px;
+@screen-medium: 768px;
+@screen-normal: @wrap;
+
+// Easing
+@easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+@easing-effect: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+@easing-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+// Box Shadow
+@box-shadow: 2px 2px 8px fade(#000, 25%);
+@box-shadow-light: 2px 2px 8px fade(#000, 5%);
+
+// Boxed
+.boxed() {
+  border: none;
+  padding: 1rem;
+  box-shadow: @box-shadow-light;
+  border-radius: 1rem;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}

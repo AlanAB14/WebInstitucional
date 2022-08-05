@@ -1,0 +1,29 @@
+.page-contacto {
+  .wp-block-columns {
+    justify-content: center;
+    margin-bottom: 4rem;
+    .wp-block-column {
+      .boxed();
+      max-width: ((@wrap / 2) - (16 * 3));
+
+      @media (max-width: @screen-small) {
+        background: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .wpcf7-form {
+    input,
+    textarea {
+      width: 100%;
+
+      &.wpcf7-submit {
+        width: auto;
+      }
+    }
+    textarea {
+      height: 5rem;
+    }
+  }
+}

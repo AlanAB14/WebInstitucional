@@ -1,0 +1,31 @@
+.form,
+.wpcf7-form {
+  input,
+  textarea,
+  select,
+  label.fileUpload {
+    .transition(all 0.3s @easing-default);
+    box-sizing: border-box;
+    font-family: @base-font-family;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: .25rem;
+    border: none;
+    border: 1px fade(@color-texto-grisado, 20%) solid;
+
+    &:focus {
+      border-color: @color-texto-grisado;
+    }
+  }
+}
+
+// Eliminando defaults
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

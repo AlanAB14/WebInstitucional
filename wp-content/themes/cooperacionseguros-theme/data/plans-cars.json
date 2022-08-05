@@ -1,0 +1,107 @@
+{
+  "assistances": ["Servicio de grúa"],
+  "coverages": [
+    "Responsabilidad Civil",
+    "Pérdida total por incendio",
+    "Pérdida parcial por incendio",
+    "Pérdida total por robo y/o hurto",
+    "Pérdida parcial por robo y/o hurto",
+    "Destrucción total por accidente",
+    "Daños parciales por accidente"
+  ],
+  "benefits": [
+    "Reposición a nuevo de la unidad",
+    "Reposición a nuevo de las cubiertas",
+    "Daños por granizo",
+    "Reposición de parabrisas o luneta",
+    "Rotura de cristales laterales y/o cerraduras de puerta",
+    "Franquicia para daños parciales"
+  ],
+  "plans": {
+    "B1": {
+      "intro": "",
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida total por robo y/o hurto": true
+      },
+      "benefits": {}
+    },
+    "B2": {
+      "intro": "",
+      "assistances": { "Servicio de grúa": "200" },
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida parcial por incendio": true,
+        "Pérdida total por robo y/o hurto": true
+      },
+      "benefits": {}
+    },
+    "C1": {
+      "intro": "",
+      "assistances": { "Servicio de grúa": "200" },
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida parcial por incendio": true,
+        "Pérdida total por robo y/o hurto": true,
+        "Pérdida parcial por robo y/o hurto": true
+      },
+      "benefits": {}
+    },
+    "C2": {
+      "intro": "",
+      "assistances": { "Servicio de grúa": "400" },
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida parcial por incendio": true,
+        "Pérdida total por robo y/o hurto": true,
+        "Pérdida parcial por robo y/o hurto": true,
+        "Destrucción total por accidente": true
+      },
+      "benefits": {
+        "Daños por granizo": true,
+        "Reposición de parabrisas o luneta": true,
+        "Rotura de cristales laterales y/o cerraduras de puerta": true
+      }
+    },
+    "C3": {
+      "intro": "",
+      "assistances": { "Servicio de grúa": "200" },
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida parcial por incendio": true,
+        "Pérdida total por robo y/o hurto": true,
+        "Pérdida parcial por robo y/o hurto": true
+      },
+      "benefits": {
+        "Daños por granizo": true,
+        "Reposición de parabrisas o luneta": true,
+        "Rotura de cristales laterales y/o cerraduras de puerta": true
+      }
+    },
+    "Plan Full": {
+      "intro": "",
+      "assistances": { "Servicio de grúa": true },
+      "coverages": {
+        "Responsabilidad Civil": true,
+        "Pérdida total por incendio": true,
+        "Pérdida parcial por incendio": true,
+        "Pérdida total por robo y/o hurto": true,
+        "Pérdida parcial por robo y/o hurto": true,
+        "Destrucción total por accidente": true,
+        "Daños parciales por accidente": true,
+        "Reposición a nuevo de la unidad": true,
+        "Reposición a nuevo de las cubiertas": true
+      },
+      "benefits": {
+        "Daños por granizo": true,
+        "Reposición de parabrisas o luneta": true,
+        "Rotura de cristales laterales y/o cerraduras de puerta": true
+      }
+    }
+  }
+}

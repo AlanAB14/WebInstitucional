@@ -1,0 +1,80 @@
+.page-nosotros {
+  h2,
+  h3 {
+    .font-size(2);
+    text-align: center;
+    color: @color-azul;
+  }
+
+  h2 {
+    .font-size(3);
+  }
+
+  p.intro {
+    .font-size(1.3);
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .wp-block-columns.fondo-ciudad {
+    justify-content: center;
+    margin-bottom: 4rem;
+    margin-top: -18rem !important;
+
+    .wp-block-column {
+      //.boxed();
+      box-sizing: border-box;
+      max-width: ((@wrap / 2) - (16 * 3));
+    }
+  }
+
+  p {
+    a {
+      color: @color-azul;
+      text-decoration: underline;
+    }
+  }
+
+  .revista {
+    box-sizing: border-box;
+    padding: 2rem;
+    border: 1px @color-azul solid;
+    text-align: center;
+    font-weight: bold;
+    color: @color-azul;
+    background: #fff;
+  }
+}
+
+.page-quiero-ser-productor {
+  .wp-block-columns {
+    .wrap();
+    max-width: @screen-medium;
+    flex-wrap: wrap;
+
+    .full {
+      flex: 0 0 100% !important;
+      margin: 0 !important;
+    }
+
+    label {
+      input,
+      textarea {
+        width: 100% !important;
+      }
+    }
+
+    .wpcf7-submit {
+      display: block !important;
+      margin: 0 auto !important;
+    }
+  }
+}
+
+.page-politica-de-privacidad-condiciones-generales-de-uso,
+.page-prevencion-del-fraude,
+.page-prevencion-de-lavados-de-activos-y-financiacion-del-terrorismo {
+  .entry-content  {
+    padding: 8rem 0 0 0;
+  }
+}

@@ -1,0 +1,122 @@
+body.page-ayuda {
+  .wp-block-group {
+    .wp-block-group__inner-container {
+      .transition(all 0.6s @easing-default);
+      .wrap();
+      .boxed();
+      box-sizing: border-box;
+      padding: 2rem;
+      margin: 1px auto;
+
+      h2 {
+        .font-size(1.2);
+        .transition(all 0.6s @easing-default);
+        position: relative;
+        cursor: pointer;
+        font-weight: bold;
+        color: fade(@color-texto, 40%);
+        line-height: 1;
+        margin: 0 !important;
+        border-bottom: 1px transparent solid;
+
+        &::after {
+          position: absolute;
+          right: 0;
+          top: 0;
+          .transition(all 0.3s @easing-default);
+          font-family: "Font Awesome 5 Free";
+          font-weight: bold;
+          content: "\f067";
+        }
+
+        &:hover {
+          color: @color-azul;
+        }
+      }
+
+      p,
+      h3,
+      h4,
+      ul,
+      ol,
+      div {
+        //.transition(all 0.3s @easing-default);
+        position: relative;
+        transform-origin: top center;
+        padding: 0;
+        margin: 0 !important;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+        color: @color-texto-grisado;
+        max-height: 0;
+
+        a {
+          color: @color-azul;
+          text-decoration: underline !important;
+        }
+      }
+
+      &.active {
+        border-radius: 0;
+        box-shadow: @box-shadow-light !important;
+        color: @color-azul;
+        margin: 2rem auto !important;
+
+        h2 {
+          border-color: darken(@color-fondo, 10%);
+          padding: 1rem 0 2rem 0;
+          margin: 0 0 2rem 0 !important;
+          color: @color-texto;
+
+          &::after {
+            top: 1rem;
+            .transform(rotate(45deg));
+          }
+        }
+
+        p,
+        h3,
+        h4,
+        ul,
+        ol,
+        div {
+          max-height: 1000rem;
+          margin: 0 0 2rem 0 !important;
+
+          &:last-child {
+            margin-bottom: 0 !important;
+          }
+        }
+
+        // Estilo de listas por defecto
+
+        ul,
+        ul li {
+          list-style-type: disc !important;
+          list-style-position: outside !important;
+          margin-left: 1rem;
+        }
+        ol,
+        ol li {
+          list-style-type: decimal !important;
+          list-style-position: outside !important;
+          margin-left: 1rem;
+        }
+        ul ul,
+        ol ul {
+          list-style-type: circle !important;
+          list-style-position: inside !important;
+          margin-left: 15px !important;
+        }
+        ol ol,
+        ul ol {
+          list-style-type: lower-latin !important;
+          list-style-position: inside !important;
+          margin-left: 15px !important;
+        }
+      }
+    }
+  }
+}

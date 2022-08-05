@@ -1,0 +1,130 @@
+{
+  "documents": [
+    {
+      "category": "vehiculos",
+      "id": "denuncia-interna",
+      "label": "Denuncia interna",
+      "requiredField": "dano-vehiculo-aseguradora"
+    },
+    {
+      "category": "vehiculos",
+      "id": "certificado-de-cobertura",
+      "label": "Certificado de cobertura",
+      "requiredField": "dano-vehiculo-aseguradora"
+    },
+    {
+      "category": "vehiculos",
+      "id": "nota-de-franquicia",
+      "label": "Nota de franquicia emitida por su aseguradora",
+      "requiredField": "franquicia-si"
+    },
+    {
+      "category": "vehiculos",
+      "id": "licencia-de-conducir",
+      "label": "Licencia de conducir",
+      "requiredField": ""
+    },
+    {
+      "category": "vehiculos",
+      "id": "tarjeta-verde",
+      "label": "Tarjeta Verde",
+      "requiredField": ""
+    },
+    {
+      "category": "vehiculos",
+      "id": "presupuesto-de-reparacion",
+      "label": "Presupuesto de reparación (Mano de obra y repuestos)",
+      "requiredField": ""
+    },
+    {
+      "category": "lesiones",
+      "id": "denuncia-interna",
+      "label": "Denuncia interna",
+      "requiredField": "dano-art"
+    },
+    {
+      "category": "lesiones",
+      "id": "certificado-de-cobertura",
+      "label": "Certificado de cobertura",
+      "requiredField": "dano-art"
+    },
+    {
+      "category": "lesiones",
+      "id": "dni-lesionado",
+      "label": "DNI del lesionado",
+      "requiredField": ""
+    },
+    {
+      "category": "lesiones",
+      "id": "informe-centro-de-salud",
+      "label": "Informe / certificado de centro de salud que realizó la atención",
+      "requiredField": ""
+    },
+    {
+      "category": "materiales",
+      "id": "denuncia-interna",
+      "label": "Denuncia interna",
+      "requiredField": "dano-seguro"
+    },
+    {
+      "category": "materiales",
+      "id": "certificado-de-cobertura",
+      "label": "Certificado de cobertura",
+      "requiredField": "dano-seguro"
+    },
+    {
+      "category": "materiales",
+      "id": "impuesto",
+      "label": "Impuesto con domicilio del bien dañado y el nombre del propietario",
+      "requiredField": ""
+    },
+    {
+      "category": "materiales",
+      "id": "dni-propietario",
+      "label": "DNI del propietario del bien dañado",
+      "requiredField": ""
+    },
+    {
+      "category": "materiales",
+      "id": "presupuesto-de-reparacion",
+      "label": "Presupuestos de reparación",
+      "requiredField": ""
+    },
+    {
+      "category": "all",
+      "id": "fotos-parte-frontal",
+      "label": "Fotos de la parte frontal de la unidad",
+      "requiredField": ""
+    },
+    {
+      "category": "all",
+      "id": "fotos-de-la-unidad-1",
+      "label": "Fotos de la unidad",
+      "requiredField": ""
+    },
+    {
+      "category": "all",
+      "id": "fotos-de-la-unidad-2",
+      "label": "Fotos de la unidad",
+      "requiredField": ""
+    },
+    {
+      "category": "all",
+      "id": "fotos-de-la-unidad-3",
+      "label": "Fotos de la unidad",
+      "requiredField": ""
+    },
+    {
+      "category": "all",
+      "id": "nota-de-reclamo",
+      "label": "Nota de reclamo - Presentación",
+      "requiredField": ""
+    },
+    {
+      "category": "all",
+      "id": "documentacion-adicional",
+      "label": "Documentación Adicional",
+      "requiredField": ""
+    }
+  ]
+}

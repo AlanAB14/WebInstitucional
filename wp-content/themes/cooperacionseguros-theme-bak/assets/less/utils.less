@@ -1,0 +1,45 @@
+// Font smoothing
+.font-smoothing(@value) when (@value = on) {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.font-smoothing(@value) when (@value = off) {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: auto;
+}
+
+// Font sizing
+.font-size(@proporcion) {
+  @remValue: unit(@proporcion, rem);
+  @pxValue: unit((@base-font-size * @proporcion), px);
+  font-size: ~"@{pxValue}";
+  font-size: ~"@{remValue}";
+}
+
+// Transition
+.transition (@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -ms-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+// Transform
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -ms-transform: @transform;
+  -o-transform: @transform;
+  transform: @transform;
+}
+
+// Spin
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,8 @@
+# Software
+node_modules
+.vscode
+.version
+
+# Assets compilados
+assets/css/*.css
+assets/js/*.js

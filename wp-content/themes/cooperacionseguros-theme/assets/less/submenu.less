@@ -1,0 +1,95 @@
+#submenu {
+  display: none;
+
+  &.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 100vh;
+    background: @color-fondo url("@{theme-url}assets/img/fondo-ciudad.png")
+      bottom center no-repeat;
+    background-size: auto 100%;
+    display: flex;
+    align-items: center;
+    z-index: 999666999;
+
+    .togglesubmenu {
+      .font-size(1.8);
+      .transition(all 0.3s @easing-default);
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: @color-azul;
+      opacity: 0.4;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    #product-menu {
+      .wrap();
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      a {
+        color: @color-texto-grisado;
+      }
+
+      li {
+        padding: 0.1rem 1rem;
+
+        &:nth-child(1) {
+          border-right: 1px fade(@color-texto-grisado, 20%) solid;
+        }
+
+        strong {
+          .font-size(1.4);
+          display: block;
+          color: @color-azul;
+          font-weight: 900;
+          margin: 2rem 0 0 0;
+          padding: 1rem 0 0 0;
+          border-top: 1px fade(@color-texto-grisado, 20%) solid;
+
+          @media (min-width: @screen-small) {
+            &:first-child {
+              margin: 0;
+              padding: 0;
+              border: none;
+            }
+          }
+        }
+
+        ul {
+          li {
+            padding: 0;
+            border: none !important;
+          }
+        }
+      }
+    }
+
+    @media (max-width: @screen-small) {
+      display: block;
+      height: 100%;
+      overflow: scroll;
+
+      #product-menu {
+        display: block;
+        padding: 1rem;
+
+        li {
+          &:nth-child(1) {
+            border: none;
+          }
+          ul {
+            .font-size(1);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.single-post {
+  // Si el cover es el primer item...
+  .site-content > .wp-block-cover:first-child {
+    padding-top: 6rem;
+    margin: 0 !important;
+  }
+
+  .postinfo {
+    background: #eee;
+    margin-bottom: 2rem;
+
+    .wrap {
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      max-width: 600px;
+    }
+  }
+
+  .entry-content {
+    margin: 0 auto 4rem auto !important;
+
+    // Titulares
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: @color-azul;
+      text-align: center;
+    }
+
+    // Elementos más angostos
+    p,
+    ul,
+    ol,
+    blockquote {
+      max-width: 600px !important;
+    }
+
+    // Citas
+    blockquote {
+      border-left: 4px @color-celeste solid;
+      padding-left: 1rem;
+
+      p {
+        font-size: 2em;
+        font-style: italic;
+        font-weight: 900;
+
+      }
+    }
+
+    // Estilo de listas por defecto
+    ul,
+    ul li {
+      list-style-type: disc !important;
+      list-style-position: inside !important;
+    }
+    ol,
+    ol li {
+      list-style-type: decimal !important;
+      list-style-position: inside !important;
+    }
+    ul ul,
+    ol ul {
+      list-style-type: circle !important;
+      list-style-position: inside !important;
+      margin-left: 15px !important;
+    }
+    ol ol,
+    ul ol {
+      list-style-type: lower-latin !important;
+      list-style-position: inside !important;
+      margin-left: 15px !important;
+    }
+
+    hr {
+      background: none;
+      border: none;
+      margin: 0 0 2rem 0;
+      border-bottom: 1px fade(@color-azul, 10%) solid;
+    }
+  }
+}

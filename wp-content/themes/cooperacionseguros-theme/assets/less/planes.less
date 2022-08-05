@@ -1,0 +1,689 @@
+.seleccion-de-planes {
+  .wrap();
+  margin-bottom: 2rem;
+
+  @media (max-width: @screen-small) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .title,
+  .legal {
+    display: block;
+    .font-size(1);
+    font-weight: 900;
+    margin: 0 !important;
+    padding: 0.5rem;
+    color: @color-azul;
+    background: fade(@color-azul, 15%);
+  }
+
+  .legal {
+    .font-size(0.8);
+    .transition(all 0.3s @easing-default);
+    cursor: pointer;
+    color: fade(@color-texto, 50%);
+    background: fade(@color-texto, 5%);
+
+    &::before {
+      float: right;
+      .font-size(1.2);
+      font-family: "Font Awesome 5 Free";
+      font-weight: normal;
+      content: "\f059";
+    }
+
+    &:hover {
+      color: @color-azul;
+    }
+  }
+
+  .opciones {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    div {
+      position: relative;
+      padding: 0.5rem;
+      background: @color-fondo;
+      border: 1px fade(@color-azul, 15%) solid;
+      border-width: 0 0 1px 0;
+
+      &.detail {
+        text-align: left;
+        border-width: 0 1px 1px 0;
+      }
+
+      &.textonly {
+        grid-column: span 3;
+      }
+
+      input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+
+        &:checked + .checklabel {
+          color: @color-ok;
+          &::before {
+            content: "\f14a";
+          }
+        }
+      }
+
+      .checklabel {
+        cursor: pointer;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        text-align: left;
+        color: fade(@color-texto-grisado, 50%);
+        line-height: 1;
+
+        &::before {
+          .font-size(1.2);
+          font-family: "Font Awesome 5 Free";
+          font-weight: normal;
+          content: "\f0c8";
+          margin: 0 0.5rem 0 0;
+        }
+      }
+
+      .on,
+      .off {
+        display: flex;
+        position: relative;
+        color: @color-ok;
+        visibility: hidden;
+        align-items: flex-start;
+
+        &::before {
+          .transform(translateX(-50%));
+          visibility: visible;
+          position: absolute;
+          left: 50%;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f00c";
+        }
+      }
+
+      .off {
+        color: fade(@color-texto-grisado, 50%);
+
+        &::before {
+          content: "\f00d";
+        }
+      }
+
+      small {
+        opacity: 0.6;
+        display: block;
+
+        &.detalle {
+          .transition(all 0.3s @easing-default);
+          max-height: 0;
+          overflow: hidden;
+        }
+      }
+
+      &.selectdiv {
+        &:after {
+          content: "\f078";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: @color-azul;
+          right: 11px;
+          top: 0.5rem;
+          //height: 1rem;
+          padding: 0.9rem 0.5rem;
+          //border-left: 1px solid fade(@color-azul, 15%);
+          position: absolute;
+          pointer-events: none;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        box-sizing: border-box;
+        font-size: inherit;
+        font-family: inherit;
+        border: none;
+        background: none;
+        width: 100%;
+        border: 1px fade(@color-azul, 15%) solid;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        text-align: center;
+
+        &::-ms-expand {
+          display: none;
+        }
+      }
+
+      &.condetalle {
+        cursor: pointer;
+
+        &::before {
+          float: right;
+          color: fade(@color-texto-grisado, 50%);
+          .font-size(1.2);
+          font-family: "Font Awesome 5 Free";
+          font-weight: normal;
+          content: "\f059";
+          margin-left: auto;
+        }
+
+        &:hover {
+          color: @color-texto-grisado;
+        }
+      }
+
+      &.ampliado {
+        .detalle {
+          max-height: 10rem;
+        }
+      }
+    }
+
+    &.header,
+    &.footer {
+      div {
+        border: none;
+
+        * {
+          .transition(all 0.3s @easing-default);
+        }
+
+        h1 {
+          font-size: 2rem !important;
+          margin: 0 0 1rem 0 !important;
+          line-height: 1;
+          color: @color-texto-grisado;
+        }
+        h2 {
+          position: relative;
+          .font-size(3);
+          color: @color-azul;
+          line-height: 1;
+          //margin: 0 !important;
+
+          sup {
+            font-size: 0.5em;
+            vertical-align: middle;
+          }
+
+          small {
+            .font-size(0.8);
+            display: block;
+            text-transform: uppercase;
+          }
+        }
+
+        h3 {
+          .font-size(0.8);
+          .transform(translateX(-50%));
+          position: absolute;
+          top: -1rem;
+          left: 50%;
+          line-height: 1;
+          background: @color-celeste;
+          color: #fff;
+          border-radius: 2rem;
+          padding: 0.6rem 1rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .legalitems {
+    .font-size(0.8);
+    .transition(all 0.3s @easing-default);
+    max-height: 0;
+    overflow: hidden;
+    border: 1px fade(@color-texto, 5%) solid;
+
+    li {
+      padding: 0.5rem;
+      border-top: 1px fade(@color-texto, 5%) solid;
+
+      &:first-child {
+        border: none;
+      }
+    }
+
+    &.ampliado {
+      max-height: 50rem;
+    }
+  }
+
+  // Solo para los elementos con transacción
+  &.transaccional {
+    // Vehículos van en 4 columnas
+    &.vehiculos {
+      .opciones {
+        grid-template-columns: 40% 1fr 1fr 1fr;
+      }
+    }
+
+    // Vida tiene 3 columnas
+    &.vida,
+    &.doble {
+      .opciones {
+        grid-template-columns: 60% 1fr 1fr;
+      }
+    }
+
+    // Ahora también hay una versión con una única columna...
+    &.simple {
+      .opciones {
+        grid-template-columns: 70% 1fr;
+      }
+    }
+
+    // Detalles generales para planes transaccionales
+    .opciones {
+      &.header {
+        .transition(all 0.3s @easing-default);
+        .transform(translateZ(0));
+        position: sticky;
+        top: 4rem;
+        z-index: 6;
+
+        div {
+          padding: 2rem 0;
+          &.detail {
+            padding-top: 5rem;
+          }
+
+          &:last-child {
+            border-radius: 2rem 2rem 0 0;
+          }
+        }
+
+        &.fixed {
+          background: #fff;
+          border-bottom: 1px fade(@color-azul, 15%) solid;
+
+          div {
+            border-radius: 0 !important;
+
+            h3 {
+              display: none;
+            }
+          }
+        }
+
+        &.noprice {
+          div {
+            &.detail {
+              padding-top: 2rem;
+            }
+
+            h1,
+            h2 {
+              font-size: 1.8rem !important;
+              margin: 0 !important;
+            }
+
+            h3,
+            .price,
+            .btn,
+            small {
+              .transform(scale(0));
+              opacity: 0;
+              position: absolute;
+            }
+          }
+        }
+      }
+
+      &.footer {
+        div {
+          padding: 2rem 0;
+          &:last-child {
+            border-radius: 0 0 2rem 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Tablas comparativas de las que se cargan en el backend
+  &.tabla-de-planes {
+    .opciones {
+      grid-template-columns: 40% 1fr 1fr 1fr;
+
+      &.header {
+        .transition(all 0.3s @easing-default);
+        position: sticky;
+        top: 4rem;
+        z-index: 6;
+
+        div {
+          padding: 2rem 0;
+          h1,
+          h2 {
+            font-size: 1.8rem !important;
+            margin: 0 !important;
+          }
+
+          &:last-child {
+            border-radius: 2rem 2rem 0 0;
+          }
+        }
+      }
+
+      @media (max-width: @screen-small) {
+        &.header {
+          div {
+            padding: 1.5rem 0 1rem 0;
+            overflow: hidden;
+            h1 {
+              font-size: 1em !important;
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+
+            h2 {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &.doble {
+      .opciones {
+        grid-template-columns: 60% 1fr 1fr;
+
+        @media (max-width: @screen-small) {
+          grid-template-columns: 40% 1fr 1fr;
+        }
+      }
+    }
+  }
+
+  // Higlight de la última columna
+  &.transaccional,
+  &.tabla-de-planes {
+    .opciones {
+      div {
+        &:last-child {
+          background-color: lighten(@color-celeste, 20%) !important;
+        }
+        &:first-child {
+          background: none !important;
+        }
+      }
+    }
+  }
+
+  // No mostramos la versióm mobile por defecto
+  .mobile {
+    display: none;
+  }
+
+  // Versión mobile
+  @media (max-width: @screen-small) {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+      margin: 0 0 4rem 0;
+    }
+
+    // Diseño para planes en mobile
+    .planesmobile {
+      #content & {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .header {
+        .boxed();
+        display: block !important;
+        background: #fff !important;
+        position: relative !important;
+        top: 0 !important;
+        padding: 1rem;
+        overflow: initial;
+
+        div {
+          background: #fff !important;
+          padding: 1rem !important;
+
+          h2 {
+            .font-size(4);
+          }
+
+          h3 {
+            top: -2rem;
+          }
+        }
+
+        .selectdiv {
+          &::after {
+            top: 1rem;
+            right: 1rem;
+          }
+        }
+
+        .label {
+          display: block;
+          font-weight: bold;
+          border-top: 1px fade(@color-azul, 15%) solid;
+          margin: 1rem 0 0 0;
+          padding: 1rem 0 0 0;
+        }
+
+        .checkbox {
+          //padding: 1rem;
+          display: flex;
+          align-items: center;
+
+          .tooltip {
+            display: block;
+            .font-size(1.3);
+            padding: 1rem 0 1rem 1rem;
+            margin-left: auto;
+            border: none;
+            color: fade(@color-azul, 20%);
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        .vermasdetalles {
+          font-weight: bold;
+          display: block;
+          background: fade(@color-azul, 30%);
+          color: @color-azul;
+          margin: 1rem -1rem -1rem -1rem;
+          padding: 1rem;
+
+          i {
+            display: block;
+          }
+        }
+
+        .masdetalles {
+          .transition(all 0.3s @easing-default);
+          max-height: 0;
+          overflow: hidden;
+          margin: 0 !important;
+
+          &.ampliado {
+            max-height: 20rem;
+          }
+
+          li {
+            .font-size(0.9);
+            font-weight: bold;
+            border-radius: 0;
+            box-shadow: none;
+            border-top: 1px fade(@color-azul, 15%) solid;
+            color: @color-texto-grisado;
+            padding: 1rem 0;
+            display: flex;
+
+            text-align: left;
+
+            &::after {
+              font-family: "Font Awesome 5 Free";
+              content: "\f00c";
+              margin-left: auto;
+            }
+          }
+        }
+      }
+
+      // Slick
+      .slick-list {
+        padding-top: 2rem !important;
+      }
+
+      .slick-slide {
+        .transform(scale(0.9));
+        opacity: 0.6;
+        box-shadow: 0 0 0 1px fade(@color-azul, 25%) inset;
+        z-index: 1 !important;
+      }
+
+      .slick-active {
+        .transform(scale(1));
+
+        opacity: 1;
+        margin: 0;
+        z-index: 6 !important;
+      }
+
+      .slick-next,
+      .slick-prev {
+        height: 3rem;
+        width: 3rem;
+        right: 0.5rem;
+        z-index: 999;
+
+        &::before {
+          .font-size(3);
+          font-family: "Font Awesome 5 Free";
+          content: "\f054";
+          color: @color-azul;
+          font-weight: bold;
+        }
+      }
+
+      .slick-prev {
+        left: 0.5rem;
+        right: auto;
+
+        &::before {
+          content: "\f053";
+        }
+      }
+    }
+  }
+
+  // Texto de recordatorio de imágenes
+  .recordatorio {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    background: fade(@color-azul, 5%);
+    padding: 1rem;
+    border: 1px fade(@color-azul, 10%) solid;
+    color: fade(@color-azul, 50%);
+
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f071";
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  // Para bloques de planes simples
+  .wp-block-lazyblock-detalles-de-plan & {
+    background: #fff;
+    max-width: @screen-medium;
+    box-shadow: @box-shadow-light;
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    h2 {
+      background: none;
+      margin: 2rem 0 1rem 0 !important;
+
+      &:first-child {
+        margin: 0 0 1rem 0 !important;
+      }
+    }
+
+    .opciones {
+      div {
+        background: none;
+      }
+
+      .detail {
+        .font-size(1.1);
+        border-width: 0 0 1px 0;
+        padding-left: 1rem;
+
+        &::before {
+          .font-size(0.5);
+          position: absolute;
+          top: 1.1rem;
+          left: 0;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f111";
+          color: @color-naranja;
+        }
+
+        &.condetalle {
+          padding-right: 5rem;
+
+          &::after {
+            .font-size(0.9);
+            position: absolute;
+            top: 0.6rem;
+            right: 0;
+            font-weight: bold;
+            content: "ver más";
+            color: @color-naranja;
+          }
+
+          &:hover {
+            &::after {
+              color: @color-celeste;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        div {
+          border: none !important;
+        }
+      }
+    }
+  }
+}

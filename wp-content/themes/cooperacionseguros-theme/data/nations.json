@@ -1,0 +1,584 @@
+[
+  {
+    "id": "1",
+    "nacionalidad": "ARGENTINO",
+    "pais": "ARGENTINA",
+    "codigopais": "AR"
+  },
+  {
+    "id": "2",
+    "nacionalidad": "BRASILERO",
+    "pais": "BRASIL",
+    "codigopais": "BR"
+  },
+  {
+    "id": "3",
+    "nacionalidad": "CHILENO",
+    "pais": "CHILE",
+    "codigopais": "CL"
+  },
+  {
+    "id": "4",
+    "nacionalidad": "ESTADO UNIDENSE",
+    "pais": "E.E.U.U",
+    "codigopais": "US"
+  },
+  {
+    "id": "5",
+    "nacionalidad": "DOMINICANO",
+    "pais": "REPUBLICA DOMINICANA",
+    "codigopais": "DO"
+  },
+  {
+    "id": "6",
+    "nacionalidad": "VENEZOLANO",
+    "pais": "VENEZUELA",
+    "codigopais": "VE"
+  },
+  {
+    "id": "7",
+    "nacionalidad": "URUGUAYO",
+    "pais": "URUGUAY",
+    "codigopais": "UY"
+  },
+  {
+    "id": "8",
+    "nacionalidad": "ESPAÑOL",
+    "pais": "ESPAÑA",
+    "codigopais": "ES"
+  },
+  {
+    "id": "9",
+    "nacionalidad": "ITALIANO",
+    "pais": "ITALIA",
+    "codigopais": "IT"
+  },
+  {
+    "id": "10",
+    "nacionalidad": "PARAGUAYO",
+    "pais": "PARAGUAY",
+    "codigopais": "PY"
+  },
+  {
+    "id": "11",
+    "nacionalidad": "BOLIVIANO",
+    "pais": "BOLIVIA",
+    "codigopais": "BO"
+  },
+  {
+    "id": "12",
+    "nacionalidad": "PERUANO",
+    "pais": "PERU",
+    "codigopais": "PE"
+  },
+  {
+    "id": "13",
+    "nacionalidad": "OTRO",
+    "pais": "OTRO",
+    "codigopais": "OT"
+  },
+  {
+    "id": "14",
+    "nacionalidad": "BRITÁNICO",
+    "pais": "ANGUILA",
+    "codigopais": "AI"
+  },
+  {
+    "id": "15",
+    "nacionalidad": "ANTIGUANO",
+    "pais": "ANTIGUA Y BARBUDA",
+    "codigopais": "AG"
+  },
+  {
+    "id": "16",
+    "nacionalidad": "NEERLANDÉS",
+    "pais": "ANTILLAS HOLANDESAS",
+    "codigopais": "AN"
+  },
+  {
+    "id": "17",
+    "nacionalidad": "NEERLANDÉS",
+    "pais": "ARUBA",
+    "codigopais": "AW"
+  },
+  {
+    "id": "18",
+    "nacionalidad": "ASCENSIONENSE",
+    "pais": "ASCENCION",
+    "codigopais": "AC"
+  },
+  {
+    "id": "19",
+    "nacionalidad": "BAHAMEÑO",
+    "pais": "COM.DE LAS BAHAMAS",
+    "codigopais": "BS"
+  },
+  {
+    "id": "20",
+    "nacionalidad": "BARBADENSE",
+    "pais": "BARBADOS",
+    "codigopais": "BB"
+  },
+  {
+    "id": "21",
+    "nacionalidad": "BELICEÑO",
+    "pais": "BELICE",
+    "codigopais": "BZ"
+  },
+  {
+    "id": "22",
+    "nacionalidad": "BRITÁNICO",
+    "pais": "BERMUDAS",
+    "codigopais": "BM"
+  },
+  {
+    "id": "23",
+    "nacionalidad": "BRUNEANO",
+    "pais": "BRUNEI DARUSSALAM",
+    "codigopais": "BN"
+  },
+  {
+    "id": "24",
+    "nacionalidad": "CAMPIONESI",
+    "pais": "CAMPIONE DITALIA",
+    "codigopais": "CI"
+  },
+  {
+    "id": "25",
+    "nacionalidad": "BRITÁNICO",
+    "pais": "COLONIA DE GIBRALTAR",
+    "codigopais": "GI"
+  },
+  {
+    "id": "26",
+    "nacionalidad": "DOMINIQUÉS",
+    "pais": "COMMONW. DE DOMINICA",
+    "codigopais": "DM"
+  },
+  {
+    "id": "27",
+    "nacionalidad": "EMIRATÍ",
+    "pais": "EMIRATOS ARABES",
+    "codigopais": "AE"
+  },
+  {
+    "id": "28",
+    "nacionalidad": "BAREINÍ",
+    "pais": "REINO DE BAHREIN",
+    "codigopais": "BH"
+  },
+  {
+    "id": "29",
+    "nacionalidad": "GRANADINO ó GRANADÍ",
+    "pais": "ESTADO DE GRANADA",
+    "codigopais": "GD"
+  },
+  {
+    "id": "30",
+    "nacionalidad": "PUERTORRIQUEÑO",
+    "pais": "PUERTO RICO",
+    "codigopais": "PR"
+  },
+  {
+    "id": "31",
+    "nacionalidad": "KUWAITÍ",
+    "pais": "KUWAIT",
+    "codigopais": "KW"
+  },
+  {
+    "id": "32",
+    "nacionalidad": "CATARÍ ó QATARÍ",
+    "pais": "QATAR",
+    "codigopais": "QA"
+  },
+  {
+    "id": "34",
+    "nacionalidad": "LUXEMBURGUÉS",
+    "pais": "LUXEMBURGO",
+    "codigopais": "LU"
+  },
+  {
+    "id": "35",
+    "nacionalidad": "GROENLANDES",
+    "pais": "GROENLANDIA",
+    "codigopais": "GL"
+  },
+  {
+    "id": "36",
+    "nacionalidad": "GUAMEÑO",
+    "pais": "GUAM",
+    "codigopais": "GU"
+  },
+  {
+    "id": "37",
+    "nacionalidad": "HONGKONÉS",
+    "pais": "HONG KONG",
+    "codigopais": "HK"
+  },
+  {
+    "id": "38",
+    "nacionalidad": "AZORIANO",
+    "pais": "ISLAS AZORES",
+    "codigopais": "IZ"
+  },
+  {
+    "id": "39",
+    "nacionalidad": "BRITÁNICO",
+    "pais": "ISLAS DEL CANAL",
+    "codigopais": "IC"
+  },
+  {
+    "id": "40",
+    "nacionalidad": "CAIMANÉS",
+    "pais": "ISLAS CAIMAN",
+    "codigopais": "KY"
+  },
+  {
+    "id": "41",
+    "nacionalidad": "AUSTRALIANO",
+    "pais": "ISLA CHRISTMAS",
+    "codigopais": "CX"
+  },
+  {
+    "id": "42",
+    "nacionalidad": "COCANO",
+    "pais": "ISLA DE COCOS",
+    "codigopais": "CC"
+  },
+  {
+    "id": "43",
+    "nacionalidad": "COOKIANO",
+    "pais": "ISLAS DE COOK",
+    "codigopais": "CK"
+  },
+  {
+    "id": "44",
+    "nacionalidad": "MANÉS",
+    "pais": "ISLA DE MAN",
+    "codigopais": "IM"
+  },
+  {
+    "id": "45",
+    "nacionalidad": "NORFOLKENSE",
+    "pais": "ISLA DE NORFOLK",
+    "codigopais": "NF"
+  },
+  {
+    "id": "46",
+    "nacionalidad": "TURCOCAIQUEÑO",
+    "pais": "ISLAS TURKAS, CAICOS",
+    "codigopais": "TC"
+  },
+  {
+    "id": "47",
+    "nacionalidad": "OCEÁNICO",
+    "pais": "ISLAS PACIFICO",
+    "codigopais": "PU"
+  },
+  {
+    "id": "48",
+    "nacionalidad": "SALOMONENSE",
+    "pais": "ISLAS SALOMON",
+    "codigopais": "SB"
+  },
+  {
+    "id": "49",
+    "nacionalidad": "ISLEÑO",
+    "pais": "I.S.PEDRO Y MIQUELON",
+    "codigopais": "PM"
+  },
+  {
+    "id": "50",
+    "nacionalidad": "ISLEÑO",
+    "pais": "ISLA QESHM",
+    "codigopais": "IQ"
+  },
+  {
+    "id": "51",
+    "nacionalidad": "VIRGENENSE BRITÁNICO",
+    "pais": "I.VIRGENES BRITAN.",
+    "codigopais": "VG"
+  },
+  {
+    "id": "52",
+    "nacionalidad": "VIRGENENSE",
+    "pais": "I.VIRGENES DE EEUU",
+    "codigopais": "VI"
+  },
+  {
+    "id": "53",
+    "nacionalidad": "KIRIBATIANO",
+    "pais": "KIRIBATI",
+    "codigopais": "KI"
+  },
+  {
+    "id": "54",
+    "nacionalidad": "LABUANÉS",
+    "pais": "LABUAN",
+    "codigopais": "LB"
+  },
+  {
+    "id": "55",
+    "nacionalidad": "MACAENSE",
+    "pais": "MACAO",
+    "codigopais": "MO"
+  },
+  {
+    "id": "56",
+    "nacionalidad": "MADEIRENSE",
+    "pais": "MADEIRA",
+    "codigopais": "MD"
+  },
+  {
+    "id": "57",
+    "nacionalidad": "DE MONTSERRAT",
+    "pais": "MONTSERRAT",
+    "codigopais": "MS"
+  },
+  {
+    "id": "58",
+    "nacionalidad": "NIUANO",
+    "pais": "NIUE",
+    "codigopais": "UN"
+  },
+  {
+    "id": "59",
+    "nacionalidad": "NO EXISTE",
+    "pais": "PATAU",
+    "codigopais": "TI"
+  },
+  {
+    "id": "60",
+    "nacionalidad": "PITCAIRNÉS",
+    "pais": "PITCAIRN",
+    "codigopais": "PN"
+  },
+  {
+    "id": "61",
+    "nacionalidad": "FRANCOPOLINESIO",
+    "pais": "POLINESIA FRANCESA",
+    "codigopais": "PF"
+  },
+  {
+    "id": "62",
+    "nacionalidad": "ANDORRANO",
+    "pais": "ANDORRA",
+    "codigopais": "AD"
+  },
+  {
+    "id": "63",
+    "nacionalidad": "LIECHTENSTEINIANO",
+    "pais": "LIECHTENSTEIN",
+    "codigopais": "LI"
+  },
+  {
+    "id": "64",
+    "nacionalidad": "MONEGASCO",
+    "pais": "MONACO",
+    "codigopais": "MC"
+  },
+  {
+    "id": "65",
+    "nacionalidad": "TONGANO",
+    "pais": "REINO DE TONGA",
+    "codigopais": "TO"
+  },
+  {
+    "id": "66",
+    "nacionalidad": "JORDANO",
+    "pais": "JORDANIA",
+    "codigopais": "JO"
+  },
+  {
+    "id": "67",
+    "nacionalidad": "SUAZI",
+    "pais": "SWAZILANDIA",
+    "codigopais": "SZ"
+  },
+  {
+    "id": "68",
+    "nacionalidad": "ALBANÉS ó ALBANO",
+    "pais": "ALBANIA",
+    "codigopais": "AL"
+  },
+  {
+    "id": "69",
+    "nacionalidad": "ANGOLEÑO",
+    "pais": "ANGOLA",
+    "codigopais": "AO"
+  },
+  {
+    "id": "70",
+    "nacionalidad": "CABOVERDIANO",
+    "pais": "CABO VERDE",
+    "codigopais": "CV"
+  },
+  {
+    "id": "71",
+    "nacionalidad": "CHIPRIOTA",
+    "pais": "CHIPRE",
+    "codigopais": "CY"
+  },
+  {
+    "id": "73",
+    "nacionalidad": "GUYANÉS",
+    "pais": "GUYANA",
+    "codigopais": "GY"
+  },
+  {
+    "id": "74",
+    "nacionalidad": "PANAMEÑO",
+    "pais": "PANAMA",
+    "codigopais": "PA"
+  },
+  {
+    "id": "75",
+    "nacionalidad": "TRINITENSE",
+    "pais": "TRINIDAD Y TOBAGO",
+    "codigopais": "TT"
+  },
+  {
+    "id": "76",
+    "nacionalidad": "LIBERIANO",
+    "pais": "LIBERIA",
+    "codigopais": "LR"
+  },
+  {
+    "id": "77",
+    "nacionalidad": "SEYCHELENSE",
+    "pais": "SEYCHELLES",
+    "codigopais": "SC"
+  },
+  {
+    "id": "78",
+    "nacionalidad": "MAURICIANO",
+    "pais": "MAURICIO",
+    "codigopais": "MU"
+  },
+  {
+    "id": "79",
+    "nacionalidad": "TUNECINO",
+    "pais": "TÚNEZ",
+    "codigopais": "TN"
+  },
+  {
+    "id": "80",
+    "nacionalidad": "MALDIVO",
+    "pais": "MALDIVAS",
+    "codigopais": "MV"
+  },
+  {
+    "id": "81",
+    "nacionalidad": "MARSHALÉS",
+    "pais": "ISLAS MARSHALL",
+    "codigopais": "MH"
+  },
+  {
+    "id": "82",
+    "nacionalidad": "NAURUANO",
+    "pais": "NAURU",
+    "codigopais": "NR"
+  },
+  {
+    "id": "83",
+    "nacionalidad": "SRILANQUÉS",
+    "pais": "SRI LANKA",
+    "codigopais": "LK"
+  },
+  {
+    "id": "84",
+    "nacionalidad": "VANUATUENSE",
+    "pais": "VANUATU",
+    "codigopais": "VU"
+  },
+  {
+    "id": "85",
+    "nacionalidad": "YEMENÍ",
+    "pais": "YEMEN",
+    "codigopais": "YE"
+  },
+  {
+    "id": "86",
+    "nacionalidad": "MALTÉS",
+    "pais": "MALTA",
+    "codigopais": "MT"
+  },
+  {
+    "id": "87",
+    "nacionalidad": "SANTAHELENO",
+    "pais": "SANTA ELENA",
+    "codigopais": "SE"
+  },
+  {
+    "id": "88",
+    "nacionalidad": "SANTALUCENSE",
+    "pais": "SANTA LUCIA",
+    "codigopais": "LC"
+  },
+  {
+    "id": "89",
+    "nacionalidad": "SANVICENTINO",
+    "pais": "S.VICENTE GRANADINAS",
+    "codigopais": "VC"
+  },
+  {
+    "id": "90",
+    "nacionalidad": "SAMOANO",
+    "pais": "SAMOA AMERICANA",
+    "codigopais": "AS"
+  },
+  {
+    "id": "91",
+    "nacionalidad": "SAMOANO",
+    "pais": "SAMOA OCCIDENTAL",
+    "codigopais": "WS"
+  },
+  {
+    "id": "92",
+    "nacionalidad": "SANMARINENSE",
+    "pais": "SAN MARINO",
+    "codigopais": "SM"
+  },
+  {
+    "id": "93",
+    "nacionalidad": "OMANÍ",
+    "pais": "OMAN",
+    "codigopais": "OM"
+  },
+  {
+    "id": "94",
+    "nacionalidad": "SVALBARENSE",
+    "pais": "SVBALBARD",
+    "codigopais": "SJ"
+  },
+  {
+    "id": "95",
+    "nacionalidad": "TUVALUANO",
+    "pais": "TUVALU",
+    "codigopais": "TV"
+  },
+  {
+    "id": "96",
+    "nacionalidad": "NO ENCONTRADO",
+    "pais": "TRISTAN DA CUNHA",
+    "codigopais": "TA"
+  },
+  {
+    "id": "97",
+    "nacionalidad": "TRIESTINO",
+    "pais": "TRIESTE",
+    "codigopais": "TR"
+  },
+  {
+    "id": "98",
+    "nacionalidad": "TOKELUANO",
+    "pais": "TOKELAU",
+    "codigopais": "TK"
+  },
+  {
+    "id": "99",
+    "nacionalidad": "NO ENCONTRADO",
+    "pais": "OSTRAVA",
+    "codigopais": "OS"
+  }
+]

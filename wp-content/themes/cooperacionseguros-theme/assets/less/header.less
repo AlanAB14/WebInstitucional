@@ -1,0 +1,277 @@
+#header {
+  .transition(all 0.3s @easing-default);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999997;
+  background: linear-gradient(180deg, fade(#000, 85%), fade(#000, 0%));
+
+  .wrap {
+    .transition(all 0.3s @easing-default);
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    h1 {
+      .font-size(1);
+      line-height: 1;
+      font-weight: 900;
+      text-transform: uppercase;
+
+      a {
+        display: block;
+        overflow: hidden;
+        color: #fff;
+
+        img,
+        svg {
+          .transition(all 0.3s @easing-default);
+          display: block;
+          height: 2rem;
+          width: auto;
+
+          path,
+          polygon {
+            fill: @color1;
+          }
+        }
+      }
+
+      &.image {
+        strong {
+          display: none;
+        }
+      }
+    }
+
+    nav {
+      margin-left: auto;
+
+      .menu-toggle {
+        display: none;
+      }
+
+      #primary-menu {
+        font-weight: bold;
+        display: flex;
+
+        li {
+          .font-size(1);
+          margin-right: 1rem;
+          line-height: 1;
+          //text-transform: uppercase;
+
+          a {
+            color: #fff;
+            display: block;
+            padding: 0.5rem 0;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+
+          &.current-menu-item {
+            border-bottom: 2px @color-celeste solid;
+
+            a {
+              color: @color-celeste;
+            }
+          }
+
+          &.asegurados,
+          &.productores {
+            margin: 0 1px 0 0;
+            a {
+              background: @color-celeste;
+              color: #fff;
+              padding: 0.5rem 1rem;
+              border-radius: 1rem 0 0 1rem;
+            }
+          }
+
+          &.productores {
+            margin: 0;
+
+            a {
+              border-radius: 0 1rem 1rem 0;
+            }
+          }
+        }
+      }
+
+      @media (max-width: @screen-medium) {
+        .menu-toggle {
+          .transition(all 0.3s ease-in-out);
+          cursor: pointer;
+          position: relative;
+          display: block;
+          background: none;
+          color: transparent;
+          border: none;
+          width: 1.5rem;
+          height: 1.5rem;
+
+          &::before,
+          &::after,
+          span {
+            .transition(all 0.3s @easing-default);
+            content: "";
+            transform-origin: center center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: #fff;
+            height: 4px;
+            border-radius: 1rem;
+          }
+
+          &::before {
+            top: 2px;
+          }
+
+          span {
+            top: 50%;
+            .transform(translateY(-50%));
+          }
+
+          &::after {
+            bottom: 2px;
+          }
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          &.active {
+            &::before {
+              .transform(
+                rotate(45deg) translateY(-2px) translateX(-2px) scale(1.1)
+              );
+              background: #fff;
+              top: 50%;
+            }
+
+            span {
+              opacity: 0;
+            }
+
+            &::after {
+              .transform(
+                rotate(-45deg) translateY(-2px) translateX(2px) scale(1.1)
+              );
+              top: 50%;
+              background: #fff;
+            }
+          }
+        }
+
+        #primary-menu-container {
+          .transition(all 0.3s @easing-default);
+          .transform(scale(0));
+          box-sizing: border-box;
+          position: fixed;
+          top: 4rem;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          opacity: 0;
+          width: 100vw;
+          z-index: 999999998;
+          overflow: hidden;
+
+          #primary-menu {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            .transform(translateY(-50%));
+            display: block;
+            text-align: center;
+
+            li {
+              .font-size(1.6);
+              margin: 0;
+
+              a {
+                color: @color-texto;
+                opacity: 0.6;
+                background: none !important;
+              }
+
+              &.current-menu-item {
+                border: none;
+
+                a {
+                  color: @color-azul;
+                  text-decoration: underline;
+                  opacity: 1;
+                }
+              }
+
+              &.asegurados {
+                margin-top: 2rem;
+              }
+
+              &.asegurados,
+              &.productores {
+                a {
+                  color: @color-texto-grisado;
+                }
+              }
+            }
+          }
+
+          &.active {
+            .transform(scale(1));
+            display: block;
+            background: fade(#fff, 95%);
+            padding: 1rem;
+            max-height: 100vh;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  // Cuando el menú está fijo
+  &.fixed,
+  .page-checkout &,
+  .page-contratar &,
+  .page-reclamos-de-terceros &,
+  .page-denuncias-de-asegurados & {
+    background: @color1;
+    box-shadow: @box-shadow;
+
+    .wrap {
+      padding: 1rem 0;
+    }
+  }
+
+  // Páginas en las que no es fixed y no hay menú
+  .page-checkout &,
+  .page-contratar &,
+  .page-reclamos-de-terceros &,
+  .page-denuncias-de-asegurados & {
+    position: relative;
+    box-shadow: none;
+  }
+
+  .page-checkout &,
+  .page-contratar & {
+    .menu-toggle {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: @screen-medium) {
+    background: @color1;
+
+    .wrap {
+      padding: 1rem 0;
+    }
+  }
+}
