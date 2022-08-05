@@ -157,7 +157,6 @@ class Quote {
     if (empty($rates) || $rates == 'cURL Error #:28') return null;
     $plans = $rates->planes;
     $recommended = [];
-    echo $response;
     if ($product == 'seguro-de-autos-y-pick-ups') {
       if ((!isset($rates->planes->B1) && !isset($rates->planes->B2)) || (!isset($rates->planes->C1) && !isset($rates->planes->C2))) return null;
       $full = [];

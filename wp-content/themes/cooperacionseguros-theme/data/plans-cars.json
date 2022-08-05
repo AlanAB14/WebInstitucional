@@ -18,6 +18,14 @@
     "Franquicia para daños parciales"
   ],
   "plans": {
+    "A": {
+      "intro": "",
+      "assistances": { "Servicio de grúa": "50" },
+      "coverages": {
+        "Responsabilidad Civil": true
+      },
+      "benefits": {}
+    },
     "B1": {
       "intro": "",
       "coverages": {
