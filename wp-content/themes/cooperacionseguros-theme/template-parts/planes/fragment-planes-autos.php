@@ -47,13 +47,13 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
     <section id="cobertura" class="seleccion-de-planes vehiculos transaccional <?php echo !isset($recommended['full']) ? 'doble' : null; ?>">
       <form id="seleccion-de-planes-vehiculos" action="/cooperacion_local/checkout" method="post">
         <div class="desktop"> <!-- START DESKTOP -->
-          <div class="opciones header wrap">
+          <div class="opciones header ">
             <div class="detail">
               <h2>Seleccioná un plan <small>para tu <?php echo $quote['answers']['vehicleBrand'] . ' ' . $quote['answers']['vehicleModel'] . ' de ' . $quote['answers']['vehicleYear']; ?></small></h2>
             </div>
 
             <div class="plan normal">
-              <h1>Normal</h1>
+              <h1>Básico</h1>
               <h2 class="price"><sup>$</sup><strong><?php echo $priceNormal; ?></strong> <small>por mes</small></h2>
               <a href="#" class="btn normal enviar" data-plan="<?php echo $recommended['normal']; ?>">Contratar</a>
             </div>
@@ -83,7 +83,7 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
 
           <h2 class="title">Auxilio Mecánico</h2>
           <?php foreach ($assistances as $asistance) : ?>
-            <div class="opciones beneficios wrap">
+            <div class="opciones beneficios ">
               <?php if ($asistance == "Servicio de grúa") : ?>
                 <div class="detail"><?php echo $asistance; ?></div>
 
@@ -116,7 +116,7 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
           <h2 class="title">Coberturas</h2>
 
           <?php foreach ($coverages as $coverage) : ?>
-            <div class="opciones coberturas wrap">
+            <div class="opciones coberturas ">
               <div class="detail"><?php echo $coverage; ?></div>
 
               <?php if (isset($plansData[$recommended['normal']]['coverages'][$coverage])) : ?>
@@ -147,7 +147,7 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
           <h2 class="title">Beneficios exclusivos</h2>
 
           <?php foreach ($benefits as $benefit) : ?>
-            <div class="opciones beneficios wrap">
+            <div class="opciones beneficios ">
 
             <?php if ($benefit == "Franquicia para daños parciales") : ?>
               <div class="detail"><span class="tooltip" title="En caso de daños parciales por accidente, el importe detallado queda a cargo del asegurado y el resto a cargo de la Compañía"><?php echo $benefit; ?></span></div>
@@ -196,7 +196,7 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
 
           <?php if ($ap->premioMensual) : ?>
             <h2 class="title">Protegé a tu familia</h2>
-            <div class="opciones ap wrap">
+            <div class="opciones ap ">
 
             <div class="detail"><input id="coberturaap" class="togglecoberturaap" name="coberturaap" type="checkbox" value="<?php echo $ap->premioMensual; ?>" checked /><label class="checklabel tooltip" title="Cobertura adicional de invalidez, muerte y asistencia médico-farmacéutica por accidente para los integrantes de la familia hasta el tercer grado de consanguinidad que sean transportados en el vehículo." for="coberturaap">Incluir cobertura para pasajeros transportados</label></div>
 
@@ -210,7 +210,7 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
             </div>
           <?php endif; ?>
 
-          <div class="opciones footer wrap">
+          <div class="opciones footer ">
             <div class="detail"> </div>
             <div class="plan basic"><h2 class="price"><sup>$</sup><strong><?php echo $priceNormal; ?></strong> <small>por mes</small></h2> <a href="#" class="btn basic enviar" data-plan="<?php echo $recommended['normal']; ?>">Contratar</a></div>
             <div class="plan basic"><h2 class="price"><sup>$</sup><strong><?php echo $priceBasic; ?></strong> <small>por mes</small></h2> <a href="#" class="btn basic enviar" data-plan="<?php echo $recommended['basic']; ?>">Contratar</a></div>
