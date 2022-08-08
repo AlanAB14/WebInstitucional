@@ -163,6 +163,7 @@ class Quote {
 
       $AP = $rates->ap[0] ?? null;
 
+      // Plan Básico
       if (isset($rates->planes->A)) {
         $recommended['normal'] = 'A';
       }
