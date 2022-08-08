@@ -4,5 +4,5 @@ node_modules
 .version
 
 # Assets compilados
-assets/css/*.css
-assets/js/*.js
+# assets/css/*.css
+# assets/js/*.js
