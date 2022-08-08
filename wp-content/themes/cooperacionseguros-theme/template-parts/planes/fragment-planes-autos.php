@@ -44,8 +44,8 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
       }
     ?>
 
-    <section id="cobertura" class="seleccion-de-planes vehiculos transaccional <?php echo !isset($recommended['full']) ? 'doble' : null; ?>">
-      <form id="seleccion-de-planes-vehiculos" action="/cooperacion_local/checkout" method="post">
+    <section id="cobertura" class="seleccion-de-planes nueva-seleccion-de-planes vehiculos transaccional <?php echo !isset($recommended['full']) ? 'doble' : null; ?>">
+      <form id="seleccion-de-planes nueva-seleccion-de-planes" action="/cooperacion_local/checkout" method="post">
         <div class="desktop"> <!-- START DESKTOP -->
           <div class="opciones header ">
             <div class="detail">
@@ -55,20 +55,20 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
             <div class="plan normal">
               <h1>Básico</h1>
               <h2 class="price"><sup>$</sup><strong><?php echo $priceNormal; ?></strong> <small>por mes</small></h2>
-              <a href="#" class="btn normal enviar" data-plan="<?php echo $recommended['normal']; ?>">Contratar</a>
+              <a href="#" class="btn nuevo-btn normal enviar" data-plan="<?php echo $recommended['normal']; ?>">Contratar</a>
             </div>
 
             <div class="plan basic">
               <h1>Esencial</h1>
               <h2 class="price"><sup>$</sup><strong><?php echo $priceBasic; ?></strong> <small>por mes</small></h2>
-              <a href="#" class="btn basic enviar" data-plan="<?php echo $recommended['basic']; ?>">Contratar</a>
+              <a href="#" class="btn nuevo-btn basic enviar" data-plan="<?php echo $recommended['basic']; ?>">Contratar</a>
             </div>
 
             <div class="plan medium">
               <?php if (!isset($recommended['full'])) echo '<h3>Recomendado</h3>'; ?>
               <h1>Superior</h1>
               <h2 class="price"><sup>$</sup><strong><?php echo $priceMedium; ?></strong> <small>por mes</small></h2>
-              <a href="#" class="btn medium enviar" data-plan="<?php echo $recommended['medium']; ?>">Contratar</a>
+              <a href="#" class="btn nuevo-btn medium enviar" data-plan="<?php echo $recommended['medium']; ?>">Contratar</a>
             </div>
 
             <?php if (isset($recommended['full'])): ?>
@@ -76,7 +76,7 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
                 <h3>Recomendado</h3>
                 <h1>Exclusivo</h1>
                 <h2 class="price"><sup>$</sup><strong><?php echo $priceFull; ?></strong> <small>por mes</small></h2>
-                <a href="#" class="btn full enviar" data-plan="<?php echo $recommended['full']; ?>">Contratar</a>
+                <a href="#" class="btn nuevo-btn full enviar" data-plan="<?php echo $recommended['full']; ?>">Contratar</a>
               </div>
             <?php endif; ?>
           </div>
@@ -212,11 +212,11 @@ if (!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-auto
 
           <div class="opciones footer ">
             <div class="detail"> </div>
-            <div class="plan basic"><h2 class="price"><sup>$</sup><strong><?php echo $priceNormal; ?></strong> <small>por mes</small></h2> <a href="#" class="btn basic enviar" data-plan="<?php echo $recommended['normal']; ?>">Contratar</a></div>
-            <div class="plan basic"><h2 class="price"><sup>$</sup><strong><?php echo $priceBasic; ?></strong> <small>por mes</small></h2> <a href="#" class="btn basic enviar" data-plan="<?php echo $recommended['basic']; ?>">Contratar</a></div>
-            <div class="plan medium"><h2 class="price"><sup>$</sup><strong><?php echo $priceMedium; ?></strong> <small>por mes</small></h2><a href="#" class="btn medium enviar" data-plan="<?php echo $recommended['medium']; ?>">Contratar</a></div>
+            <div class="plan basic"><h2 class="price"><sup>$</sup><strong><?php echo $priceNormal; ?></strong> <small>por mes</small></h2> <a href="#" class="btn nuevo-btn basic enviar" data-plan="<?php echo $recommended['normal']; ?>">Contratar</a></div>
+            <div class="plan basic"><h2 class="price"><sup>$</sup><strong><?php echo $priceBasic; ?></strong> <small>por mes</small></h2> <a href="#" class="btn nuevo-btn basic enviar" data-plan="<?php echo $recommended['basic']; ?>">Contratar</a></div>
+            <div class="plan medium"><h2 class="price"><sup>$</sup><strong><?php echo $priceMedium; ?></strong> <small>por mes</small></h2><a href="#" class="btn nuevo-btn medium enviar" data-plan="<?php echo $recommended['medium']; ?>">Contratar</a></div>
             <?php if (isset($recommended['full'])) : ?>
-              <div class="plan full"><h2 class="price"><sup>$</sup><strong><?php echo $priceFull; ?></strong> <small>por mes</small></h2> <a href="#" class="btn full enviar" data-plan="<?php echo $recommended['full']; ?>">Contratar</a></div>
+              <div class="plan full"><h2 class="price"><sup>$</sup><strong><?php echo $priceFull; ?></strong> <small>por mes</small></h2> <a href="#" class="btn nuevo-btn full enviar" data-plan="<?php echo $recommended['full']; ?>">Contratar</a></div>
             <?php endif; ?>
           </div>
 
