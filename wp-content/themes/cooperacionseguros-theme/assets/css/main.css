@@ -190,7 +190,9 @@
     grid-template-columns: 30% 1fr 1fr 1fr 1fr!important;
 }
 
-
+.nueva-seleccion-de-planes.transaccional.doble .opciones {
+    grid-template-columns: 40% 1fr 1fr 1fr!important;
+}
 
 .nueva-seleccion-de-planes.transaccional.vehiculos .coberturas {
     font-size: 15px;
