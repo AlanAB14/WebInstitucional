@@ -43,6 +43,12 @@
       "requiredField": ""
     },
     {
+      "category": "vehiculos",
+      "id": "presupuesto-de-reparacion-1",
+      "label": "Presupuesto de reparación (Mano de obra y repuestos)",
+      "requiredField": ""
+    },
+    {
       "category": "lesiones",
       "id": "denuncia-interna",
       "label": "Denuncia interna",
@@ -106,6 +112,12 @@
       "category": "all",
       "id": "fotos-parte-frontal",
       "label": "Fotos de la parte frontal de la unidad",
+      "requiredField": ""
+    },
+    {
+      "category": "all",
+      "id": "fotos-de-la-unidad",
+      "label": "Fotos de la unidad",
       "requiredField": ""
     },
     {
