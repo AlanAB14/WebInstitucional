@@ -799,7 +799,7 @@ require_once get_template_directory() . '/api/api.php';
         <fieldset>
           <legend>Estos son los documentos necesarios para presentar la denuncia:</legend>
 
-          <p class="note"><span>El formato de los archivos adjuntos puede ser: JPEG / JPG / JFIF / BMP / PNG / PDF / DOC / XLS, con un tamaño máximo de 3 MB</span></p>
+          <p class="note"><span>El formato de los archivos adjuntos puede ser: JPEG / JPG / JFIF / BMP / PNG / PDF / DOC / XLS, con un tamaño máximo de 10 MB</span></p>
 
           <div id="documentos"></div>
 
