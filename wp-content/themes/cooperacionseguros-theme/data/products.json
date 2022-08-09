@@ -996,10 +996,10 @@
             {
               "title": "Integral",
               "keywords": "mercadería, comercios, locales",
-              "questions": ["nombre", "email", "integral"],
+              "questions": [],
               "category": "pymes-y-comercios",
               "pagetitle": "Seguro Integral para PYMEs y Comercios",
-              "slug": "seguro-de-empresas-integral-pymes",
+              "slug": "seguro-de-empresas-integral",
               "coopid": "13",
               "coopname": "Empresa Int. Empresas",
               "steps": [
