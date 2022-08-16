@@ -1,5 +1,34 @@
 <?php
 require_once get_template_directory() . '/api/api.php';
+
+// // Funcion para comprimir imagenes
+// function compress_image($source_url, $destination_url, $quality) {
+//   $info = getimagesize($source_url);
+   
+//   if ($info['mime'] == 'image/jpeg') $image = imagecreatefromjpeg($source_url);
+//   elseif ($info['mime'] == 'image/gif') $image = imagecreatefromgif($source_url);
+//   elseif ($info['mime'] == 'image/png') $image = imagecreatefrompng($source_url);
+//   elseif ($info['mime'] == 'image/jpg') $image = imagecreatefromjpeg($source_url);
+   
+//   //Guarda
+//   imagejpeg($image, $destination_url, $quality);
+       
+//   //retorna URL
+//   return $destination_url;    
+// }
+
+
+// if (isset($_POST['vehiculos-denuncia-interna'])) {
+//   $allowTypes = array('jpg','png','jpeg','gif');
+
+//   if (in_array(pathinfo($v['name'], PATHINFO_EXTENSION), $allowTypes)) {
+//     $compressed = compress_image($v['tmp_name'], $v['tmp_name'], 50);
+//     if ($compressed) {
+//       echo 'Se comprimió';
+//     }
+//   }
+// }
+
 ?>
 
 <div class="agregar wrap">
@@ -10,7 +39,7 @@ require_once get_template_directory() . '/api/api.php';
     <p>Completá todos los pasos del siguiente formulario para <strong>agregar un reclamo nuevo</strong>. Si tenés alguna duda, podés consultar <a href="/ayuda/">nuestra sección de ayuda</a>.</p>
   </header>
 
-  <form class="form" enctype="multipart/form-data" id="reclamos-de-terceros-form" method="post" action="/reclamos-de-terceros/?accion=procesar">
+  <form class="form" enctype="multipart/form-data" id="reclamos-de-terceros-form" method="post" action="/cooperacion_local/reclamos-de-terceros/?accion=procesar">
     <input type="hidden" name="guid" value="<?php echo GUID(); ?>" />
     <?php
     /**
@@ -799,7 +828,7 @@ require_once get_template_directory() . '/api/api.php';
         <fieldset>
           <legend>Estos son los documentos necesarios para presentar la denuncia:</legend>
 
-          <p class="note"><span>El formato de los archivos adjuntos puede ser: JPEG / JPG / JFIF / BMP / PNG / PDF / DOC / XLS, con un tamaño máximo de 10 MB</span></p>
+          <p class="note"><span>El formato de los archivos adjuntos puede ser: JPEG / JPG / JFIF / BMP / PNG / PDF / DOC / XLS, con un tamaño máximo de 6 MB</span></p>
 
           <div id="documentos"></div>
 

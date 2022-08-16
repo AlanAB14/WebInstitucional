@@ -98,13 +98,13 @@
       },
       {
         "category": "materiales",
-        "id": "presupuesto-de-reparacion",
+        "id": "presupuesto-de-reparacion-1",
         "label": "Presupuestos de reparación",
         "requiredField": ""
       },
       {
         "category": "materiales",
-        "id": "presupuesto-de-reparacion-1",
+        "id": "presupuesto-de-reparacion-2",
         "label": "Presupuestos de reparación",
         "requiredField": ""
       },
@@ -112,12 +112,6 @@
         "category": "all",
         "id": "fotos-parte-frontal",
         "label": "Fotos de la parte frontal de la unidad",
-        "requiredField": ""
-      },
-      {
-        "category": "all",
-        "id": "fotos-de-la-unidad",
-        "label": "Fotos de la unidad",
         "requiredField": ""
       },
       {
@@ -146,14 +140,14 @@
       },
       {
         "category": "all",
-        "id": "nota-de-reclamo",
-        "label": "Nota de reclamo - Presentación",
+        "id": "fotos-de-la-unidad-5",
+        "label": "Fotos de la unidad",
         "requiredField": ""
       },
       {
         "category": "all",
-        "id": "documentacion-adicional",
-        "label": "Documentación Adicional (Otro presupuesto / Foto / Etc.)",
+        "id": "nota-de-reclamo",
+        "label": "Nota de reclamo - Presentación",
         "requiredField": ""
       },
       {
@@ -177,6 +171,12 @@
       {
         "category": "all",
         "id": "documentacion-adicional-4",
+        "label": "Documentación Adicional (Otro presupuesto / Foto / Etc.)",
+        "requiredField": ""
+      },
+      {
+        "category": "all",
+        "id": "documentacion-adicional-5",
         "label": "Documentación Adicional (Otro presupuesto / Foto / Etc.)",
         "requiredField": ""
       }

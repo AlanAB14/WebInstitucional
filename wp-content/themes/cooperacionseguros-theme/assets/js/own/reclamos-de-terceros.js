@@ -5,7 +5,7 @@
 // Templates para Documentos
 $.templates({
   templateDocumentos:
-    '<p><label for="{{:id}}" class="fileUpload"><span>{{:label}}</span></label><input type="file" id="{{:id}}" name="{{:id}}" accept="image/*,.jfif,application/pdf" maxsize="10000" /> </p>',
+    '<p><label for="{{:id}}" class="fileUpload"><span>{{:label}}</span></label><input type="file" id="{{:id}}" name="{{:id}}" accept="image/*,.jfif,application/pdf" maxsize="5000" /> </p>',
 
   // TODO required
 });

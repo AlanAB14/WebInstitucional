@@ -1,6 +1,8 @@
 <?php
 require_once get_template_directory() . '/api/api.php';
 
+
+
 // Array de datos generales
 $success = false;
 $params =  array();
@@ -161,26 +163,13 @@ if (!empty($_POST) && isset($_POST['reclamante-nombre']) && isset($_POST['reclam
     $files = array();
     $files['NroReclamoTercero'] = $code;
     $files['FechaHora'] = date('m-d-Y H:m');
-
     $files['Archivos'] = array();
+
     foreach ($_FILES as $k => $v) {
-
-      
-      // $zip = new ZipArchive();
-
 
       $file_name = $code . '-' . $v['name'];
       $new_path = $upload_dir . '/' . $file_name;
 
-
-      // CAMBIOS ZIP
-      // if ($zip->open($file_name, ZipArchive::CREATE) === TRUE) {
-      //   $zip->addFile($new_path);
-      //   $zip->close();
-      //   $resultadoZip = 'ok';
-      // }else {
-      //   $resultadoZip = 'no';
-      // }
 
       if (move_uploaded_file($v['tmp_name'], $new_path)) {
         $base64 = base64_encode(file_get_contents($new_path));
@@ -191,7 +180,9 @@ if (!empty($_POST) && isset($_POST['reclamante-nombre']) && isset($_POST['reclam
         );
         $files['Archivos'][] = $file;
       }
+
     }
+
 
     $inspeccion = coopseg_terceros_inspeccion($tokenTerceros, $files);
     //print_r($inspeccion);
