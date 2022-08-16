@@ -1,34 +1,5 @@
 <?php
 require_once get_template_directory() . '/api/api.php';
-
-// // Funcion para comprimir imagenes
-// function compress_image($source_url, $destination_url, $quality) {
-//   $info = getimagesize($source_url);
-   
-//   if ($info['mime'] == 'image/jpeg') $image = imagecreatefromjpeg($source_url);
-//   elseif ($info['mime'] == 'image/gif') $image = imagecreatefromgif($source_url);
-//   elseif ($info['mime'] == 'image/png') $image = imagecreatefrompng($source_url);
-//   elseif ($info['mime'] == 'image/jpg') $image = imagecreatefromjpeg($source_url);
-   
-//   //Guarda
-//   imagejpeg($image, $destination_url, $quality);
-       
-//   //retorna URL
-//   return $destination_url;    
-// }
-
-
-// if (isset($_POST['vehiculos-denuncia-interna'])) {
-//   $allowTypes = array('jpg','png','jpeg','gif');
-
-//   if (in_array(pathinfo($v['name'], PATHINFO_EXTENSION), $allowTypes)) {
-//     $compressed = compress_image($v['tmp_name'], $v['tmp_name'], 50);
-//     if ($compressed) {
-//       echo 'Se comprimió';
-//     }
-//   }
-// }
-
 ?>
 
 <div class="agregar wrap">
