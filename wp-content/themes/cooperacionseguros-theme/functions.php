@@ -465,16 +465,3 @@ function wpb_add_google_fonts_roboto() {
   }
   
   add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts_roboto' );
-
-
-
-
-
-// JS RECLAMO TERCERO
-add_action('wp_enqueue_scripts', 'collectiveray_load_js_script_reclamo');
-
-function collectiveray_load_js_script_reclamo() {
-  if( is_page('reclamos-de-terceros') ) {
-    wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/compressImage.js');
-  }
-}

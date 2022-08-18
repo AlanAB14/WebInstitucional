@@ -10,7 +10,7 @@ require_once get_template_directory() . '/api/api.php';
     <p>Completá todos los pasos del siguiente formulario para <strong>agregar un reclamo nuevo</strong>. Si tenés alguna duda, podés consultar <a href="/ayuda/">nuestra sección de ayuda</a>.</p>
   </header>
 
-  <form class="form" enctype="multipart/form-data" id="reclamos-de-terceros-form" method="post" action="/cooperacion_local/reclamos-de-terceros/?accion=procesar">
+  <form class="form" enctype="multipart/form-data" id="reclamos-de-terceros-form" method="post" onsubmit="procesarDatos(event);">
     <input type="hidden" name="guid" value="<?php echo GUID(); ?>" />
     <?php
     /**

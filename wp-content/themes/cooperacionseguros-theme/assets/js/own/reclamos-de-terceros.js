@@ -5,7 +5,7 @@
 // Templates para Documentos
 $.templates({
   templateDocumentos:
-    '<p><label for="{{:id}}" class="fileUpload"><span>{{:label}}</span></label><input type="file" id="{{:id}}" name="{{:id}}" accept="image/*,.jfif,application/pdf" maxsize="5000" /> </p>',
+    '<p><label for="{{:id}}" class="fileUpload"><span>{{:label}}</span></label><input onchange="compressImage( event )" type="file" id="{{:id}}" name="{{:id}}" accept="image/*,.jfif,application/pdf" maxsize="5000" /> <img src="" id="image-{{:id}}" /> </p>',
 
   // TODO required
 });
@@ -658,7 +658,7 @@ $(function () {
           // En el último paso se envia finalmente el form
           submittable = true;
 
-          formContainer.submit();
+          formContainer.submit(procesarDatos(event));
         } else {
           // Ver próximo paso
           nextStep($(this));

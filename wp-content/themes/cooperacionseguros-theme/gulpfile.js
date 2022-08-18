@@ -46,7 +46,10 @@ function scripts() {
       "./assets/js/own/validate.js",
       "./assets/js/own/quiero-que-me-llamen.js",
       "./assets/js/own/reclamos-de-terceros.js",
+      "./assets/js/own/fragment-reclamos-procesar.js",
+      "./assets/js/own/compressImage.js",
     ])
+
     .pipe(plugins.plumber())
     .pipe(plugins.concat("main.js"))
     .pipe(gulp.dest("./assets/js"))
