@@ -38,6 +38,7 @@ function compressImage(e) {
 
     }
     img.src = e.target.result;
+    
   }
   reader.readAsDataURL(file);
 
