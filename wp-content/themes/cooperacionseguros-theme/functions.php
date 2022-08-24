@@ -465,3 +465,27 @@ function wpb_add_google_fonts_roboto() {
   }
   
   add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts_roboto' );
+
+// PASAR VARIABLES A ARCHIVO JS
+function myprefix_variables_enqueue_scripts() {
+  wp_enqueue_script( 
+    'variables-script',
+    get_stylesheet_directory_uri() . '/assets/js/own/fragment-reclamos-procesar.js'
+  );
+  wp_localize_script( 'variables-script', 'php_data', array(
+        'templateUrl' => get_template_directory(),
+        'COOPSEG_TOKEN_URL' => COOPSEG_TOKEN_URL,
+        'COOPSEG_CONFIG_GRANT_TYPE' => COOPSEG_CONFIG_GRANT_TYPE,
+        'COOPSEG_CONFIG_TERCEROS_CLIENT_ID' => COOPSEG_CONFIG_TERCEROS_CLIENT_ID,
+        'COOPSEG_CONFIG_TERCEROS_CLIENT_SECRET' => COOPSEG_CONFIG_TERCEROS_CLIENT_SECRET,
+
+        'COOPSEG_RECLAMOS_AGREGAR' => COOPSEG_RECLAMOS_AGREGAR,
+        
+        'COOPSEG_QUOTE_IMAGES_DIR' => COOPSEG_QUOTE_IMAGES_DIR,
+        'COOPSEG_RECLAMOS_INSPECCION' => COOPSEG_RECLAMOS_INSPECCION
+
+    )
+  );
+  }
+
+  add_action('wp_enqueue_scripts', 'myprefix_variables_enqueue_scripts');
