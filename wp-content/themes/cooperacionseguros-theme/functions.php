@@ -474,6 +474,7 @@ function myprefix_variables_enqueue_scripts() {
   );
   wp_localize_script( 'variables-script', 'php_data', array(
         'templateUrl' => get_template_directory(),
+        'NuevaUrl' => get_template_directory_uri(),
         'COOPSEG_TOKEN_URL' => COOPSEG_TOKEN_URL,
         'COOPSEG_CONFIG_GRANT_TYPE' => COOPSEG_CONFIG_GRANT_TYPE,
         'COOPSEG_CONFIG_TERCEROS_CLIENT_ID' => COOPSEG_CONFIG_TERCEROS_CLIENT_ID,

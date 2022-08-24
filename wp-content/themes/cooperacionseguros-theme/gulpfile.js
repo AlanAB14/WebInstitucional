@@ -48,6 +48,8 @@ function scripts() {
       "./assets/js/own/reclamos-de-terceros.js",
       "./assets/js/own/fragment-reclamos-procesar.js",
       "./assets/js/own/compressImage.js",
+      "./assets/js/own/fragment-reclamos-procesar.js",
+      "./assets/js/own/compressImage.js",
     ])
 
     .pipe(plugins.plumber())

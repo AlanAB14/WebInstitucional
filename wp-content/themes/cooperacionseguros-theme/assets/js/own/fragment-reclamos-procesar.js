@@ -1,7 +1,8 @@
-window.onload = function () {
+window.onload = async function () {
     var date = new Date();
-    
-
+    alert(`${php_data.NuevaUrl}/fragment-tripolis.php`)
+    // window.location = `${php_data.NuevaUrl}/fragment-tripolis.php`
+    // await fetch('http://localhost:8080/cooperacion_local/fragment-tripolis.php')
 
 }
 async function procesarDatos(e) {
@@ -41,25 +42,9 @@ async function procesarDatos(e) {
         }
 
 
-        // params['FechaHoraSiniestro']        = `${fecha} ${hora}`;
-        // params['idTipoDamnificado']         = idTipoDamnificado;
-        // params['EsReclamoFranquicia']       = esReclamoFranquicia;
-        // params['idTipoPersonaReclamante']   = idTipoPersonaReclamante;
 
         
         // Reclamante
-        // params['ApellidoReclamante']        = document.getElementById('reclamante-apellido').value;
-        // params['NombreReclamante']          = document.getElementById('reclamante-nombre').value;
-        // params['IdTipoDocumentoReclamante'] = document.getElementById('reclamante-documento-tipo').value;
-        // params['NroDocumentoReclamante']    = document.getElementById('reclamante-documento-numero').value;
-        // params['GeneroReclamante']          = document.getElementById('reclamante-genero').value;
-        // params['IdEstadoCivilReclamante']   = document.getElementById('reclamante-estado-civil').value;
-        // params['ActividadReclamante']       = document.getElementById('reclamante-ocupacion').value;
-        // params['CalleReclamante']           = document.getElementById('reclamante-calle').value;
-        // params['NroCalleReclamante']        = document.getElementById('reclamante-numero').value;
-        // params['IdLocalidadReclamante']     = document.getElementById('reclamante-localidad').value;
-        // params['TelefonoReclamante']        = document.getElementById('reclamante-telefono').value;
-        // params['EmailReclamante']           = document.getElementById('reclamante-email').value;
         params = {
             ...params,
             ApellidoReclamante          : document.getElementById('reclamante-apellido').value,
@@ -77,13 +62,6 @@ async function procesarDatos(e) {
         }
 
         // Otro
-        // params['ApellidoOtro']              = document.getElementById('otro-apellido').value ? document.getElementById('otro-apellido').value : '';
-        // params['NombreOtro']                = document.getElementById('otro-nombre').value ?  document.getElementById('otro-nombre').value : '';
-        // params['IdTipoDocumentoOtro']       = document.getElementById('otro-documento-tipo').value ?  document.getElementById('otro-documento-tipo').value : '';
-        // params['NroDocuementoOtro']         = document.getElementById('otro-documento-numero').value ?  document.getElementById('otro-documento-numero').value : '';
-        // params['TelefonoOtro']              = document.getElementById('otro-telefono').value ?  document.getElementById('otro-telefono').value : '';
-        // params['EmailOtro']                 = document.getElementById('otro-email').value ?  document.getElementById('otro-email').value : '';
-        // params['VinculoOtro']               = document.getElementById('otro-vinculo').value ?  document.getElementById('otro-vinculo').value : '';
         params = {
             ...params,
             ApellidoOtro        : document.getElementById('otro-apellido').value ? document.getElementById('otro-apellido').value : '',
@@ -97,9 +75,6 @@ async function procesarDatos(e) {
 
 
         // Lugar
-        // params['idLugarSiniestro']          = document.getElementById('dano-lugar').value;
-        // params['idLocalidadSiniestro']      = document.getElementById('dano-lugar-localidad').value;
-        // params['DescripcionLugarSiniestro'] = document.getElementById('dano-lugar-descripcion').value;
         params = {
             ...params,
             idLugarSiniestro            : document.getElementById('dano-lugar').value,
@@ -108,7 +83,6 @@ async function procesarDatos(e) {
         }
 
         // Patente
-        // params['PatenteAsegurado']          = document.getElementById('patente-vehiculo-asegurado').value;
         params = {
             ...params,
             PatenteAsegurado : document.getElementById('patente-vehiculo-asegurado').value
@@ -127,26 +101,6 @@ async function procesarDatos(e) {
             tiposDeSiniestro ++;
             
             // Incluir item como un Array
-            // params['Vehiculos'] = new Array();
-            // params['Vehiculos']['ApellidoDamnificado']         = document.getElementById('dano-apellido').value;
-            // params['Vehiculos']['NombreDamnificado']           = document.getElementById('dano-nombre').value;
-            // params['Vehiculos']['idTipoDocumentoDamnificado']  = document.getElementById('dano-documento-tipo').value;
-            // params['Vehiculos']['NroDocumentoDamnificado']     = document.getElementById('dano-documento-numero').value;
-            // params['Vehiculos']['GeneroDamnificado']           = document.getElementById('dano-genero').value;
-            // params['Vehiculos']['IdTipoVehiculo']              = document.getElementById('dano-vehiculo-tipo').value;
-            // params['Vehiculos']['Patente']                     = document.getElementById('patente-vehiculo-propio').value;
-            // params['Vehiculos']['Anio']                        = document.getElementById('dano-vehiculo-ano').value;
-            // params['Vehiculos']['Codval']                      = document.getElementById('dano-vehiculo-version').value ? document.getElementById('dano-vehiculo-version').value : '';
-            // params['Vehiculos']['VehiculoEstacionado']         = document.querySelector('input[name="dano-vehiculo-estacionado"]:checked').value === "si" ? 'true' : 'false';
-            // params['Vehiculos']['ApellidoConductor']           = document.getElementById('conductor-apellido').value ? document.getElementById('conductor-apellido').value : '';
-            // params['Vehiculos']['NombreConductor']             = document.getElementById('conductor-nombre').value ? document.getElementById('conductor-nombre').value : '';
-            // params['Vehiculos']['IdTipoDocumentoConductor']    = document.getElementById('conductor-documento-tipo').value ? document.getElementById('conductor-documento-tipo').value : '';
-            // params['Vehiculos']['NroDocumentoConductor']       = document.getElementById('conductor-documento-numero').value ? document.getElementById('conductor-documento-numero').value : '';
-            // params['Vehiculos']['CompaniaAseguradora']         = document.getElementById('dano-vehiculo-aseguradora-nombre').value ? document.getElementById('dano-vehiculo-aseguradora-nombre').value : '';
-            // params['Vehiculos']['PolizaTercero']               = document.getElementById('dano-vehiculo-aseguradora-poliza').value ? document.getElementById('dano-vehiculo-aseguradora-poliza').value : '';
-            // params['Vehiculos']['PolizaTercero']               = ''; //TODO:
-            // params['Vehiculos']['Franquicia']                  = document.getElementById('dano-franquicia-valor').value ? document.getElementById('dano-franquicia-valor').value : '';
-            // params['Vehiculos']['DescripcionSiniestro']        = document.getElementById('dano-vehiculos-descripcion').value;
             params = {
                 ...params,
                 Vehiculos : [{
@@ -192,17 +146,6 @@ async function procesarDatos(e) {
             tiposDeSiniestro ++;
 
 
-            // params['Lesiones'] = new Array();
-            // params['Lesiones']['ApellidoDamnificado']          = document.getElementById('dano-apellido').value;
-            // params['Lesiones']['NombreDamnificado']            = document.getElementById('dano-nombre').value;
-            // params['Lesiones']['IdTipoDocumentoDamnificado']   = document.getElementById('dano-documento-tipo').value;
-            // params['Lesiones']['NroDocumentoDamnificado']      = document.getElementById('dano-documento-numero').value;
-            // params['Lesiones']['GeneroDamnificado']            = document.getElementById('dano-genero').value;
-            // params['Lesiones']['TipoLesion']                   = document.getElementById('dano-tipo-lesion').value;
-            // params['Lesiones']['NombreCentroSalud']            = document.getElementById('dano-centro-nombre').value;
-            // params['Lesiones']['IdLocalidadCentroSalud']       = document.getElementById('dano-centro-ubicacion').value;
-            // params['Lesiones']['NombreART']                    = document.getElementById('dano-art-nombre').value ? document.getElementById('dano-art-nombre').value : '';
-            // params['Lesiones']['DescripcionSiniestro']         = document.getElementById('dano-lesiones-descripcion').value;
             params = {
                 ...params,
                 Lesiones : [{
@@ -234,17 +177,6 @@ async function procesarDatos(e) {
             params.idTipoSiniestro = 3;
             tiposDeSiniestro ++;
 
-            // params['DaniosMateriales'] = new Array();
-            // params['DaniosMateriales']['ApellidoDamnificado'] = document.getElementById('dano-apellido').value; 
-            // params['DaniosMateriales']['NombreDamnificado'] = document.getElementById('dano-nombre').value; 
-            // params['DaniosMateriales']['IdTipoDocumentoDamnificado'] = document.getElementById('dano-documento-tipo').value; 
-            // params['DaniosMateriales']['NroDocumentoDamnificado'] = document.getElementById('dano-documento-numero').value; 
-            // params['DaniosMateriales']['GeneroDamnificado'] = document.getElementById('dano-genero').value; 
-            // params['DaniosMateriales']['CalleDanioMaterial'] = document.getElementById('dano-calle').value; 
-            // params['DaniosMateriales']['NroDanioMaterial'] = document.getElementById('dano-numero').value; 
-            // params['DaniosMateriales']['IdLocalidadDanioMaterial'] = document.getElementById('dano-localidad').value; 
-            // params['DaniosMateriales']['NombreAseguradora'] = document.getElementById('dano-seguro-aseguradora').value ? document.getElementById('dano-seguro-aseguradora').value : '';
-            // params['DaniosMateriales']['DescripcionSiniestro'] = document.getElementById('dano-materiales-descripcion').value; 
             params = {
                 ...params,
                 DaniosMateriales: [{
@@ -266,7 +198,7 @@ async function procesarDatos(e) {
             console.log(params)
             console.log(descripciones)
         }
-    }
+    
 
     if (tiposDeSiniestro > 1) {
         params.idTipoSiniestro = 4
@@ -284,23 +216,114 @@ async function procesarDatos(e) {
         // Enviar archivos
         var uploadDir = `${php_data.templateUrl}/${php_data.COOPSEG_QUOTE_IMAGES_DIR}`;
 
-        var fecha = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '-' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '-' + date.getFullYear()
-        var hora = `${date.getHours()}:${date.getMinutes()}`;
+        var newDate = new Date();
+        var fecha = ((newDate.getMonth() > 8) ? (newDate.getMonth() + 1) : ('0' + (newDate.getMonth() + 1))) + '-' + ((newDate.getDate() > 9) ? newDate.getDate() : ('0' + newDate.getDate())) + '-' + newDate.getFullYear()
+        var hora = `${newDate.getHours()}:${newDate.getMinutes()}`;
         var fechaHora = `${fecha} ${hora}`
         
         var files = {}
         files = {
             NroReclamoTercero: code,
-            FechaHora: fechaHora
+            FechaHora: fechaHora,
+            Archivos: []
         }
-        document.getElementsByClassName('file')
+        
+        $("#reclamos-de-terceros-form").find("input[type=file]").each(async function(index, field){
+            const file = field.files[0];
+
+
+              if(file) {
+                var extension = file.name.split('.').pop();
+                var fileName = `${code}-${field.name}`;
+                var fieldId = field.id;
+                var imageId = `image-${fieldId}`;
+                var ContenidoArchivo = document.getElementById(imageId).src;
+                var base64result = ContenidoArchivo.substr(ContenidoArchivo.indexOf(',') + 1);
+                    
+                console.log(base64result)
+                files.Archivos.push({
+                    NombreArchivo: fileName,
+                    ExtensionArchivo: extension,
+                    ContenidoArchivo: base64result
+                })
+            }
+            
+        });
+        console.log(files)
+
+        const inspeccion = await ingresoInspeccion(tokenTercero.access_token, files)
+        var sectionReclamoTercero = document.getElementById("reclamos-de-terceros")
+
+        if (inspeccion && inspeccion.status === 200) {
+            success = true;
+        } else {
+            console.log('Error en - Reclamo Inspeccion');
+        }
     }else {
-        console.log('Error en Enviar params');
+        console.log('Error en - Reclamo Agregar')
+    }
+}else {
+    console.log('Error - Invalid POST')
+} 
+
+
+
+    if (success) {
+            const data = {
+                
+            database : 'reclamosterceros',
+            contactGroup : 'terceros',
+            contactFields : {
+                guid : `test-${code}`,
+                email : params.EmailReclamante,
+                nombreyapellido : `${reclamanteNombre} ${reclamanteApellido}`,
+                numerodereclamo : code,
+                detalle : (`Patente: ${params.PatenteAsegurado} - ${descripciones[0]}`).substring(0,255),
+            }
+        
+        };
+
+        console.log(data)
+        
+
+        sectionReclamoTercero.innerHTML = 
+        `
+        <div class="confirmacion wrap">
+        <header class="header">
+        <h1>Tu reclamo fue ingresado</h1>
+        <p class="aviso">Número de reclamo: <strong>${ code }</strong></p>
+        <p>Tu reclamo fue ingresado correctamente. En breve recibirás por e-mail tu número de reclamo para que puedas hacer seguimiento online de su estado. Si te queda alguna duda podés <a href="/contacto/">contactarnos</a> o consultar <a href="/ayuda/">nuestra sección de ayuda</a>.</p>
+        <p class="action"><a href="/" class="btn">Volver al inicio</a></p>
+        </header>
+        </div>
+        `;
+
+
+       const resp = await fetch(`${php_data.NuevaUrl}/fragment-tripolis.php`,{
+        method: "POST",
+        body: JSON.stringify(data)
+       })
+
+       console.log(resp)
+       const respuesta = await resp.json();
+       console.log(respuesta)
+       
+
+        
+    } else {
+        sectionReclamoTercero.innerHTML = 
+        `
+        <div class="wrap">
+        <header class="header">
+        <h1>Hubo un problema</h1>
+        <p>Se produjo un problema al enviar tu reclamo. Por favor comunicate con nuestro equipo de Atención al Cliente: <a href="mailto:' .  get_theme_mod('custom_option_email') . '">' .  get_theme_mod('custom_option_email') . '</a> –  Teléfono: <strong>' .  get_theme_mod('custom_option_phone') . '</strong>, de lunes a viernes en el horario de 7 a 20hs.</p>
+        </header>
+        </div>
+        `
     }
 
-
-    
 }
+
 
 
 
@@ -342,5 +365,22 @@ async function ingresoReclamoTercero(tokenTercero, data) {
         return res
     } catch (error) {
         console.log(error)
+    }
+}
+
+async function ingresoInspeccion(tokenTercero, files) {
+    try {
+        const response = await fetch(php_data.COOPSEG_RECLAMOS_INSPECCION, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${tokenTercero}`
+            },
+            body: JSON.stringify(files)
+        })
+        console.log(response);
+        return response
+    } catch (e) {
+        console.log(e)
     }
 }
