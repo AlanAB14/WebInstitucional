@@ -93,6 +93,8 @@ function tripolis_add($data)
   $response = curl_exec($curl);
   $err = curl_error($curl);
 
+  echo $response;
+
   curl_close($curl);
 
   if ($response != '') {

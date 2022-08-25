@@ -1,6 +1,5 @@
 window.onload = async function () {
     var date = new Date();
-    alert(`${php_data.NuevaUrl}/fragment-tripolis.php`)
     // window.location = `${php_data.NuevaUrl}/fragment-tripolis.php`
     // await fetch('http://localhost:8080/cooperacion_local/fragment-tripolis.php')
 
@@ -271,7 +270,7 @@ async function procesarDatos(e) {
     if (success) {
             const data = {
                 
-            database : 'reclamosterceros',
+            database : 'reclamoterceros',
             contactGroup : 'terceros',
             contactFields : {
                 guid : `test-${code}`,
@@ -292,6 +291,7 @@ async function procesarDatos(e) {
         <header class="header">
         <h1>Tu reclamo fue ingresado</h1>
         <p class="aviso">Número de reclamo: <strong>${ code }</strong></p>
+        <input type="text" autofocus style="width:1px; height:1px;" />
         <p>Tu reclamo fue ingresado correctamente. En breve recibirás por e-mail tu número de reclamo para que puedas hacer seguimiento online de su estado. Si te queda alguna duda podés <a href="/contacto/">contactarnos</a> o consultar <a href="/ayuda/">nuestra sección de ayuda</a>.</p>
         <p class="action"><a href="/" class="btn">Volver al inicio</a></p>
         </header>
@@ -311,6 +311,7 @@ async function procesarDatos(e) {
 
         
     } else {
+        var sectionReclamoTercero = document.getElementById("reclamos-de-terceros");
         sectionReclamoTercero.innerHTML = 
         `
         <div class="wrap">

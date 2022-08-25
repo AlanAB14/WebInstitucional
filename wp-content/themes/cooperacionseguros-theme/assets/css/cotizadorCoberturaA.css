@@ -1,0 +1,47 @@
+/* -------------------- */
+/* COTIZADOR AGREGO COBERTURA A */
+/* --------------------- */
+
+.nueva-seleccion-de-planes {
+    max-width: 1200px;
+}
+
+.nueva-seleccion-de-planes .title {
+    max-width: 1200px!important;
+}
+
+.nueva-seleccion-de-planes.transaccional.vehiculos .opciones {
+    grid-template-columns: 30% 1fr 1fr 1fr 1fr!important;
+}
+
+.nueva-seleccion-de-planes.transaccional.doble .opciones {
+    grid-template-columns: 40% 1fr 1fr 1fr!important;
+}
+
+.nueva-seleccion-de-planes.transaccional.vehiculos .coberturas {
+    font-size: 15px;
+}
+
+.nueva-seleccion-de-planes.transaccional.vehiculos .beneficios {
+    font-size: 15px;
+}
+
+.nueva-seleccion-de-planes.transaccional.vehiculos .ap {
+    font-size: 15px;
+}
+
+.nueva-seleccion-de-planes .opciones.header div h2 {
+    font-size: 2.2rem;
+}
+
+.nueva-seleccion-de-planes .opciones.footer div h2 {
+    font-size: 2.2rem;
+}
+
+.nueva-seleccion-de-planes .opciones.header div h2 small {
+    margin-top: 2px;
+}
+
+.nuevo-btn {
+    padding: 1rem 1.2rem!important;
+}
