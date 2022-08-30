@@ -291,7 +291,7 @@ async function procesarDatos(e) {
         <header class="header">
         <h1>Tu reclamo fue ingresado</h1>
         <p class="aviso">Número de reclamo: <strong>${ code }</strong></p>
-        <input type="text" autofocus style="width:1px; height:1px;" />
+        <input type="text" autofocus style="width:1px; height:1px; border: none!important" />
         <p>Tu reclamo fue ingresado correctamente. En breve recibirás por e-mail tu número de reclamo para que puedas hacer seguimiento online de su estado. Si te queda alguna duda podés <a href="/contacto/">contactarnos</a> o consultar <a href="/ayuda/">nuestra sección de ayuda</a>.</p>
         <p class="action"><a href="/" class="btn">Volver al inicio</a></p>
         </header>
@@ -305,9 +305,6 @@ async function procesarDatos(e) {
        })
 
        console.log(resp)
-       const respuesta = await resp.json();
-       console.log(respuesta)
-       
 
         
     } else {

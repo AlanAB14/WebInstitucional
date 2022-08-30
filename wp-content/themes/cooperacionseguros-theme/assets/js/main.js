@@ -13055,7 +13055,7 @@ async function procesarDatos(e) {
         <header class="header">
         <h1>Tu reclamo fue ingresado</h1>
         <p class="aviso">Número de reclamo: <strong>${ code }</strong></p>
-        <input type="text" autofocus style="width:1px; height:1px;" />
+        <input type="text" autofocus style="width:1px; height:1px; border: none!important" />
         <p>Tu reclamo fue ingresado correctamente. En breve recibirás por e-mail tu número de reclamo para que puedas hacer seguimiento online de su estado. Si te queda alguna duda podés <a href="/contacto/">contactarnos</a> o consultar <a href="/ayuda/">nuestra sección de ayuda</a>.</p>
         <p class="action"><a href="/" class="btn">Volver al inicio</a></p>
         </header>
@@ -13069,9 +13069,6 @@ async function procesarDatos(e) {
        })
 
        console.log(resp)
-       const respuesta = await resp.json();
-       console.log(respuesta)
-       
 
         
     } else {
@@ -13169,8 +13166,8 @@ function compressImage(e) {
         var ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0);
   
-        var MAX_WIDTH = 500;
-        var MAX_HEIGHT = 300;
+        var MAX_WIDTH = 600;
+        var MAX_HEIGHT = 400;
         var width = img.width;
         var height = img.height;
   

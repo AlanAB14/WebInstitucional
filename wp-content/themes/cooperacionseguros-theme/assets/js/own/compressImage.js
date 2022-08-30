@@ -17,8 +17,8 @@ function compressImage(e) {
         var ctx = canvas.getContext("2d");
         ctx.drawImage(img, 0, 0);
   
-        var MAX_WIDTH = 500;
-        var MAX_HEIGHT = 300;
+        var MAX_WIDTH = 600;
+        var MAX_HEIGHT = 400;
         var width = img.width;
         var height = img.height;
   
