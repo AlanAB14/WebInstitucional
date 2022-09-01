@@ -204,9 +204,7 @@ if (!isset($_POST['consulta'])) {
         $result = json_decode($data);
         if (isset($result->estadoReclamoTercero)) {
           $filtered = array(
-            //Oculto estado del reclamo al usuario
-
-            // 'Estado del reclamo' => $result->estadoReclamoTercero,
+            'Estado del reclamo' => $result->estadoReclamoTercero,
             'Tipo de reclamo' => $result->tipoSiniestro,
             'Reclamante' => $result->reclamante,
             'Fecha de ocurrencia' => date('d/m/Y', strtotime($result->fechaHoraSiniestro)),
