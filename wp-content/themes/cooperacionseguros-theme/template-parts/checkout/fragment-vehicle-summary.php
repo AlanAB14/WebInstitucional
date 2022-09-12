@@ -83,4 +83,4 @@
       </p>
     </form>
 
-    <?php get_template_part('/template-parts/checkout/block-terminos'); ?>
+    <?php get_template_part('template-parts/checkout/block-terminos'); ?>

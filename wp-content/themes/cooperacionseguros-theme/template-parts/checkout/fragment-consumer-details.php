@@ -244,9 +244,197 @@
 </form>
 
 <script>
-  $(function () {
-    <?php if (isset($_COOKIE['clientDNI']) && isset($_COOKIE['clientSex'])) {?>
-      validarIdentidad();
-    <?php } ?>
+  //$(function () {
+    //<?php if (isset($_COOKIE['clientDNI']) && isset($_COOKIE['clientSex'])) {?>
+      //validarIdentidad();
+    //<?php } ?>
+  //});
+  var tipoPersona = $("input[name='persona']:checked").val();
+  formPersona(tipoPersona);
+
+  $("input[name='persona']").on("click", function () {
+    tipoPersona = $(this).val();
+    formPersona(tipoPersona);
   });
+
+  function formPersona(tipoPersona) {
+    if (tipoPersona === undefined || tipoPersona == "fisica") {
+      $(".formPersonaJuridica").hide();
+      $(".formPersonaFisica").show();
+    } else if (tipoPersona == "juridica") {
+      $(".formPersonaJuridica").show();
+      $(".formPersonaFisica").hide();
+    }
+  }
+
+  function validarIdentidad() {
+    $("#error-no-verificado").addClass("d-none");
+
+    $(this)
+      .find("button.btn")
+      .prop("disabled", true)
+      .append(' <i class="fas fa-circle-notch fa-spin"></i>');
+
+    if (tipoPersona === undefined || tipoPersona == "fisica") {
+      let num_dni = $("#numeroDni").val();
+      let sexo;
+
+      if ($("#sexoMasculino").prop("checked")) {
+        sexo = "M";
+      } else if ($("#sexoFemenino").prop("checked")) {
+        sexo = "F";
+      }
+
+      $.ajax({
+        url: `${themePath}api/api.php?get=customer&num_dni=${num_dni}&sexo=${sexo}`,
+        context: document.body,
+        success: function (data) {
+          if (data.nroDocumento) {
+            // Disableamos inputs
+            $("#validarIdentidad input, #validarIdentidad button").attr({
+              disabled: "disabled",
+            });
+
+            let fechaNacimiento = new Date(data.fechaNacimiento);
+
+            // Cargamos data en el siguiente form
+            $("#customerNombre").val(data.nombre);
+            $("#customerApellido").val(data.apellido);
+            $("#num_dni_hidden").val(data.nroDocumento);
+            $("#sexo_hidden").val(sexo);
+            $("#customerFechaNacimientoDia").val(fechaNacimiento.getDate());
+            $("#customerFechaNacimientoMes").val(
+              fechaNacimiento.getMonth() + 1
+            );
+            $("#customerFechaNacimientoAno").val(fechaNacimiento.getFullYear());
+            $("#codcli").val(data.codcli);
+
+            // Si existe nacionalidad
+            if (data.idNacionalidad) {
+              $("#customerNacionalidad").val(data.idNacionalidad);
+            }
+
+            // Si existe estado civil
+            if (data.idEstadoCivil) {
+              $("#customerEstadoCivil").val(data.idEstadoCivil);
+            }
+
+            // Ocupación, sólo si existe
+            if (
+              $("#customerOcupacion option[value='" + data.idActividad + "']")
+                .length > 0
+            ) {
+              $("#customerOcupacion").val(data.idActividad);
+            }
+
+            // Teléfono, sólo si existe
+            if (data.telefono) {
+              $("#customerPhoneNumber").val(data.telefono);
+            }
+
+            // E-mail, sólo si no hay uno en la sesión
+            if (!$("#customerEmail").val()) {
+              $("#customerEmail").val(data.emailAOL);
+            }
+
+            // Buscamos el lugar de nacimiento a partir del ID
+            if (data.lugarNacimiento) {
+              $("#customerLugarNacimiento").val(data.lugarNacimiento);
+            }
+
+            $("#datos-solicitante .personaJuridica").each(function (i, e) {
+              $(this).find("input").prop("disabled", true);
+              $(this).hide();
+            });
+
+            // Mostramos el form
+            $("#datos-solicitante").removeClass("d-none");
+
+            // Enviamos lead intermedio por AJAX
+            $.post(themePath + "inc/ajax-lead.php", {
+              guid,
+              dni: num_dni,
+              genero: sexo,
+              instancia,
+            });
+
+            const eventData = {
+              'customerType': 'fisica',
+              'customerGender': sexo,
+              ...commonEvent,
+            };
+
+            if (purchasable) {
+              eventData['event'] = 'trackEcommerceCheckoutValidateCustomer';
+            } else {
+              eventData['event'] = 'trackCheckoutValidateCustomer';
+            }
+
+            pushDataLayer(eventData);
+
+            // Ocultamos el coso inicial
+            $("#validarIdentidad").slideUp();
+          } else {
+            // Si no se pudo verificar la identidad
+            $("#error-no-verificado").removeClass("d-none");
+
+            // Quitar la animación y rehabilitar el botón
+            $("#validarIdentidad")
+              .removeClass("validando")
+              .find("button.btn")
+              .prop("disabled", false)
+              .html("Verificar identidad");
+          }
+        },
+      }).done(function () {});
+    } else {
+      $("#datos-solicitante .personaFisica").each(function (i, e) {
+        $(this).find("input").prop("disabled", true);
+        $(this).hide();
+      });
+
+      $(this)
+        .find("button.btn")
+        .prop("disabled", true)
+        .append(' <i class="fas fa-circle-notch fa-spin"></i>');
+
+      // Mostramos el form
+      $("#datos-solicitante").removeClass("d-none");
+
+      // Sumamos el CUIT al form
+      let num_cuit = $("#numeroCUIT").val();
+      $("#num_cuit_hidden").val(num_cuit);
+
+      $.post(themePath + "inc/ajax-lead.php", {
+        guid,
+        dni: num_cuit,
+        genero: "",
+        instancia,
+      });
+
+      const eventData = {
+        'customerType': 'juridica',
+        ...commonEvent,
+      };
+
+      if (purchasable) {
+        eventData['event'] = 'trackEcommerceCheckoutValidateCustomer';
+      } else {
+        eventData['event'] = 'trackCheckoutValidateCustomer';
+      }
+
+      pushDataLayer(eventData);
+
+      $("#validarIdentidad").slideUp();
+    }
+  }
+
+  $("#validarIdentidad").on("submit", function (event) {
+    event.preventDefault();
+    validarIdentidad();
+  });
+
+        <?php if (isset($_COOKIE['clientDNI']) && isset($_COOKIE['clientSex'])) { ?>
+          validarIdentidad();
+        <?php } ?>
 </script>

@@ -17,6 +17,26 @@ require_once('api-cedula.php');
 require_once('api-quote.php');
 
 /**
+ * Simple helper to debug to the console
+ *
+ * @param $data object, array, string $data
+ * @param $context string  Optional a description.
+ *
+ * @return string
+ */
+function debug_to_console($data, $context = 'Debug in Console') {
+
+  // Buffering to solve problems frameworks, like header() in this and not a solid return.
+  ob_start();
+
+  $output  = 'console.info(\'' . $context . ':\');';
+  $output .= 'console.log(' . json_encode($data) . ');';
+  $output  = sprintf('<script>%s</script>', $output);
+
+  echo $output;
+}
+
+/**
  * Obtenemos un token para usar con el resto de las funciones
  */
 $token = encrypt_decrypt('decrypt', coopseg_get_local_token());
@@ -66,10 +86,12 @@ if (isset($_GET['get']) && ($_GET['get'] == 'places')) {
 
       $data = json_encode($result);
     }
+    
 
     header('Content-Type: application/json');
     echo $data;
   }
+  else{echo "no encontro resultados" . $data; }
 }
 
 /** Obtener ubicación de la base de datos */

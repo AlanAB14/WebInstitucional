@@ -107,7 +107,8 @@ WPMailSMTP.Admin.Settings = WPMailSMTP.Admin.Settings || ( function( document, w
 					type: 'POST',
 					data: {
 						action: 'wp_mail_smtp_ajax',
-						task: 'pro_banner_dismiss'
+						task: 'pro_banner_dismiss',
+						nonce: wp_mail_smtp.nonce
 					}
 				} )
 					.always( function() {
@@ -132,6 +133,7 @@ WPMailSMTP.Admin.Settings = WPMailSMTP.Admin.Settings || ( function( document, w
 					type: 'POST',
 					data: {
 						action: 'wp_mail_smtp_ajax',
+						nonce: wp_mail_smtp.nonce,
 						task: 'notice_dismiss',
 						notice: $notice.data( 'notice' ),
 						mailer: $notice.data( 'mailer' )
@@ -203,12 +205,12 @@ WPMailSMTP.Admin.Settings = WPMailSMTP.Admin.Settings || ( function( document, w
 
 				$buttonIcon
 					.removeClass( 'dashicons-admin-page' )
-					.addClass( 'dashicons-yes-alt wp-mail-smtp-success wp-mail-smtp-animate' );
+					.addClass( 'wp-mail-smtp-dashicons-yes-alt-green wp-mail-smtp-success wp-mail-smtp-animate' );
 
 				setTimeout(
 					function() {
 						$buttonIcon
-							.removeClass( 'dashicons-yes-alt wp-mail-smtp-success wp-mail-smtp-animate' )
+							.removeClass( 'wp-mail-smtp-dashicons-yes-alt-green wp-mail-smtp-success wp-mail-smtp-animate' )
 							.addClass( 'dashicons-admin-page' );
 					},
 					1000

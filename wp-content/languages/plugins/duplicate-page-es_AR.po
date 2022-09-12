@@ -15,7 +15,7 @@ msgstr ""
 msgid "All Editors"
 msgstr "Todos los editores"
 
-#: duplicatepage.php:215 duplicatepage.php:231 duplicatepage.php:255
+#: duplicatepage.php:245 duplicatepage.php:261 duplicatepage.php:285
 msgid "Duplicate this as "
 msgstr "Duplicar esto como "
 
@@ -31,7 +31,7 @@ msgstr "Editor clásico"
 msgid "Choose Editor"
 msgstr "Elegir el editor"
 
-#: duplicatepage.php:282
+#: duplicatepage.php:312
 msgid "Duplicate This as "
 msgstr "Duplicar esto como "
 
@@ -67,20 +67,20 @@ msgstr "Duplica entradas, páginas y tipos de contenido personalizado con un sol
 msgid "https://wordpress.org/plugins/duplicate-page/"
 msgstr "https://es-ar.wordpress.org/plugins/duplicate-page/"
 
-#: duplicatepage.php:215 duplicatepage.php:231 duplicatepage.php:254
+#: duplicatepage.php:245 duplicatepage.php:261 duplicatepage.php:284
 msgid "Duplicate This"
 msgstr "Duplicar esto"
 
 #. Plugin Name of the plugin
-#: duplicatepage.php:90 duplicatepage.php:312
+#: duplicatepage.php:91 duplicatepage.php:341
 msgid "Duplicate Page"
 msgstr "Duplicate Page"
 
-#: duplicatepage.php:77
+#: duplicatepage.php:78
 msgid "Donate"
 msgstr "Donar"
 
-#: duplicatepage.php:76
+#: duplicatepage.php:77
 msgid "Settings"
 msgstr "Ajustes"
 

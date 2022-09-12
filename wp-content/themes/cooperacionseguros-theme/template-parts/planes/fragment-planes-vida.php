@@ -31,7 +31,7 @@ if ((!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-vid
       echo '<section id="cobertura" class="seleccion-de-planes vida transaccional">';
 
       // Todo va contenido en un form, para enviar
-      echo '<form id="seleccion-de-planes-vida" action="/checkout" method="post">';
+      echo '<form id="seleccion-de-planes-vida" action="/wordpress/checkout" method="post">';
 
       /**
        * Versión desktop

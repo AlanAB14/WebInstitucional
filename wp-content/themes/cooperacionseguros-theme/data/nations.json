@@ -72,12 +72,6 @@
     "codigopais": "PE"
   },
   {
-    "id": "13",
-    "nacionalidad": "OTRO",
-    "pais": "OTRO",
-    "codigopais": "OT"
-  },
-  {
     "id": "14",
     "nacionalidad": "BRITÁNICO",
     "pais": "ANGUILA",
@@ -580,5 +574,23 @@
     "nacionalidad": "NO ENCONTRADO",
     "pais": "OSTRAVA",
     "codigopais": "OS"
+  },
+  {
+    "id": "108",
+    "nacionalidad": "COLOMBIANO",
+    "pais": "COLOMBIA",
+    "codigopais": "CO"
+  },
+  {
+    "id": "109",
+    "nacionalidad": "CUBANO",
+    "pais": "CUBA",
+    "codigopais": "CU"
+  },
+  {
+    "id": "110",
+    "nacionalidad": "CHINO",
+    "pais": "CHINA",
+    "codigopais": "CN"
   }
 ]

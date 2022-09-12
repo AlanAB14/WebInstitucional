@@ -35,7 +35,7 @@ define( 'AI1WM_DEBUG', false );
 // ==================
 // = Plugin Version =
 // ==================
-define( 'AI1WM_VERSION', '7.50' );
+define( 'AI1WM_VERSION', '7.61' );
 
 // ===============
 // = Plugin Name =
@@ -456,7 +456,8 @@ if ( ! defined( 'WP_CONTENT_DIR' ) ) {
 // ================
 // = Backups Path =
 // ================
-define( 'AI1WM_BACKUPS_PATH', WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'ai1wm-backups' );
+define( 'AI1WM_DEFAULT_BACKUPS_PATH', WP_CONTENT_DIR . DIRECTORY_SEPARATOR . 'ai1wm-backups' );
+define( 'AI1WM_BACKUPS_PATH', get_option( 'ai1wm_backups_path', AI1WM_DEFAULT_BACKUPS_PATH ) );
 
 // ==========================
 // = Storage index.php File =
@@ -477,6 +478,11 @@ define( 'AI1WM_BACKUPS_INDEX_PHP', AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . 'i
 // = Backups index.html File =
 // ===========================
 define( 'AI1WM_BACKUPS_INDEX_HTML', AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . 'index.html' );
+
+// ===========================
+// = Backups robots.txt File =
+// ===========================
+define( 'AI1WM_BACKUPS_ROBOTS_TXT', AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . 'robots.txt' );
 
 // ==========================
 // = Backups .htaccess File =

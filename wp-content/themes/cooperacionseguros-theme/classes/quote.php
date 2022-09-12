@@ -157,16 +157,12 @@ class Quote {
     if (empty($rates) || $rates == 'cURL Error #:28') return null;
     $plans = $rates->planes;
     $recommended = [];
+
     if ($product == 'seguro-de-autos-y-pick-ups') {
       if ((!isset($rates->planes->B1) && !isset($rates->planes->B2)) || (!isset($rates->planes->C1) && !isset($rates->planes->C2))) return null;
       $full = [];
 
       $AP = $rates->ap[0] ?? null;
-
-      // Plan Básico
-      if (isset($rates->planes->A)) {
-        $recommended['normal'] = 'A';
-      }
 
       if (isset($rates->planes->B2)) {
         $recommended['basic'] = 'B2';
@@ -177,7 +173,7 @@ class Quote {
       // Plan Superior
       if ((date('Y') - $year) <= 10) {
         $recommended['medium'] = 'C2';
-      } else if ((date('Y') - $year) < 14) {
+      } else if ((date('Y') - $year) <= 14) {
         $recommended['medium'] = 'C3';
       } else {
         $recommended['medium'] = 'C1';

@@ -2,13 +2,13 @@
 /**
  * The base configuration for WordPress
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * and fill in the values.
  *
  * This file contains the following configurations:
  *
- * * MySQL settings
+ * * Database settings
  * * Secret keys
  * * Database table prefix
  * * ABSPATH
@@ -18,47 +18,52 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+// ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'cooperacion_local' );
+define( 'DB_NAME', 'wordpress' );
 
-/** MySQL database username */
+/** Database username */
 define( 'DB_USER', 'root' );
 
-/** MySQL database password */
+/** Database password */
 define( 'DB_PASSWORD', '' );
 
-/** MySQL hostname */
+/** Database hostname */
 define( 'DB_HOST', 'localhost' );
 
-/** Database Charset to use in creating database tables. */
+/** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
 
-/** The Database Collate type. Don't change this if in doubt. */
+/** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+define( 'WP_HOME', 'http://localhost/wordpress/' );
+define( 'WP_SITEURL', 'http://localhost/wordpress/' );
+
 /**#@+
- * Authentication Unique Keys and Salts.
+ * Authentication unique keys and salts.
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ * Change these to different unique phrases! You can generate these using
+ * the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}.
+ *
+ * You can change these at any point in time to invalidate all existing cookies.
+ * This will force all users to have to log in again.
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         '9-1q 6DLP,Y{,!X|}{}Ha30f0%c?4r52IJBodIrAlA4CP_LT6e Os_  D}0O]CeZ' );
-define( 'SECURE_AUTH_KEY',  '5_<L9qUY<iVqbARZc;)Rx;FhWXfo#)v}IA[#O;QeYhZjOpWU/aG; iPjoOhq`D{0' );
-define( 'LOGGED_IN_KEY',    'i>Tk)8O$g<Ke$!-tQbvIp91,]C?U9%3aJz+leV6J@ -uwd!.:% {11s_s1I4xv7S' );
-define( 'NONCE_KEY',        'e;fX!b( upFF,k{$J8F1%K#W>BB}::2>s@RoE=}axz4-vxZ!?6iLckV`lZ&F|j=y' );
-define( 'AUTH_SALT',        'V+1VwQg9&!teR9_G/:|MKd$Vi/j.v0_hXphPj&C`!5 T*jjm]]M~s,@P>BIF&Q(u' );
-define( 'SECURE_AUTH_SALT', ' <9$*SF?n#)4^=I!>9XhD79EQb&MdK(XMriVmW>+.&)Tko|[fHR(MY.2y]jLU$:n' );
-define( 'LOGGED_IN_SALT',   '*V]|[;Lx+BgyQl`?*nqM_io}`cr)n@P)]$25Ii))Y>k9LO^3DH$y=*!gT/V? <fN' );
-define( 'NONCE_SALT',       'e_9(~1e2Jq(|BWk(Y*b4 EbL}6vAuIf7Rxz+2:)8b@b/}[8a.{g Q5;=G+baZMb{' );
+define( 'AUTH_KEY',         '4j.KC*8dfvsDN$[` w<4G%I&3S0,t:ubka0.D+NO%jf9{:>nx&r^u$(NZ_j?5uOj' );
+define( 'SECURE_AUTH_KEY',  'Y #5,<I<ku{s9plUHf+/.56K* 5AP:ZA1_[Qnsrxe^NJdNrmJ$ChZo>NykW(AT=F' );
+define( 'LOGGED_IN_KEY',    'wR2(yW*|/(0EdPx_/bNbCcrF,Jp}+}L?EZxp,s0-*/`?K,j91k(`ajM_G?SpB~mv' );
+define( 'NONCE_KEY',        'w&@M^C2OkNq(}q=ms:-&7NmMlI-tb{RFh+Ye[vz|x(90@i%#&,Y]_R4%YCZA_(G{' );
+define( 'AUTH_SALT',        '?W=k^dS^Q$Ng;I{gd5RdYhw*UG#vU%3K{/Ni8;{_Jc))z5D@wGZ!L3!_8Nm& =w(' );
+define( 'SECURE_AUTH_SALT', 'EFw{:F*H#sx.IZg<BXzZv@{m(%PS/h<tJ(MxWpZ$V@t z_gVn#b*+`+{ds #>ls,' );
+define( 'LOGGED_IN_SALT',   'E1v?gPMQIWGFVeBYwe<cW.NqAl;[>-0:N,8%]J|<ZX5rS5jh!JU8rF2f7B7^O{$t' );
+define( 'NONCE_SALT',       '+9nWo{@P|5n23Nk^l=*I%kl,-{LFeky<WB<5ti|XlNeChQSGyl.KA$r550=90^,~' );
 
 /**#@-*/
 
 /**
- * WordPress Database Table prefix.
+ * WordPress database table prefix.
  *
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
@@ -77,9 +82,16 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+
 
 /* That's all, stop editing! Happy publishing. */
+
+
+
 /** Constantes relevantes al web-service de Cooperación Seguros */
 define('COOPSEG_CONFIG_GRANT_TYPE', 'client_credentials');
 define('COOPSEG_CONFIG_CLIENT_ID', 'WEBINSTITUCIONAL');
@@ -119,7 +131,7 @@ define('COOPSEG_SUGGEST_PRODUCERS_URL', 'https://wstest.cooperacionseguros.com.a
 /** Quotes */
 define('COOPSEG_QUOTE_DIR', 'quotes');
 define('COOPSEG_QUOTE_IMAGES_DIR', '/uploads');
-define('COOPSEG_QUOTE_IMAGES_URL', '/cooperacion_local/wp-content/themes/cooperacionseguros-theme/uploads/');
+define('COOPSEG_QUOTE_IMAGES_URL', '/wp-content/themes/cooperacionseguros-theme/uploads/');
 
 /** Socios */
 define('COOPSEG_CUSTOMER_URL', 'https://wstest.cooperacionseguros.com.ar/cmpServicesTest/api/Clientes/ObtenerSocioPorDNISexo');
@@ -148,16 +160,25 @@ define('COOPSEG_RECLAMOS_AGREGAR', 'https://wstest.cooperacionseguros.com.ar/cmp
 define('COOPSEG_RECLAMOS_INSPECCION', 'https://wstest.cooperacionseguros.com.ar/cmpServicesTest/api/Inspecciones/ReclamoTercero');
 define('COOPSEG_RECLAMOS_DIR', 'reclamos');
 
+
+
 /** All-In-One WP Migration */
 
+@ini_set( 'upload_max_filesize' , '128M' );
+@ini_set( 'post_max_size', '128M');
+@ini_set( 'memory_limit', '256M' );
+@ini_set( 'max_execution_time', '300' );
+@ini_set( 'max_input_time', '300' );
+
+/* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/' );
+               define('ABSPATH', dirname( __FILE__ ) . '/');
 }
 
 /** Sets up WordPress vars and included files. */
-require_once ABSPATH . 'wp-settings.php';
+require_once( ABSPATH . 'wp-settings.php' );
 
+/** tabla para loguear accesos al mapa de productores */
 define('COOPSEG_PRODUCERS_DB_LOGGER', 'coopseg_map_logger');
-

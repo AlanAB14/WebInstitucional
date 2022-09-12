@@ -10,7 +10,7 @@ require_once get_template_directory() . '/api/api.php';
     <p>Completá todos los pasos del siguiente formulario para <strong>agregar un reclamo nuevo</strong>. Si tenés alguna duda, podés consultar <a href="/ayuda/">nuestra sección de ayuda</a>.</p>
   </header>
 
-  <form class="form" enctype="multipart/form-data" id="reclamos-de-terceros-form" method="post" onsubmit="procesarDatos(event);">
+  <form class="form" enctype="multipart/form-data" id="reclamos-de-terceros-form" method="post" action="/reclamos-de-terceros/?accion=procesar">
     <input type="hidden" name="guid" value="<?php echo GUID(); ?>" />
     <?php
     /**
@@ -799,7 +799,7 @@ require_once get_template_directory() . '/api/api.php';
         <fieldset>
           <legend>Estos son los documentos necesarios para presentar la denuncia:</legend>
 
-          <p class="note"><span>El formato de los archivos adjuntos puede ser: JPEG / JPG / JFIF / BMP / PNG / PDF / DOC / XLS, con un tamaño máximo de 5 MB</span></p>
+          <p class="note"><span>El formato de los archivos adjuntos puede ser: JPEG / JPG / JFIF / BMP / PNG / PDF / DOC / XLS, con un tamaño máximo de 3 MB</span></p>
 
           <div id="documentos"></div>
 
@@ -847,7 +847,7 @@ require_once get_template_directory() . '/api/api.php';
     </div>
 
     <?php
-    //require_once __DIR__ . '/../inc/ajax-terceros.php';
+      //require_once __DIR__ . '/../inc/ajax-terceros.php';
     ?>
 
   </form>

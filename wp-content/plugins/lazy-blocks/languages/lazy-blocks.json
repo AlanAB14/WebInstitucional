@@ -98,6 +98,18 @@
          "Template": [
             ""
          ],
+         "Post Types": [
+            ""
+         ],
+         "Template Lock": [
+            ""
+         ],
+         "All": [
+            ""
+         ],
+         "Insert": [
+            ""
+         ],
          "Export / Import": [
             ""
          ],
@@ -121,7 +133,7 @@
             "",
             "Imported %s templates"
          ],
-         "Template for post type '%s' already exists.": [
+         "Template for these post types '%s' already exists.": [
             ""
          ],
          "Added new block '%s'.": [
@@ -211,6 +223,12 @@
          "Icon Picker": [
             ""
          ],
+         "Error: Could not generate the preview.": [
+            ""
+         ],
+         "Preview": [
+            ""
+         ],
          "Show in posts": [
             ""
          ],
@@ -238,13 +256,13 @@
          "Add Control": [
             ""
          ],
-         "Inspector": [
+         "Content Controls": [
+            ""
+         ],
+         "Inspector Controls": [
             ""
          ],
          "Hidden": [
-            ""
-         ],
-         "Title": [
             ""
          ],
          "Slug": [
@@ -296,6 +314,9 @@
             ""
          ],
          "Placement": [
+            ""
+         ],
+         "Inspector": [
             ""
          ],
          "Required": [
@@ -409,22 +430,16 @@
          "Write custom CSS on each inserted blocks.": [
             ""
          ],
+         "Block Name": [
+            ""
+         ],
          "Supports": [
             ""
          ],
          "Condition": [
             ""
          ],
-         "Controls": [
-            ""
-         ],
-         "Code": [
-            ""
-         ],
          "Blocks Constructor": [
-            ""
-         ],
-         "Undefined Block": [
             ""
          ],
          "None": [
@@ -436,22 +451,7 @@
          "Prevent inserting new blocks, but allows moving existing ones": [
             ""
          ],
-         "Select post type:": [
-            ""
-         ],
-         "Block Name": [
-            ""
-         ],
-         "+ Add Block": [
-            ""
-         ],
-         "Template Lock": [
-            ""
-         ],
-         "Save Template": [
-            ""
-         ],
-         "Do you really want to remove template for \"%s\"?": [
+         "Template Settings": [
             ""
          ],
          "Select all": [
@@ -526,6 +526,18 @@
          "Will be added option that allow you to set semi-transparent colors with rgba": [
             ""
          ],
+         "Output Format": [
+            ""
+         ],
+         "Allows you to change attribute output format": [
+            ""
+         ],
+         "Color": [
+            ""
+         ],
+         "Array (Color + Slug)": [
+            ""
+         ],
          "Select Date": [
             ""
          ],
@@ -593,12 +605,6 @@
             ""
          ],
          "Allows you to reset selected option value to null": [
-            ""
-         ],
-         "Output Format": [
-            ""
-         ],
-         "Allows you to change attribute output format": [
             ""
          ],
          "Value": [

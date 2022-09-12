@@ -6,11 +6,17 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /cooperacion_local/
+RewriteBase /wordpress/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /cooperacion_local/index.php [L]
+RewriteRule . /wordpress/index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+   <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js)$">
+       Header set Access-Control-Allow-Origin "*"
+   </FilesMatch>
 </IfModule>
 
 # END WordPress

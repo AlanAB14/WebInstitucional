@@ -14,8 +14,8 @@
  */
 namespace WPMailSMTP\Vendor\phpseclib3\Math\BigInteger\Engines\BCMath\Reductions;
 
-use WPMailSMTP\Vendor\phpseclib3\Math\BigInteger\Engines\BCMath\Base;
 use WPMailSMTP\Vendor\phpseclib3\Math\BigInteger\Engines\BCMath;
+use WPMailSMTP\Vendor\phpseclib3\Math\BigInteger\Engines\BCMath\Base;
 /**
  * PHP Barrett Modular Exponentiation Engine
  *
@@ -55,10 +55,6 @@ abstract class EvalBarrett extends \WPMailSMTP\Vendor\phpseclib3\Math\BigInteger
      */
     protected static function generateCustomReduction(\WPMailSMTP\Vendor\phpseclib3\Math\BigInteger\Engines\BCMath $m, $class)
     {
-        if (isset($n->reduce)) {
-            self::$custom_reduction = $n->reduce;
-            return $n->reduce;
-        }
         $m_length = \strlen($m);
         if ($m_length < 5) {
             $code = 'return bcmod($x, $n);';
@@ -73,7 +69,7 @@ abstract class EvalBarrett extends \WPMailSMTP\Vendor\phpseclib3\Math\BigInteger
         $m = "'{$m}'";
         $u = "'{$u}'";
         $m1 = "'{$m1}'";
-        $code .= '
+        $code = '
             $lsd = substr($n, -' . $cutoff . ');
             $msd = substr($n, 0, -' . $cutoff . ');
 

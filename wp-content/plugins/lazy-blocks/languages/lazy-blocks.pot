@@ -1,23 +1,23 @@
-# Copyright (C) 2021 nK
+# Copyright (C) 2022 nK
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Lazy Blocks 2.3.1\n"
+"Project-Id-Version: Lazy Blocks 2.5.3\n"
 "Report-Msgid-Bugs-To: https://github.com/nk-o/lazyblocks/issues\n"
 "Last-Translator: nK\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-03-19T09:05:28+00:00\n"
+"POT-Creation-Date: 2022-01-08T20:00:26+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: lazy-blocks\n"
 
 #. Plugin Name of the plugin
 #: classes/class-admin.php:211
 #: classes/class-blocks.php:312
-#: classes/class-blocks.php:1031
+#: classes/class-blocks.php:1074
 msgid "Lazy Blocks"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgid "Duplicate “%1$s”"
 msgstr ""
 
 #: classes/class-blocks.php:453
-#: assets/admin/constructor/blocks/controls/control.js:136
+#: assets/admin/constructor/blocks/controls/control.js:140
 msgid "Duplicate"
 msgstr ""
 
@@ -79,18 +79,17 @@ msgid "Export"
 msgstr ""
 
 #: classes/class-blocks.php:520
-#: assets/admin/constructor/blocks/general/index.js:132
+#: assets/admin/constructor/blocks/general/index.js:91
 msgid "Icon"
 msgstr ""
 
 #: classes/class-blocks.php:522
-#: assets/admin/constructor/blocks/general/index.js:139
-#: assets/admin/templates/templates.js:555
+#: assets/admin/constructor/blocks/general/index.js:98
 msgid "Category"
 msgstr ""
 
 #: classes/class-blocks.php:523
-#: assets/admin/constructor/blocks/general/index.js:194
+#: assets/admin/constructor/blocks/general/index.js:153
 msgid "Description"
 msgstr ""
 
@@ -99,7 +98,6 @@ msgid "Basic"
 msgstr ""
 
 #: classes/class-controls.php:42
-#: assets/admin/constructor/blocks/controls/index.js:184
 #: assets/admin/constructor/blocks/selected-control-settings/settings-rows/placement.js:66
 msgid "Content"
 msgstr ""
@@ -124,40 +122,56 @@ msgstr ""
 msgid "Example block that helps you to get started with Lazy Blocks plugin"
 msgstr ""
 
-#: classes/class-rest.php:106
+#: classes/class-rest.php:129
 msgid "Sorry, you are not allowed to read Gutenberg blocks of this post."
 msgstr ""
 
-#: classes/class-rest.php:110
+#: classes/class-rest.php:133
 msgid "Sorry, you are not allowed to read Gutenberg blocks as this user."
 msgstr ""
 
-#: classes/class-rest.php:131
+#: classes/class-rest.php:154
 msgid "Sorry, you are not allowed to read Gutenberg blocks data."
 msgstr ""
 
-#: classes/class-rest.php:135
 #: classes/class-rest.php:158
+#: classes/class-rest.php:181
 msgid "Sorry, you are not allowed to read Gutenberg blocks data as this user."
 msgstr ""
 
-#: classes/class-rest.php:200
+#: classes/class-rest.php:233
 msgid "Invalid block."
 msgstr ""
 
-#: classes/class-rest.php:208
+#: classes/class-rest.php:241
+#: classes/class-rest.php:357
 msgid "Render callback is not specified."
 msgstr ""
 
-#: classes/class-templates.php:150
-#: classes/class-templates.php:151
-#: classes/class-templates.php:166
-#: classes/class-templates.php:213
+#: classes/class-templates.php:155
 msgid "Templates"
 msgstr ""
 
-#: classes/class-templates.php:167
+#: classes/class-templates.php:156
 msgid "Template"
+msgstr ""
+
+#: classes/class-templates.php:298
+#: assets/admin/templates/index.js:198
+msgid "Post Types"
+msgstr ""
+
+#: classes/class-templates.php:299
+#: assets/admin/templates/index.js:209
+msgid "Template Lock"
+msgstr ""
+
+#: classes/class-templates.php:330
+msgid "All"
+msgstr ""
+
+#: classes/class-templates.php:332
+msgid "Insert"
 msgstr ""
 
 #: classes/class-tools.php:48
@@ -170,39 +184,39 @@ msgstr ""
 msgid "No file selected"
 msgstr ""
 
-#: classes/class-tools.php:234
+#: classes/class-tools.php:235
 msgid "Error uploading file. Please try again"
 msgstr ""
 
-#: classes/class-tools.php:239
+#: classes/class-tools.php:241
 msgid "Incorrect file type"
 msgstr ""
 
-#: classes/class-tools.php:249
+#: classes/class-tools.php:252
 msgid "Import file empty"
 msgstr ""
 
 #. translators: %s - number of blocks.
-#: classes/class-tools.php:285
+#: classes/class-tools.php:291
 msgid "Imported %s block"
 msgid_plural "Imported %s blocks"
 msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s - number of templates.
-#: classes/class-tools.php:305
+#: classes/class-tools.php:311
 msgid "Imported %s template"
 msgid_plural "Imported %s templates"
 msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s - post type.
-#: classes/class-tools.php:455
-msgid "Template for post type '%s' already exists."
+#: classes/class-tools.php:461
+msgid "Template for these post types '%s' already exists."
 msgstr ""
 
 #. translators: %s - post title.
-#: classes/class-tools.php:501
+#: classes/class-tools.php:507
 msgid "Added new block '%s'."
 msgstr ""
 
@@ -218,7 +232,7 @@ msgstr ""
 msgid "Code Editor"
 msgstr ""
 
-#: controls/color/index.php:23
+#: controls/color/index.php:30
 msgid "Color Picker"
 msgstr ""
 
@@ -321,6 +335,15 @@ msgstr ""
 msgid "Icon Picker"
 msgstr ""
 
+#: assets/admin/constructor/blocks/code-preview/index.js:160
+#: assets/admin/constructor/blocks/code-preview/preview-error-boundary.js:25
+msgid "Error: Could not generate the preview."
+msgstr ""
+
+#: assets/admin/constructor/blocks/code-preview/index.js:169
+msgid "Preview"
+msgstr ""
+
 #: assets/admin/constructor/blocks/condition/index.js:53
 msgid "Show in posts"
 msgstr ""
@@ -341,55 +364,51 @@ msgstr ""
 msgid "(copy)"
 msgstr ""
 
-#: assets/admin/constructor/blocks/controls/control.js:147
+#: assets/admin/constructor/blocks/controls/control.js:151
 msgid "Do you really want to remove control?"
 msgstr ""
 
-#: assets/admin/constructor/blocks/controls/control.js:152
-#: assets/admin/templates/templates.js:584
-#: assets/admin/templates/templates.js:662
+#: assets/admin/constructor/blocks/controls/control.js:161
 msgid "Remove"
 msgstr ""
 
-#: assets/admin/constructor/blocks/controls/index.js:153
+#: assets/admin/constructor/blocks/controls/index.js:157
 msgid "Add Child Control"
 msgstr ""
 
-#: assets/admin/constructor/blocks/controls/index.js:153
+#: assets/admin/constructor/blocks/controls/index.js:157
 msgid "Add Control"
 msgstr ""
 
-#: assets/admin/constructor/blocks/controls/index.js:188
-#: assets/admin/constructor/blocks/selected-control-settings/settings-rows/placement.js:89
-msgid "Inspector"
+#: assets/admin/constructor/blocks/controls/index.js:194
+msgid "Content Controls"
 msgstr ""
 
 #: assets/admin/constructor/blocks/controls/index.js:206
+msgid "Inspector Controls"
+msgstr ""
+
+#: assets/admin/constructor/blocks/controls/index.js:226
 msgid "Hidden"
 msgstr ""
 
-#: assets/admin/constructor/blocks/general/index.js:108
-msgid "Title"
-msgstr ""
-
-#: assets/admin/constructor/blocks/general/index.js:116
-#: assets/admin/templates/templates.js:554
+#: assets/admin/constructor/blocks/general/index.js:75
 msgid "Slug"
 msgstr ""
 
-#: assets/admin/constructor/blocks/general/index.js:126
+#: assets/admin/constructor/blocks/general/index.js:85
 msgid "Block slug must include only lowercase alphanumeric characters or dashes, and start with a letter. Example: lazyblock/my-custom-block"
 msgstr ""
 
-#: assets/admin/constructor/blocks/general/index.js:143
+#: assets/admin/constructor/blocks/general/index.js:102
 msgid "Select category"
 msgstr ""
 
-#: assets/admin/constructor/blocks/general/index.js:152
+#: assets/admin/constructor/blocks/general/index.js:111
 msgid "Keywords"
 msgstr ""
 
-#: assets/admin/constructor/blocks/general/index.js:157
+#: assets/admin/constructor/blocks/general/index.js:116
 msgid "Enter up to 3 keywords"
 msgstr ""
 
@@ -397,11 +416,11 @@ msgstr ""
 msgid "Select control to see settings."
 msgstr ""
 
-#: assets/admin/constructor/blocks/selected-control-settings/settings-rows/default.js:20
+#: assets/admin/constructor/blocks/selected-control-settings/settings-rows/default.js:33
 msgid "Default value"
 msgstr ""
 
-#: assets/admin/constructor/blocks/selected-control-settings/settings-rows/default.js:21
+#: assets/admin/constructor/blocks/selected-control-settings/settings-rows/default.js:34
 msgid "Appears when inserting a new block"
 msgstr ""
 
@@ -421,18 +440,18 @@ msgstr ""
 #: assets/admin/constructor/blocks/selected-control-settings/settings-rows/required.js:24
 #: assets/admin/constructor/blocks/selected-control-settings/settings-rows/save-in-meta.js:39
 #: controls/checkbox/script.js:54
-#: controls/color/script.js:44
+#: controls/color/script.js:50
 #: controls/radio/script.js:62
 #: controls/repeater/script.js:236
 #: controls/select/script.js:82
 #: controls/select/script.js:94
-#: controls/toggle/script.js:55
+#: controls/toggle/script.js:54
 msgid "Yes"
 msgstr ""
 
 #: assets/admin/constructor/blocks/selected-control-settings/settings-rows/label.js:61
 #: controls/radio/script.js:79
-#: controls/select/component-choices.js:21
+#: controls/select/component-choices.js:28
 #: controls/select/script.js:111
 msgid "Label"
 msgstr ""
@@ -451,6 +470,10 @@ msgstr ""
 
 #: assets/admin/constructor/blocks/selected-control-settings/settings-rows/placement.js:41
 msgid "Placement"
+msgstr ""
+
+#: assets/admin/constructor/blocks/selected-control-settings/settings-rows/placement.js:89
+msgid "Inspector"
 msgstr ""
 
 #: assets/admin/constructor/blocks/selected-control-settings/settings-rows/required.js:21
@@ -602,64 +625,36 @@ msgstr ""
 msgid "Write custom CSS on each inserted blocks."
 msgstr ""
 
-#: assets/admin/constructor/index.js:93
-msgid "Supports"
-msgstr ""
-
-#: assets/admin/constructor/index.js:99
-msgid "Condition"
-msgstr ""
-
-#: assets/admin/constructor/index.js:111
-msgid "Controls"
-msgstr ""
-
-#: assets/admin/constructor/index.js:116
-msgid "Code"
-msgstr ""
-
-#: assets/admin/constructor/index.js:145
-msgid "Blocks Constructor"
-msgstr ""
-
-#: assets/admin/templates/templates.js:128
-msgid "Undefined Block"
-msgstr ""
-
-#: assets/admin/templates/templates.js:487
-msgid "None"
-msgstr ""
-
-#: assets/admin/templates/templates.js:490
-msgid "Prevent all operations"
-msgstr ""
-
-#: assets/admin/templates/templates.js:493
-msgid "Prevent inserting new blocks, but allows moving existing ones"
-msgstr ""
-
-#: assets/admin/templates/templates.js:503
-msgid "Select post type:"
-msgstr ""
-
-#: assets/admin/templates/templates.js:553
+#: assets/admin/constructor/blocks/title/index.js:67
 msgid "Block Name"
 msgstr ""
 
-#: assets/admin/templates/templates.js:597
-msgid "+ Add Block"
+#: assets/admin/constructor/index.js:107
+msgid "Supports"
 msgstr ""
 
-#: assets/admin/templates/templates.js:614
-msgid "Template Lock"
+#: assets/admin/constructor/index.js:113
+msgid "Condition"
 msgstr ""
 
-#: assets/admin/templates/templates.js:647
-msgid "Save Template"
+#: assets/admin/constructor/index.js:171
+msgid "Blocks Constructor"
 msgstr ""
 
-#: assets/admin/templates/templates.js:657
-msgid "Do you really want to remove template for \"%s\"?"
+#: assets/admin/templates/index.js:146
+msgid "None"
+msgstr ""
+
+#: assets/admin/templates/index.js:149
+msgid "Prevent all operations"
+msgstr ""
+
+#: assets/admin/templates/index.js:152
+msgid "Prevent inserting new blocks, but allows moving existing ones"
+msgstr ""
+
+#: assets/admin/templates/index.js:193
+msgid "Template Settings"
 msgstr ""
 
 #: assets/admin/tools/tools.js:125
@@ -713,7 +708,7 @@ msgid "Edit Block"
 msgstr ""
 
 #: controls/checkbox/script.js:43
-#: controls/toggle/script.js:44
+#: controls/toggle/script.js:43
 msgid "Alongside Text"
 msgstr ""
 
@@ -722,7 +717,7 @@ msgid "Displays text alongside the checkbox"
 msgstr ""
 
 #: controls/checkbox/script.js:51
-#: controls/toggle/script.js:52
+#: controls/toggle/script.js:51
 msgid "Checked"
 msgstr ""
 
@@ -755,12 +750,32 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: controls/color/script.js:40
+#: controls/color/script.js:46
 msgid "Alpha Channel"
 msgstr ""
 
-#: controls/color/script.js:41
+#: controls/color/script.js:47
 msgid "Will be added option that allow you to set semi-transparent colors with rgba"
+msgstr ""
+
+#: controls/color/script.js:58
+#: controls/radio/script.js:70
+#: controls/select/script.js:102
+msgid "Output Format"
+msgstr ""
+
+#: controls/color/script.js:59
+#: controls/radio/script.js:71
+#: controls/select/script.js:103
+msgid "Allows you to change attribute output format"
+msgstr ""
+
+#: controls/color/script.js:64
+msgid "Color"
+msgstr ""
+
+#: controls/color/script.js:67
+msgid "Array (Color + Slug)"
 msgstr ""
 
 #: controls/date_time/script.js:55
@@ -775,11 +790,11 @@ msgstr ""
 msgid "Select Time"
 msgstr ""
 
-#: controls/date_time/script.js:184
+#: controls/date_time/script.js:185
 msgid "Date"
 msgstr ""
 
-#: controls/date_time/script.js:206
+#: controls/date_time/script.js:207
 msgid "Time"
 msgstr ""
 
@@ -805,11 +820,11 @@ msgstr ""
 msgid "Maximum number of characters allowed. Leave blank to no limit."
 msgstr ""
 
-#: controls/file/file-control.js:85
+#: controls/file/file-control.js:86
 msgid "file"
 msgstr ""
 
-#: controls/file/file-control.js:134
+#: controls/file/file-control.js:137
 msgid "Remove File"
 msgstr ""
 
@@ -821,11 +836,11 @@ msgstr ""
 msgid "If nothing selected, all file types will be allowed to use."
 msgstr ""
 
-#: controls/gallery/gallery-control.js:71
+#: controls/gallery/gallery-control.js:68
 msgid "images"
 msgstr ""
 
-#: controls/gallery/gallery-control.js:123
+#: controls/gallery/gallery-control.js:120
 msgid "Edit Gallery"
 msgstr ""
 
@@ -839,11 +854,11 @@ msgstr ""
 msgid "Medium"
 msgstr ""
 
-#: controls/image/image-control.js:70
+#: controls/image/image-control.js:67
 msgid "image"
 msgstr ""
 
-#: controls/image/image-control.js:110
+#: controls/image/image-control.js:107
 msgid "Remove Image"
 msgstr ""
 
@@ -872,18 +887,8 @@ msgstr ""
 msgid "Allows you to reset selected option value to null"
 msgstr ""
 
-#: controls/radio/script.js:70
-#: controls/select/script.js:102
-msgid "Output Format"
-msgstr ""
-
-#: controls/radio/script.js:71
-#: controls/select/script.js:103
-msgid "Allows you to change attribute output format"
-msgstr ""
-
 #: controls/radio/script.js:76
-#: controls/select/component-choices.js:26
+#: controls/select/component-choices.js:33
 #: controls/select/script.js:108
 msgid "Value"
 msgstr ""
@@ -893,17 +898,17 @@ msgstr ""
 msgid "Both (Array)"
 msgstr ""
 
-#: controls/repeater/repeater-control.js:108
+#: controls/repeater/repeater-control.js:110
 #: controls/repeater/script.js:197
 msgid "Row {{#}}"
 msgstr ""
 
-#: controls/repeater/repeater-control.js:202
+#: controls/repeater/repeater-control.js:204
 #: controls/repeater/script.js:206
 msgid "+ Add Row"
 msgstr ""
 
-#: controls/repeater/repeater-control.js:205
+#: controls/repeater/repeater-control.js:207
 msgid "Toggle all rows"
 msgstr ""
 
@@ -947,11 +952,11 @@ msgstr ""
 msgid "Multiline"
 msgstr ""
 
-#: controls/select/component-choices.js:154
+#: controls/select/component-choices.js:165
 msgid "Choices"
 msgstr ""
 
-#: controls/select/component-choices.js:180
+#: controls/select/component-choices.js:191
 msgid "+ Add Choice"
 msgstr ""
 
@@ -963,7 +968,7 @@ msgstr ""
 msgid "Allows you to select multiple values"
 msgstr ""
 
-#: controls/toggle/script.js:45
+#: controls/toggle/script.js:44
 msgid "Displays text alongside the toggle"
 msgstr ""
 

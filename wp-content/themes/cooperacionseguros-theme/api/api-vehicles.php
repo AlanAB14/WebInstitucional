@@ -5,7 +5,7 @@
  */
 
 // Incluir Wordpress para acceder a sus funciones y variables
-require_once(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/cooperacion_local/wp-load.php');
+require_once(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/wordpress/wp-load.php');
 
 // Mostrar todos los errores
 error_reporting(E_ALL);
@@ -32,6 +32,7 @@ function coopseg_vehicles_get_brands($token, $category = 1)
   $params = array('categoria' => $category);
   $result = coopseg_curl($token, COOPSEG_VEHICLES_BRANDS_URL, 'GET', $params);
 
+  
   // Ordenamos alfabeticamente la respuesta antes de devolverla
   usort($result, "cmp");
 

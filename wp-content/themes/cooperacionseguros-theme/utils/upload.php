@@ -1,6 +1,6 @@
 <?php
 
-require_once rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/cooperacion_local/wp-load.php';
+require_once rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/wordpress/wp-load.php';
 require_once get_template_directory() . '/functions.php';
 require_once get_template_directory() . '/api/api.php';
 

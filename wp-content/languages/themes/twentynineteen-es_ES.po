@@ -172,17 +172,15 @@ msgid "Featured"
 msgstr "Destacada"
 
 #. translators: %s: WordPress version.
-#. translators: %s: WordPress version.
-#. translators: %s: WordPress version.
 #: inc/back-compat.php:43 inc/back-compat.php:60 inc/back-compat.php:83
 msgid "Twenty Nineteen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again."
 msgstr "Twenty Nineteen necesita, al menos, la versión 4.7 de WordPress. Estás ejecutando la versión %s. Por favor, actualiza e inténtalo de nuevo."
 
-#: inc/template-functions.php:143
+#: inc/template-functions.php:144
 msgid "Back"
 msgstr "Volver"
 
-#: inc/template-functions.php:136
+#: inc/template-functions.php:137
 msgid "More"
 msgstr "Más"
 
@@ -299,7 +297,6 @@ msgstr "Menú superior"
 
 #. translators: %s: Post title.
 #. translators: %s: Post title. Only visible to screen readers.
-#. translators: %s: Post title. Only visible to screen readers.
 #: functions.php:225 template-parts/content/content-single.php:27
 #: template-parts/content/content.php:36
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
@@ -348,11 +345,11 @@ msgstr "Entrada siguiente"
 msgid "Search results for: "
 msgstr "Resultados de la búsqueda de: "
 
-#: inc/template-tags.php:234
+#: inc/template-tags.php:233
 msgid "Older posts"
 msgstr "Entradas anteriores"
 
-#: inc/template-tags.php:230
+#: inc/template-tags.php:229
 msgid "Newer posts"
 msgstr "Entradas siguientes"
 
@@ -364,7 +361,6 @@ msgstr "Etiquetas:"
 msgid "Posted in"
 msgstr "Publicado en"
 
-#. translators: Used between list items, there is a space after the comma.
 #. translators: Used between list items, there is a space after the comma.
 #: inc/template-tags.php:86 inc/template-tags.php:98
 msgid ", "
@@ -426,8 +422,6 @@ msgstr "Archivos de la etiqueta: "
 msgid "Category Archives: "
 msgstr "Archivos de la categoría: "
 
-#. translators: %s: Post title. Only visible to screen readers.
-#. translators: %s: Post title. Only visible to screen readers.
 #. translators: %s: Post title. Only visible to screen readers.
 #: inc/template-tags.php:120 template-parts/content/content-page.php:41
 #: template-parts/header/entry-header.php:32

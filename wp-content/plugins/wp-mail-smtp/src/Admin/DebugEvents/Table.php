@@ -2,7 +2,7 @@
 
 namespace WPMailSMTP\Admin\DebugEvents;
 
-use WPMailSMTP\WP;
+use WPMailSMTP\Helpers\Helpers;
 
 if ( ! class_exists( 'WP_List_Table', false ) ) {
 	require_once ABSPATH . 'wp-admin/includes/class-wp-list-table.php';
@@ -40,6 +40,11 @@ class Table extends \WP_List_Table {
 				'ajax'     => false,
 			]
 		);
+
+		// Include polyfill if mbstring PHP extension is not enabled.
+		if ( ! function_exists( 'mb_substr' ) || ! function_exists( 'mb_strlen' ) ) {
+			Helpers::include_mbstring_polyfill();
+		}
 	}
 
 	/**
@@ -293,11 +298,13 @@ class Table extends \WP_List_Table {
 	 */
 	public function get_filtered_search() {
 
-		if ( empty( $_REQUEST['search'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( empty( $_REQUEST['search'] ) ) {
 			return false;
 		}
 
-		return sanitize_text_field( $_REQUEST['search'] ); // phpcs:ignore
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return sanitize_text_field( wp_unslash( $_REQUEST['search'] ) );
 	}
 
 	/**
@@ -389,12 +396,16 @@ class Table extends \WP_List_Table {
 		// Total amount for pagination with WHERE clause - super quick count DB request.
 		$total_items = ( new EventsCollection( $params ) )->get_count();
 
-		if ( ! empty( $_REQUEST['orderby'] ) ) { // phpcs:ignore
-			$params['orderby'] = $_REQUEST['orderby']; // phpcs:ignore
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_REQUEST['orderby'] ) && in_array( $_REQUEST['orderby'], [ 'event', 'type', 'content', 'initiator', 'created_at' ], true ) ) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$params['orderby'] = sanitize_key( $_REQUEST['orderby'] );
 		}
 
-		if ( ! empty( $_REQUEST['order'] ) ) { // phpcs:ignore
-			$params['order'] = $_REQUEST['order']; // phpcs:ignore
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_REQUEST['order'] ) ) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$params['order'] = strtoupper( sanitize_text_field( wp_unslash( $_REQUEST['order'] ) ) ) === 'DESC' ? 'DESC' : 'ASC';
 		}
 
 		$params['offset'] = ( $this->get_pagenum() - 1 ) * EventsCollection::$per_page;
@@ -428,14 +439,21 @@ class Table extends \WP_List_Table {
 			return;
 		}
 
-		$search = ! empty( $_REQUEST['search'] ) ? wp_unslash( $_REQUEST['search'] ) : ''; // phpcs:ignore WordPress.Security
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$search = ! empty( $_REQUEST['search'] ) ? sanitize_text_field( wp_unslash( $_REQUEST['search'] ) ) : '';
 
-		if ( ! empty( $_REQUEST['orderby'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			echo '<input type="hidden" name="orderby" value="' . esc_attr( $_REQUEST['orderby'] ) . '" />'; // phpcs:ignore WordPress.Security
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_REQUEST['orderby'] ) && in_array( $_REQUEST['orderby'], [ 'event', 'type', 'content', 'initiator', 'created_at' ], true ) ) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$order_by = sanitize_text_field( wp_unslash( $_REQUEST['orderby'] ) );
+			echo '<input type="hidden" name="orderby" value="' . esc_attr( $order_by ) . '" />';
 		}
 
-		if ( ! empty( $_REQUEST['order'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			echo '<input type="hidden" name="order" value="' . esc_attr( $_REQUEST['order'] ) . '" />'; // phpcs:ignore WordPress.Security
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( ! empty( $_REQUEST['order'] ) ) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$order = strtoupper( sanitize_text_field( wp_unslash( $_REQUEST['order'] ) ) ) === 'DESC' ? 'DESC' : 'ASC';
+			echo '<input type="hidden" name="order" value="' . esc_attr( $order ) . '" />';
 		}
 		?>
 

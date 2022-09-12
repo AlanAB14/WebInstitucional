@@ -1,5 +1,5 @@
 // Variables genéricas para la selección y muestra de productos
-var themePath = "/cooperacion_local/wp-content/themes/cooperacionseguros-theme/";
+var themePath = "/wordpress/wp-content/themes/cooperacionseguros-theme/";
 var gtmIdentifier = (environment == 'prod') ? 'GTM-PXJ8MMZ' : 'GTM-K5MCW3Z';
 
 // Funciones genéricas

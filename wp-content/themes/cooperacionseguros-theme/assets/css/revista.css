@@ -1,4 +1,9 @@
 /* HEADER */
+.header_blog{
+	background-color: transparent!important;
+	margin: 0!important;
+}
+
 .header_section {
     background-color: #f7f8fb;
 }
@@ -20,6 +25,7 @@
     align-items: center;
     text-align: center;
 }
+
 .text_header_revista h1{
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
@@ -27,8 +33,9 @@
     color: white!important;
     margin: 0!important;
     font-size: 55px!important;
-    max-width: 100%!important;
+	max-width: 100%!important;
 }
+
 .text_header_revista h1 .somos_text_header {
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
@@ -42,6 +49,12 @@
     line-height: 2.4;
     letter-spacing: 5px;
 }
+
+.wp-show-posts-entry-title {
+    font-size: 1.17em!important;
+    text-align: left!important;
+}
+
 
 @media (max-width: 1250px) {
     .text_header_revista h1{
@@ -62,7 +75,12 @@
     .header_revista {
         margin: 50px 20px 0 20px!important;
     } 
+	.header_blog {
+        margin: 50px 20px 0 20px!important;
+    } 
 }
+
+	
 
 @media (max-width: 800px) {    
     .text_header_revista h1{
@@ -72,8 +90,17 @@
         font-size: 17px;
     }
     .header_revista {
-        margin: 30px 0px 0 0px!important;
+        margin: 50px 0px 0 0px!important;
     } 
+	.header_blog {
+        margin: 50px 0 0 0!important;
+    }
+	.wp-block-cover, .wp-block-cover-image {
+		min-height: 230px!important;
+	}
+	.entrevistas-section {
+		padding: 20px 0!important;
+	}
 }
 
 @media (max-width: 700px) {  
@@ -83,6 +110,26 @@
     .conocenos_text_header {
         font-size: 12px;
     }
+	.header_revista {
+        margin: 50px 0px 0 0px!important;
+    } 
+	.header_blog {
+        margin: 50px 0 0 0!important;
+    }
+	.wp-block-cover, .wp-block-cover-image {
+		min-height: 130px!important;
+	}
+	.entrevistas-section {
+		padding: 20px 0!important;
+	}
+}
+@media (max-width: 480px) {
+	.header_revista {
+			margin: 50px 0px 0 0px!important;
+		}
+	.header_blog {
+        margin: 50px 0 0 0!important;
+    }		
 }
 
 @media (max-width: 430px) {
@@ -103,34 +150,8 @@
 .bloque-entrevistas {
     background-color: white!important;
     padding: 20px;
-    flex-basis: 70%!important;
-}
-/*** **/
-.videos-column {
-    flex-basis: 30%!important;
 }
 
-.videos-column .wp-show-posts-image {
-    margin-bottom: .2rem!important;
-}
-
-.videos-column article p {
-    text-align: center;
-    font-weight: 700;
-}
-.videos-column article p a {
-    font-size: 1.1rem!important;
-}
-.videos-column section article img{
-    border-radius: 10px;
-}
-.videos-column .centered {
-    justify-content: center!important;
-}
-.direction-flex-start {
-    align-items: flex-start!important;
-}
-/*** **/
 @media (max-width: 780px) {
     .bloque-entrevistas {
       margin: 0 auto;
@@ -139,11 +160,6 @@
         margin: 0 auto!important;
         margin-top: 2rem!important;
     }
-}
-
-.wp-show-posts-entry-title {
-    font-size: 1.17em;
-    text-align: left;
 }
 
 .bloque-entrevistas h3, p {
@@ -174,6 +190,9 @@
     .breakpoint-flex  .bloque-entrevistas{
         margin-bottom: 20px;
     }
+	.entrevistas-section {
+		padding: 20px 0!important;
+	}
 }
 
 /* SECCION CARDS ESTADISTICAS */
@@ -181,7 +200,7 @@
 .section-estadisticas {
     width: 100%;
     padding: 40px 0;
-    background-image: url(http://localhost:8080/cooperacion_local/wp-content/uploads/2022/01/fondo-solo-03.png);
+    background-image: url('../img/banner/fondo-solo-03.png');
     background-size: cover;
     display: flex;
     justify-content: space-around;
@@ -208,7 +227,6 @@
 .image-estadistica {
     width: 300px;
 }
-
 .box-estadistica-content {
     width: 300px;
 }
@@ -224,8 +242,6 @@
     opacity: .7;
 }
 
-
-
 .num-3-estadisticas {
     overflow: hidden;
     white-space: nowrap;
@@ -240,8 +256,6 @@
     letter-spacing: .7px;
     animation: typing 3.6s steps(7, end) forwards infinite;
 }
-
-
 
 .text-estadisticas {
     font-family: 'Titillium Web', sans-serif;
@@ -374,7 +388,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+   }
     .box-img-fija {
         display: flex;
         align-items: center;
@@ -391,9 +405,8 @@
     .text-estadisticas {
         font-size: 16px!important;
     }
+
 }
-
-
 
 /* SECCION HISTORIA */
 
@@ -450,11 +463,10 @@
     }
 }
 
-
-/* SECCION 3 IMAGENES BANNER */
+/* SECCION BANNER COMERCIAL */
 
 .section-banner-comercial {
-    background-image: url(http://localhost:8080/cooperacion_local/wp-content/uploads/2022/01/fondo-01.png);
+    background-image: url('../img/banner/fondo-01.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -509,7 +521,7 @@
          transform: scale(1);
      }
  
- }
+}
 
 /* SECCION NOVEDADES INSTITUCIONALES */
 
@@ -528,8 +540,6 @@
 .novedades-institucionales-section .wp-show-posts-image.wpsp-image-left {
     width: 100%;
 }
-
-
 
 /* SECCION NOVEDADES COMERCIALES */
 .section-innovacion {
@@ -564,181 +574,10 @@
     width: 100%;
 }
 
-/* SECCION NOTICIAS REVISTA */
-.bloque-noticias-revista {
-    background-color: white!important;
-    padding: 20px;
-}
-
-/* SECCION ATENCION AL CLIENTE */
-.section-atencion-cliente {
-    margin: 60px 0!important;
-}
-
-.bloque-atencion-cliente {
-    background-color: white!important;
-    padding: 20px;
-}
-
-.bloque-atencion-cliente h3, p {
-    margin-bottom: 0!important;
-}
-
-.bloque-atencion-cliente a{
-    color: #185286;
-}
-
-@media (max-width: 780px){
-    .bloque-atencion-cliente {
-        margin: 0 auto;
-    }
-}
-
-.category-noticias-revista p a{
-    padding: 0!important;
-    font-size: 15px!important;
-    color: #185286!important;
-}
-
-.category-noticias-revista:not(:last-child) {
-    margin-bottom: 5px!important;
-}
-
-
-
-
-
-/* SECCION INFOGRAFIA */
-.section-infografia {
-    background-color: #1a284b;
-    padding: 60px 0;
-    overflow: hidden;
-}
-
-.canales-comerciales {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 60px;
-}
-
-.canales-box {
-    display: flex;
-    flex-direction: column;
-}
-
-.composicion-img {
-    width: 500px;
-}
-
-.text-composicion {
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 18px;
-    color: #77d0f3;
-    font-weight: 600;
-    margin: 0!important;
-    padding: 0 0 4px 0!important;
-}
-
-.composicion-line {
-    background-color: #fdffff;
-    width: 100%;
-    margin: 0 0 60px 0;
-}
-
-@media (max-width: 1050px) {
-    .text-composicion {
-        font-size: 16px;
-    }
-    .composicion-img {
-        width: 450px;
-    }
-}
-
-@media (max-width: 950px) {
-    .text-composicion {
-        font-size: 16px;
-    }
-    .composicion-img {
-        width: 400px;
-    }
-}
-
-@media (max-width: 850px) {
-    .text-composicion {
-        font-size: 16px;
-        padding: 0 0 4px 0!important;
-    }
-    .composicion-img {
-        width: 420px;
-        margin-bottom: 50px;
-    }
-    .composicion-line {
-        margin-bottom: 30px;
-    }
-    .canales-comerciales {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.fade-in {
-    visibility: visible!important;
-    animation: fade-in 1s forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.category-entrevistas {
-    visibility: hidden;
-}
-.category-novedades-institucionales {
-    visibility: hidden;
-}
-
-.category-capital-humano {
-    visibility: hidden;
-}
-
-.category-instalaciones {
-    visibility: hidden;
-}
-
-.category-novedades-comerciales {
-    visibility: hidden;
-}
-
-.category-atencion-al-cliente {
-    visibility: hidden;
-}
-
-.category-responsabilidad-social-empresaria {
-    visibility: hidden;
-}
-
-.category-innovacion {
-    visibility: hidden;
-}
-
-.category-red-comercial {
-    visibility: hidden;
-}
-
-.category-socios-estrategicos {
-    visibility: hidden;
-}
-
 /* SECCION REDES SOCIALES */
+
 .section-redes {
-    background-image: url(http://localhost:8080/cooperacion_local/wp-content/uploads/2022/01/fondo-01-1.png);
+    background-image: url('../img/banner/fondo-01-redes.png');
     background-size: 100% 100%;
     display: flex;
     justify-content: center;
@@ -792,7 +631,6 @@
         transition: all .2s;
     }
 }
-
 
 /* SECCION ENFOQUE ESTRATÉGICO */
 .section-enfoque {
@@ -855,9 +693,7 @@
     }
 }
 
-
 /* SECCION VALORES ESTRATEGICOS */
-
 
 .section-enfoque-estrategico{
     display: block;
@@ -1038,10 +874,8 @@
         margin: 35px 15px;
         padding: 18px;
     }
-
     
 }
-
 
 @media (max-width: 1160px){
     .section-enfoque-estrategico p {
@@ -1222,9 +1056,6 @@
     }
 }
 
-
-
-
 /* RESPONSABILIDAD SOCIAL EMPRESARIA */
 
 .responsabilidad-title {
@@ -1247,7 +1078,7 @@
 }
 
 .bloque-responsabilidad-empresaria {
-    margin: 20px 0;
+    margin: auto 0;
     background-color: white!important;
     padding: 20px;
 }
@@ -1279,6 +1110,7 @@
 .bloque-innovacion {
     background-color: white!important;
     padding: 20px;
+	height: fit-content;
 }
 
 .bloque-innovacion h3, p {
@@ -1386,8 +1218,6 @@
         margin: 0 auto!important;
     }
 }
-
-
 
 /* ------------------------------------------- */
 /* ENTREVISTAS */
@@ -1575,6 +1405,188 @@
     }
 }
 
+/* SECCION NOTICIAS REVISTA */
+
+.bloque-noticias-revista {
+    background-color: white!important;
+    padding: 20px;
+}
+
+.category-noticias p a{
+    padding: 0!important;
+    font-size: 15px!important;
+    color: #185286!important;
+}
+
+.category-noticias:not(:last-child) {
+    margin-bottom: 5px!important;
+}
+
+.category-novedades p a{
+    padding: 0!important;
+    font-size: 15px!important;
+    color: #185286!important;
+}
+
+.category-novedades:not(:last-child) {
+    margin-bottom: 5px!important;
+}
+
+/* SECCION ATENCION AL CLIENTE */
+
+.section-atencion-cliente {
+    margin: 60px 0!important;
+}
+
+.bloque-atencion-cliente {
+    background-color: white!important;
+    padding: 20px;
+}
+
+.bloque-atencion-cliente h3, p {
+    margin-bottom: 0!important;
+}
+
+.bloque-atencion-cliente a{
+    color: #185286;
+}
+
+@media (max-width: 780px){
+    .bloque-atencion-cliente {
+        margin: 0 auto;
+    }
+}
+
+/* SECCION INFOGRAFIA */
+.section-infografia {
+    background-color: #1a284b;
+    padding: 60px 0;
+	overflow: hidden;
+}
+
+.canales-comerciales {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.canales-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.composicion-img {
+    width: 500px;
+}
+
+.text-composicion {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    color: #77d0f3;
+    font-weight: 600;
+    margin: 0!important;
+    padding: 0 0 4px 0!important;
+}
+
+.composicion-line {
+    background-color: #fdffff;
+    width: 100%;
+    margin: 0 0 60px 0;
+}
+
+@media (max-width: 1050px) {
+    .text-composicion {
+        font-size: 16px;
+    }
+    .composicion-img {
+        width: 450px;
+    }
+}
+
+@media (max-width: 950px) {
+    .text-composicion {
+        font-size: 16px;
+    }
+    .composicion-img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 850px) {
+    .text-composicion {
+        font-size: 16px;
+        padding: 0 0 4px 0!important;
+    }
+    .composicion-img {
+        width: 420px;
+        margin-bottom: 50px;
+    }
+    .composicion-line {
+        margin-bottom: 30px;
+    }
+    .canales-comerciales {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* EFECTO ENTRADAS */
+
+.fade-in {
+    visibility: visible!important;
+    animation: fade-in .4s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.category-entrevistas {
+    visibility: hidden;
+}
+.category-novedades-institucionales {
+    visibility: hidden;
+}
+
+.category-capital-humano {
+    visibility: hidden;
+}
+
+.category-instalaciones {
+    visibility: hidden;
+}
+
+.category-novedades-comerciales {
+    visibility: hidden;
+}
+
+.category-atencion-al-cliente {
+    visibility: hidden;
+}
+
+.category-responsabilidad-social-empresaria {
+    visibility: hidden;
+}
+
+.category-innovacion {
+    visibility: hidden;
+}
+
+.category-red-comercial {
+    visibility: hidden;
+}
+
+.category-socios-estrategicos {
+    visibility: hidden;
+}
+
 .composicion-cartera-img {
     opacity: 0;
 }
@@ -1587,3 +1599,5 @@
 .composicion-canales-img-after {
     opacity: 1!important;
 }
+
+

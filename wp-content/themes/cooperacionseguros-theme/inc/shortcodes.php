@@ -4,6 +4,75 @@
  * Custom shortcodes
  */
 
+//nuevo Cotizador
+function shortcode_cotizador($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/nuevo_cotizador');
+  return ob_get_clean();
+}
+add_shortcode('cotizador', 'shortcode_cotizador');
+
+function shortcode_datos_personales($attr)
+{
+  return get_template_part('template-parts/cotizador/datos_personales');
+}
+add_shortcode('datos_personales', 'shortcode_datos_personales');
+
+function shortcode_datos_del_auto($attr)
+{
+  return get_template_part('template-parts/cotizador/datos_auto');
+}
+add_shortcode('cotizador_datos_auto', 'shortcode_datos_del_auto');
+
+function shortcode_cotizador_precios($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/cotizador_precios');
+  return ob_get_clean();
+}
+add_shortcode('cotizador_precios', 'shortcode_cotizador_precios');
+
+function shortcode_cotizador_datos_personales($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/cotizador_datos_personales');
+  return ob_get_clean();
+}
+add_shortcode('cotizador_datos_personales', 'shortcode_cotizador_datos_personales');
+
+function shortcode_cotizador_datos_del_auto($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/cotizador_datos_del_auto');
+  return ob_get_clean();
+}
+add_shortcode('cotizador_datos_del_auto', 'shortcode_cotizador_datos_del_auto');
+
+function shortcode_cotizador_datos_asesor($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/cotizador_datos_asesor');
+  return ob_get_clean();
+}
+add_shortcode('cotizador_datos_asesor', 'shortcode_cotizador_datos_asesor');
+
+function shortcode_cotizador_resumen($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/cotizador_resumen');
+  return ob_get_clean();
+}
+add_shortcode('cotizador_resumen', 'shortcode_cotizador_resumen');
+
+function shortcode_cotizador_pago($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/cotizador_pago');
+  return ob_get_clean();
+}
+add_shortcode('cotizador_pago', 'shortcode_cotizador_pago');
+
 // Selección de productos
 function shortcode_productos($attr)
 {
@@ -92,6 +161,7 @@ function postsrecientes_shortcode($atts, $content = NULL)
     [
       'orderby' => 'date',
       'type' => 'post',
+	  'cat' => '1',
       'posts_per_page' => '6'
     ],
     $atts,
@@ -128,7 +198,7 @@ function postsrecientes_shortcode($atts, $content = NULL)
   wp_reset_query();
   $output .= '</div>';
 
-  $output .= '<div class="posts-navigation"><div class="nav-links centered"><a class="btn" href="/novedades/">Ver todas las novedades</a></div></div>';
+  $output .= '<div class="posts-navigation"><div class="nav-links centered"><a class="btn" href="/nosotros/">Conoce más de nosotros</a></div></div>';
   $output .= '</section>';
 
   return $output;

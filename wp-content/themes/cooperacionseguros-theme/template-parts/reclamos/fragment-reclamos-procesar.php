@@ -1,9 +1,6 @@
 <?php
 require_once get_template_directory() . '/api/api.php';
 
-
-
-
 // Array de datos generales
 $success = false;
 $params =  array();
@@ -164,8 +161,8 @@ if (!empty($_POST) && isset($_POST['reclamante-nombre']) && isset($_POST['reclam
     $files = array();
     $files['NroReclamoTercero'] = $code;
     $files['FechaHora'] = date('m-d-Y H:m');
-    $files['Archivos'] = array();
 
+    $files['Archivos'] = array();
     foreach ($_FILES as $k => $v) {
       $file_name = $code . '-' . $v['name'];
       $new_path = $upload_dir . '/' . $file_name;
@@ -180,7 +177,6 @@ if (!empty($_POST) && isset($_POST['reclamante-nombre']) && isset($_POST['reclam
         $files['Archivos'][] = $file;
       }
     }
-
 
     $inspeccion = coopseg_terceros_inspeccion($tokenTerceros, $files);
     //print_r($inspeccion);

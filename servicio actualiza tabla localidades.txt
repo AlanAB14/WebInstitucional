@@ -1,0 +1,1 @@
+<dominio>/wp-content/themes/cooperacionseguros-theme/api/api.php?update=save_places&debug

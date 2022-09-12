@@ -124,34 +124,21 @@
   <p class="wrap"><a href="<?php echo get_privacy_policy_url(); ?>">Política de Privacidad & Condiciones Generales de Uso</a></p>
 </div>
 
-<div id="ssn" class="nuevo-footer" style="display: flex;flex-direction: column;">
+<div id="ssn" class="wrap">
 
-  <div class="cols footer-ssn">
-    <p style="display: flex;flex-direction: column;justify-content: center;">N° de Inscripción de SSN <br> <span style="font-weight: bold">Rubro 0196</span></p>
-    <p class="border-none">Departamento de Orientación<br />y Asistencia al Asegurado</p>
-    <p><span class="ssn-color-bold">0800-666-8400</span></p>
-    <p class="ssn-color-bold">www.argentina.gob.ar/ssn</p>
-    <p class="border-none logo-ssn-nuevo-footer"><img src="<?= get_template_directory_uri(); ?>/assets/img/logo-ssn.png" class="img-logo-ssn" alt="SSN" /></p>
+  <div class="cols">
+    <p>N° de Inscripción de SSN<br />0196</p>
+    <p>Atención al asegurado<br />0800-666-8400</p>
+    <p>Organismo de control<br />www.argentina.gob.ar/ssn</p>
+    <p><img src="<?= get_template_directory_uri(); ?>/assets/img/logo-ssn.png" alt="SSN" /></p>
   </div>
 
-  <div class="end footer-nuevo-end">
-    <div class="end-box-1">
-        <p class="end-box-1-text">La entidad aseguradora dispone de un <span style="font-weight: bold;">Servicio de Atención al Asegurado</span> que atenderá las consultas y reclamos que
-        presenten los tomadores de seguros, asegurados, beneficiarios y/o derechohabientes. <br><br>
-        En caso de que existiera un reclamo ante la entidad aseguradora y que el mismo no haya sido resuelto o haya sido
-        desestimado, total o parcialmente, o que haya sido denegada su admisión, podrá comunicarse con la
-        Superintendencia de Seguros de la Nación por teléfono al 0800-666-8400, correo electrónico a <span style="font-weight: bold;">consultas@ssn.gob.ar</span>
-        o formulario disponible en la página <span style="font-weight: bold;">www.argentina.gob.ar/ssn</span></p>
-    </div>
-    <div class="end-box-2">
-        <p><span style="font-weight: bold;">El Servicio de Atención al Asegurado está integrado por:</span>
-          <br><br>
-        RESPONSABLE  <span style="font-weight: bold;">Sr. Barrios, Alejandro Daniel</span>
-        TELÉFONO 03462-435100 / 435200 INTERNO 1251
-        <br><br>
-        SUPLENTE <span style="font-weight: bold;">Sra. Fatila, Valeria Graciela</span>
-        TELÉFONO 03462-435100 / 435200 INTERNO 1574</p>
-    </div>
+  <div class="end">
+    <p>La entidad aseguradora dispone de un Servicio de Atención al Asegurado que atiende las consultas y reclamos que presentan los tomadores de seguros, asegurados, beneficiarios y / o derechohabientes.</p>
+    <p>El Servicio de Atención al Asegurado está integrado por:
+      <br />RESPONSABLE: Sr. Leon, Ramiro - Teléfono 03462-435100 / 435200 - Interno 1183
+      <br />SUPLENTE: Sra. Fatila, Valeria Graciela - Teléfono 03462-435100 / 435200 - Interno 1574</p>
+    <p>En caso de que el reclamo no haya sido resuelto o haya sido desestimado, total o parcialmente, o que haya sido denegada su admisión, podrá comunicarse con la Superintendencia de Seguros de la Nación por teléfono al 0800-666-8400, correo electrónico a <a href="mailto:denuncias@ssn.gob.ar">denuncias@ssn.gob.ar</a> o formulario web a través de <a href="https://www.argentina.gob.ar/ssn" target="_blank">www.argentina.gob.ar/ssn</a></p>
   </div>
 
 </div>

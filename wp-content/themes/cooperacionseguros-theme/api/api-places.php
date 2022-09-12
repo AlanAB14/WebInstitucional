@@ -5,7 +5,7 @@
  */
 
 // Incluir Wordpress para acceder a sus funciones y variables
-require_once(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/cooperacion_local/wp-load.php');
+require_once(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/wordpress/wp-load.php');
 
 // Mostrar todos los errores
 error_reporting(E_ALL);
@@ -107,7 +107,7 @@ function coopseg_places_save_places($token)
 
   // Localidades de productores, con web service específico
   $updates = 0;
-  $resultProductores = coopseg_curl('d3NXZWJDb3JwOldlYkNvcnAkMzE0MSU=', 'https://ws.cooperacionseguros.com.ar/webservicecmp/api/ObtenerLocalidadesDeProductoresWebCorp', 'GET', '', 'Basic');
+  $resultProductores = coopseg_curl('d3NXZWJDb3JwOldlYkNvcnAkMzE0MSU=', 'https://wstest.cooperacionseguros.com.ar/cmpservicest/api/ObtenerLocalidadesDeProductoresWebCorp', 'GET', '', 'Basic');
 
   // Hacemos un update con los datos de lugares de producción
   foreach ($resultProductores as $r) {
@@ -186,7 +186,7 @@ function fixed_places()
  */
 function coopseg_places_get_places_db($q = '', $limit = '', $allowed = 0, $producers = 0)
 {
-  
+     
   // Empezamos con un resultado vacío
   $result = array();
 

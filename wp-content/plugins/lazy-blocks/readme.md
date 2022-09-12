@@ -2,10 +2,10 @@
 
 * Contributors: nko
 * Tags: gutenberg, blocks, custom, meta, fields
-* Requires at least: 5.5
-* Tested up to: 5.7
-* Requires PHP: 5.5.9
-* Stable tag: 2.3.1
+* Requires at least: 5.8
+* Tested up to: 5.8
+* Requires PHP: 7.2
+* Stable tag: 2.5.3
 * License: GPLv2 or later
 * License URI: <http://www.gnu.org/licenses/gpl-2.0.html>
 
@@ -16,9 +16,9 @@ Easily create custom Gutenberg blocks and custom meta fields without hard coding
 **Custom Blocks Plugin For WordPress**
 ★★★★★<br>
 
-**Developers magic wand for WordPress custom blocks.** We created <a href="https://lazyblocks.com/?utm_source=wporg&utm_medium=link&utm_campaign=demo" target="_blank">**Lazy Blocks WordPress plugin**</a>, to help every developer get access to the powerful tools they need to quickly run websites based on WordPress block editor (called Gutenberg).
+**Developers magic wand for WordPress custom blocks.** We created [**Lazy Blocks WordPress plugin**](https://lazyblocks.com/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=head), to help every developer get access to the powerful tools they need to quickly run websites based on WordPress block editor (called Gutenberg).
 
-<a href="https://lazyblocks.com/?utm_source=wporg&utm_medium=link&utm_campaign=demo" target="_blank">Official Site</a> | <a href="https://lazyblocks.com/documentation/getting-started/?utm_source=wporg&utm_medium=link&utm_campaign=docs" target="_blank">Documentation</a> | <a href="https://github.com/nk-crew/lazy-blocks" target="_blank">GitHub</a>
+[Official Site](https://lazyblocks.com/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=head) | [Documentation](https://lazyblocks.com/documentation/getting-started/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=head) | [GitHub](https://github.com/nk-crew/lazy-blocks)
 
 Create custom blocks visually, add controls to your blocks using drag & drop, write blocks output using HTML or PHP code. You can create custom blocks as well as custom meta fields for specific post types. Furthermore, you are able to create post templates with predefined blocks for any post type.
 
@@ -74,13 +74,13 @@ To manage custom blocks attributes you need to use Controls. Lazy Blocks have a 
   * Date Time Picker
 * Layout
   * Repeater
-* Custom Controls <a href="https://lazyblocks.com/documentation/examples/create-custom-control/?utm_source=wporg&utm_medium=link&utm_campaign=docs" target="_blank">[read our extended documentation](https://lazyblocks.com/documentation/examples/create-custom-control/)</a>
+* Custom Controls [read our extensive documentation](https://lazyblocks.com/documentation/examples/create-custom-control/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=custom_controls)
 
 ### 🛠 Built For Developers
 
 Lazy Blocks built by developers, for developers and gives you unlimited freedom to create custom blocks. Furthermore, there are PHP filters and actions to customize every part of your custom blocks from the backend. Possibility to use PHP and theme templates system.
 
-Every UI part should be intuitive for simple custom blocks, but if you want to create something more complex, you may be required to <a href="https://lazyblocks.com/documentation/getting-started/?utm_source=wporg&utm_medium=link&utm_campaign=docs" target="_blank">read our extended documentation</a>.
+Every UI part should be intuitive for simple custom blocks, but if you want to create something more complex, you may be required to [read our extensive documentation](https://lazyblocks.com/documentation/getting-started/?utm_source=wordpress.org&utm_medium=readme&utm_campaign=developers).
 
 ## Installation
 
@@ -101,6 +101,66 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
 3. Posts Templates
 
 ## Changelog
+
+= 2.5.3 =
+
+* added block inserter preview (thanks <https://github.com/nk-crew/lazy-blocks/pull/230>)
+* fixed PHP8 deprecation warning
+* fixed security issue in the code for duplicating post (thanks to the Wordfence team)
+* minor changes
+
+= 2.5.2 =
+
+* added support for color slugs in the Color controls when using new FSE themes
+* added code preview in the constructor (thanks <https://github.com/nk-crew/lazy-blocks/pull/227>)
+* fixed propagating cut event in the constructor (thanks <https://github.com/nk-crew/lazy-blocks/pull/226>)
+* removed default value generated for repeaters, as it was not working correctly
+
+= 2.5.1 =
+
+* added "Free Content" block in the Templates editor
+* fixed PHP warnings when migrating to v2.5.0
+
+= 2.5.0 =
+
+* improved Templates editor (now you can use Gutenberg editor and insert full-featured blocks)
+* fixed `get_lzb_meta` output of array and object values
+* fixed Constructor screen title click in WP 5.9
+* fixed long block names word wrap in export page
+* fixed Color Picker control styles in editor
+
+= 2.4.3 =
+
+* changed post types list limit in the templates editor ()
+* changed minimal PHP version to 7.2
+
+= 2.4.2 =
+
+* added option to use the color slug in the Color Picker control (see Output Format option)
+* fixed js errors in the widget screen
+* changed minimal WP version to 5.8
+
+= 2.4.1 =
+
+* fixed 'wp-editor' deprecated error
+* fixed conflict with Widgets Gutenberg editor
+* fixed repeater sorting error
+* removed accepted list for file control Upload button since it is not working correctly in some cases
+
+= 2.4.0 =
+
+* added support for WordPress 5.8
+* added a lot of UI improvements
+* added slug check in the block name before register block (fixes possible errors)
+* added placeholder color in image and gallery controls if images no more exist in media library
+* added control names autocompletion to code editor in the blocks constructor
+* fixed multiple select control wrong height and styles
+* fixed displaying control post meta using function `get_lzb_meta` when live reload preview
+* fixed Classic Control toolbar sticky
+* fixed Date Control JS error
+* fixed long words render in control labels and descriptions
+* fixed PHP 8 deprecated error
+* fixed wrong activation hook call
 
 = 2.3.1 =
 
@@ -129,16 +189,16 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
 = 2.2.0 =
 
 * added possibility to select image preview size for Image and Gallery controls (Medium size by default)
-* added possibility to filter custom block output using php filter <https://lazyblocks.com/documentation/php-filters/lzb-block_render-output/>
+* added possibility to filter custom block output using php filter [https://lazyblocks.com/documentation/php-filters/lzb-block_render-output/](https://lazyblocks.com/documentation/php-filters/lzb-block_render-output/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * added description data in Image and Gallery controls
 * update image and gallery control data in custom block dynamically for output actual image data
-* improved custom block template path filters <https://lazyblocks.com/documentation/php-filters/lzb-block_render-include_template/>
+* improved custom block template path filters [https://lazyblocks.com/documentation/php-filters/lzb-block_render-include_template/](https://lazyblocks.com/documentation/php-filters/lzb-block_render-include_template/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * fixed possibility to use Post data in custom block render preview
 * fixed constructor Align attribute duplications bug
 
 = 2.1.1 =
 
-* added possibility to hide admin menu item using php filter <https://lazyblocks.com/documentation/php-filters/lzb-show_admin_menu/>
+* added possibility to hide admin menu item using php filter [https://lazyblocks.com/documentation/php-filters/lzb-show_admin_menu/](https://lazyblocks.com/documentation/php-filters/lzb-show_admin_menu/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * improved icon picker cache method
 * fixed controls default values loading while rendering (for example, default value of Checkbox control now will be `false`)
 * minor changes
@@ -146,7 +206,7 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
 = 2.1.0 =
 
 * added support for WordPress 5.5
-* added support for theme template files <https://lazyblocks.com/documentation/blocks-code/theme-template/>
+* added support for theme template files [https://lazyblocks.com/documentation/blocks-code/theme-template/](https://lazyblocks.com/documentation/blocks-code/theme-template/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * added Output Format option for Select and Radio controls
   * You can output Label
   * You can output array with Value and Label
@@ -220,14 +280,14 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
 
 = 2.0.0 =
 
-* added custom controls API <https://lazyblocks.com/documentation/examples/create-custom-control/>
-* added Export / Import JSON for custom blocks and templates <https://lazyblocks.com/documentation/export-blocks/>
+* added custom controls API [https://lazyblocks.com/documentation/examples/create-custom-control/](https://lazyblocks.com/documentation/examples/create-custom-control/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
+* added Export / Import JSON for custom blocks and templates [https://lazyblocks.com/documentation/export-blocks/](https://lazyblocks.com/documentation/export-blocks/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * added error messages to File, Image and Gallery controls
 * added Width option to controls
 * added alongside option to Checkbox and Toggle controls
 * added Example Block after plugin activation
-* added Classic Editor control <https://lazyblocks.com/documentation/blocks-controls/classic-editor-wysiwyg/>
-* added possibility to include plugin code in themes and 3rd-party plugins <https://lazyblocks.com/documentation/examples/include-lazy-blocks-within-theme-or-plugin/>
+* added Classic Editor control [https://lazyblocks.com/documentation/blocks-controls/classic-editor-wysiwyg/](https://lazyblocks.com/documentation/blocks-controls/classic-editor-wysiwyg/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
+* added possibility to include plugin code in themes and 3rd-party plugins [https://lazyblocks.com/documentation/examples/include-lazy-blocks-within-theme-or-plugin/](https://lazyblocks.com/documentation/examples/include-lazy-blocks-within-theme-or-plugin/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * changed block icons to Material SVG <https://material.io/resources/icons/>
 * fixed change value in Rich Text and Code Editor
 * fixed errors when no specified block icon or title
@@ -268,10 +328,10 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
   * Maximum Rows
   * Collapsible Rows
 * added Characters Limit option to text controls
-* added js actions to PreviewServerCallback component (before change and after change), useful for developers <https://lazyblocks.com/documentation/js-actions/>
+* added js actions to PreviewServerCallback component (before change and after change), useful for developers [https://lazyblocks.com/documentation/js-actions/](https://lazyblocks.com/documentation/js-actions/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * added support for [Ghost Kit](https://ghostkit.io/) Extensions
-* added `callback` and `allow_wrapper` filters for both contexts using single filter name (frontend and editor) <https://lazyblocks.com/documentation/php-filters/#render-callback>
-* added filter for output attributes <https://lazyblocks.com/documentation/php-filters/#attributes>
+* added `callback` and `allow_wrapper` filters for both contexts using single filter name (frontend and editor) [https://lazyblocks.com/documentation/php-filters/](https://lazyblocks.com/documentation/php-filters/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog#render-callback)
+* added filter for output attributes [https://lazyblocks.com/documentation/php-filters/](https://lazyblocks.com/documentation/php-filters/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog#attributes)
 * improved Meta setting (use control name as meta if custom meta name is not defined)
 * fixed encoded values in Repeater controls
 * fixed possibility to add more than 1 InnerBlocks control per custom block
@@ -381,7 +441,7 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
 
 = 1.3.0 =
 
-* added filter for output frontend PHP of custom blocks ([read in documentation](https://lazyblocks.com/documentation/blocks-code/php/))
+* added filter for output frontend PHP of custom blocks ([read in documentation](https://lazyblocks.com/documentation/blocks-code/php/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog))
 * added Allow Null option to Select control
 * added Help option in controls
 * added Placeholder option in controls
@@ -405,7 +465,7 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
 = 1.2.0 =
 
 * added Inner Blocks control
-* added support for custom frontend render function (use PHP instead of Handlebars) [https://lazyblocks.com/documentation/blocks-code/php/](https://lazyblocks.com/documentation/blocks-code/php/)
+* added support for custom frontend render function (use PHP instead of Handlebars) [https://lazyblocks.com/documentation/blocks-code/php/](https://lazyblocks.com/documentation/blocks-code/php/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * added possibility to resort Repeater rows
 * changed Repeater control styles
 * disabled autofocus in URL control
@@ -435,7 +495,7 @@ The manual installation method involves downloading our Lazy Blocks plugin and u
 = 1.0.3 =
 
 * added support for custom categories [https://wordpress.org/support/topic/frontend-html/](https://wordpress.org/support/topic/frontend-html/)
-* improved **do_shortcode** handlebars helper to work with attributes. Read here how to use - [https://lazyblocks.com/docs/documentation/examples/shortcode-gutenberg/](https://lazyblocks.com/docs/documentation/examples/shortcode-gutenberg/)
+* improved **do_shortcode** handlebars helper to work with attributes. Read here how to use - [https://lazyblocks.com/docs/documentation/examples/shortcode-gutenberg/](https://lazyblocks.com/docs/documentation/examples/shortcode-gutenberg/?utm_source=wordpress.org&utm_medium=changelog&utm_campaign=changelog)
 * fixed image field data conversion to array
 
 = 1.0.2 =

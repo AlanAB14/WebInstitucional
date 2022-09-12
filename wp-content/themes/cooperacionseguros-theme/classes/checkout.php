@@ -228,7 +228,7 @@ class Checkout {
 
     if(!empty($next_step)) {
       unset($_POST);
-      $url = '/cooperacion_local/checkout/'. $this->product->slug .'/'. $next_step->slug .'/'. $this->guid;
+      $url = '/wordpress/checkout/'. $this->product->slug .'/'. $next_step->slug .'/'. $this->guid;
       if ($next_status) $url .= '/' . $next_status;
       header("Location: $url");
     }
@@ -241,7 +241,7 @@ class Checkout {
   }
 
   private function redirect_error() {
-    header('Location: /cooperacion_local/hubo-un-problema');
+    header('Location: /hubo-un-problema');
     exit;
   }
 

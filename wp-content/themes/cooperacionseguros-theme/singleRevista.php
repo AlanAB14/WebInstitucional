@@ -1,13 +1,12 @@
 <?php
 get_header();
-
 if ( have_posts() ) :
   while ( have_posts() ) :
     the_post();
 
     echo '<div class="wp-block-cover has-parallax"';
     if (has_post_thumbnail($post->ID)) {
-      echo ' style="background-image:url(../../../../wp-content/themes/cooperacionseguros-theme/assets/img/fondos/entrevistas.jpg); background-size: cover"';
+      echo ' style="background-image:url('.get_template_directory_uri().'/assets/img/fondos/entrevistas.jpg); background-size: cover"';
     }
     echo ' >';
     echo '<div class="wp-block-cover__inner-container">';
@@ -31,9 +30,6 @@ if ( have_posts() ) :
         endif;
         echo '</div>';
         the_content();
-        echo '<div class="box_button">';
-          echo '<a class="link_button" href="#"><img class="img_button_return" src="../../../../wp-content/themes/cooperacionseguros-theme/assets/img/button-back/boton-back-02.png"/></a>';
-        echo '</div>';
       echo '</div>';
       echo '<div class="noticias-relacionadas">';
         echo '<p class="title-block">Notas relacionadas</p>';

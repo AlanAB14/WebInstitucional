@@ -53,7 +53,7 @@ if ((!$quote || (isset($quote['product']) && $quote['product'] != 'seguro-de-mot
       ?>
 
         <section id="cobertura" class="seleccion-de-planes vehiculos transaccional <?php echo $class; ?>">
-          <form id="seleccion-de-planes-vehiculos" action="/checkout" method="post">
+          <form id="seleccion-de-planes-vehiculos" action="/wordpress/checkout" method="post">
             <div class="desktop"> <!-- START DESKTOP -->
               <div class="opciones header wrap">
                 <div class="detail">

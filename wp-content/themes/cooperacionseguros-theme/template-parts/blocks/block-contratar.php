@@ -9,7 +9,7 @@ $productInfo = get_product_from_slug($product);
 
 <div class="block block-contratar">
   <?php if ($quote || empty($productInfo->questions)) : ?>
-    <form method="post" action="/checkout">
+    <form method="post" action="/wordpress/checkout">
       <input type="hidden" name="guid" value="<?php echo $quote['guid']; ?>" />
       <input type="hidden" name="product" value="<?php echo $product; ?>" />
 

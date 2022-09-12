@@ -14,6 +14,7 @@ require_once get_template_directory() . '/classes/lead.php';
 require_once get_template_directory() . '/classes/quote.php';
 require_once get_template_directory() . '/classes/checkout.php';
 require_once get_template_directory() . '/classes/errorlog.php';
+require_once get_template_directory() . '/classes/cotizador.php';
 
 // Do theme setup
 if (!function_exists('custom_theme_setup')) :
@@ -133,6 +134,10 @@ function custom_theme_scripts()
     wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
   }
 
+  // Assets requeridos Cotizador
+  if (is_page('cotizador')) {
+    wp_enqueue_script('cotizador', get_template_directory_uri() . '/assets/js/own/cotiza2.js', NULL, '1.0', true);
+  }
   // Incluimos el CSS unificado, siempre minificado
   $csstime = filemtime(get_template_directory() . '/assets/css/main.css');
   wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', array(), $csstime);
@@ -379,38 +384,40 @@ if (isset($_GET['clientDNI']) && (isset($_GET['clientSex']))) {
   setrawcookie("userData", rawurlencode($userData), strtotime('+1 day'), '/');
 }
 
-
-
-//--------------------------------------//
-//--------------REVISTA-----------------//
-//--------------------------------------//
-
-
 // CSS REVISTA
+//https://developer.wordpress.org/reference/functions/is_single/ 
+ 
 add_action( 'wp_enqueue_scripts', 'custom_enqueue_styles');
 
 function custom_enqueue_styles() {
-  if (is_page('nosotros')) {
+  if (is_page(1340) || is_single()) {
     wp_enqueue_style( 'custom-style', 
     get_stylesheet_directory_uri() . '/assets/css/revista.css', 
     array(), 
     wp_get_theme()->get('Version')
   );
   }
-  if (is_page_template( 'singleRevista.php' )){
+
+  if (is_page(1019) || is_page(1056) || is_page(1058) || is_page(1077) || is_page(1086) || is_page(1090) || is_page(1093) || is_page(1139)) {
     wp_enqueue_style( 'custom-style', 
-    get_stylesheet_directory_uri() . '/assets/css/revista.css', 
+    get_stylesheet_directory_uri() . '/assets/css/new_cotizador.css',
     array(), 
     wp_get_theme()->get('Version')
-   );
+  );
   }
+  
 }
+
+//add_action('wp_enqueue_scripts', 'custom_cotizador_styles');
+//function custom_cotizador_styles(){
+//  wp_enqueue_style('cotizador_style', get_stylesheet_directory_uri() . '/assets/css/new_cotizador.css' )
+//}
 
 // ANIMATE CSS MIN
 add_action( 'wp_enqueue_scripts', 'animate_css');
 
 function animate_css() {
-  if (is_page('nosotros')) {
+  if (is_page(1340) || is_single()) {
     wp_enqueue_style( 'animate-style', 
     get_stylesheet_directory_uri() . '/assets/css/animate.min.css', 
     array(), 
@@ -419,37 +426,37 @@ function animate_css() {
   }
 }
 
-
 // JS REVISTA
 add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');
 
 function collectiveray_load_js_script() {
-  if( is_page('nosotros') ) {
+  if( is_page(1340) || is_single()) {
     wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/revista.js');
   }
-}
-
-
-
-// FONT TITILIUM DIFERENTES WEIGHTS
-function wpb_add_google_fonts() {
-  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap', false );
+  if( is_page(1019) || is_page(1058) || is_single()) {
+    wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/cotizador.js');
   }
   
-  add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+}
 
+// FONT TITILIUM DIFERENTES WEIGHTS
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
+function wpb_add_google_fonts() {
+  if (is_page(1340) || is_single()) {
+    wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap', false );
+  }
+}
 
   // FONT POPPINS DIFERENTES WEIGHTS
   add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts_poppins' );
 
 function wpb_add_google_fonts_poppins() {
-  if (is_page('nosotros')) {
-  wp_enqueue_style( 'wpb-google-fonts_poppins', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap', false );
-
+  if (is_page(1340) || is_single()) {
+    wp_enqueue_style( 'wpb-google-fonts_poppins', 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap', false );
   }
-  }
+}
   
-
 // PLUGIN 2 IMAGENES DESTACADAS
 if (class_exists('MultiPostThumbnails')) {
   new MultiPostThumbnails(array(
@@ -459,34 +466,17 @@ if (class_exists('MultiPostThumbnails')) {
   ));
 }
 
-// FONT ROBOTO PARA FOOTER SSN
-function wpb_add_google_fonts_roboto() {
-  wp_enqueue_style( 'wpb-google-fonts_roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', false );
+
+
+// ------------------------
+// --------COTIZADOR-------
+// ------------------------
+
+add_action('wp_enqueue_scripts', 'scripts_cotizador');
+
+function scripts_cotizador() {
+  if( is_single('cotizador-personal-autos-y-pick-ups')) {
+    wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/vendor/select2/js/select2.min.js');
   }
-  
-  add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts_roboto' );
+}
 
-// PASAR VARIABLES A ARCHIVO JS
-function myprefix_variables_enqueue_scripts() {
-  wp_enqueue_script( 
-    'variables-script',
-    get_stylesheet_directory_uri() . '/assets/js/own/fragment-reclamos-procesar.js'
-  );
-  wp_localize_script( 'variables-script', 'php_data', array(
-        'templateUrl' => get_template_directory(),
-        'NuevaUrl' => get_template_directory_uri(),
-        'COOPSEG_TOKEN_URL' => COOPSEG_TOKEN_URL,
-        'COOPSEG_CONFIG_GRANT_TYPE' => COOPSEG_CONFIG_GRANT_TYPE,
-        'COOPSEG_CONFIG_TERCEROS_CLIENT_ID' => COOPSEG_CONFIG_TERCEROS_CLIENT_ID,
-        'COOPSEG_CONFIG_TERCEROS_CLIENT_SECRET' => COOPSEG_CONFIG_TERCEROS_CLIENT_SECRET,
-
-        'COOPSEG_RECLAMOS_AGREGAR' => COOPSEG_RECLAMOS_AGREGAR,
-        
-        'COOPSEG_QUOTE_IMAGES_DIR' => COOPSEG_QUOTE_IMAGES_DIR,
-        'COOPSEG_RECLAMOS_INSPECCION' => COOPSEG_RECLAMOS_INSPECCION
-
-    )
-  );
-  }
-
-  add_action('wp_enqueue_scripts', 'myprefix_variables_enqueue_scripts');

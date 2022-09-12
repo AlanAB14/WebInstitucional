@@ -1,6 +1,6 @@
 <?php
 // Incluir Wordpress para acceder a sus funciones y variables
-require_once rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/cooperacion_local/wp-load.php';
+require_once rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/wordpress/wp-load.php';
 require_once get_template_directory() . '/functions.php';
 require_once get_template_directory() . '/api/api.php';
 
@@ -204,8 +204,7 @@ if (!isset($_POST['consulta'])) {
         $result = json_decode($data);
         if (isset($result->estadoReclamoTercero)) {
           $filtered = array(
-            // Oculto estado del reclamo 
-            // 'Estado del reclamo' => $result->estadoReclamoTercero,
+            'Estado del reclamo' => $result->estadoReclamoTercero,
             'Tipo de reclamo' => $result->tipoSiniestro,
             'Reclamante' => $result->reclamante,
             'Fecha de ocurrencia' => date('d/m/Y', strtotime($result->fechaHoraSiniestro)),

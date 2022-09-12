@@ -60,6 +60,14 @@
       "email": "junin@cooperacionseguros.com.ar",
       "imagen": "of-junin.jpg"
     },
+	"Oficina Mar del Plata": {
+      "latitud": "-38.00073670152116",
+      "longitud": "-57.5557046732312",
+      "direccion": "Av. Colón 3148, Mar del Plata",
+      "telefono": "0223 4950304 / 0223 4953465",
+      "email": "mardelplata@cooperacionseguros.com.ar",
+      "imagen": "of-mardelplata.jpg"
+    },
     "Oficina Olavarría": {
       "latitud": "-36.883119",
       "longitud": "-60.3078618",
@@ -79,8 +87,8 @@
   },
   "SanJuan": {
     "Oficina San Juan": {
-      "latitud": "-31.5299328",
-      "longitud": "-68.5300779",
+      "latitud": "-31.52969", 
+      "longitud": "-68.52791",
       "direccion": "Entre Ríos 347 Norte Planta Baja, San Juan",
       "telefono": "0264 4219972",
       "email": "sanjuan@cooperacionseguros.com.ar",

@@ -46,12 +46,8 @@ function scripts() {
       "./assets/js/own/validate.js",
       "./assets/js/own/quiero-que-me-llamen.js",
       "./assets/js/own/reclamos-de-terceros.js",
-      "./assets/js/own/fragment-reclamos-procesar.js",
-      "./assets/js/own/compressImage.js",
-      "./assets/js/own/fragment-reclamos-procesar.js",
-      "./assets/js/own/compressImage.js",
+      "./assets/js/own/cotiza2.js",
     ])
-
     .pipe(plugins.plumber())
     .pipe(plugins.concat("main.js"))
     .pipe(gulp.dest("./assets/js"))

@@ -1,0 +1,10 @@
+!ug4V$gKZ*!2oY9b!CVs6qmq
+
+
+30/06/2022
+cesarBarrionuevo en phpmyAdmin: $P$Bi3gl7llUiL8E.KXiD8ROdzy4sfOoo0
+
+usuario: cesarbarrionuevo
+clave: cabs2328
+
+para reestablecer la clave desde phpmyadmin encriptar como md5 y escribir la nueva contraseña. Listo.

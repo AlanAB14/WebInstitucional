@@ -153,6 +153,7 @@ if ( $action ) {
 				$plugins = array();
 			}
 
+			// Used in the HTML title tag.
 			$title       = __( 'Update Plugins' );
 			$parent_file = 'plugins.php';
 
@@ -597,6 +598,7 @@ get_current_screen()->set_screen_reader_content(
 	)
 );
 
+// Used in the HTML title tag.
 $title       = __( 'Plugins' );
 $parent_file = 'plugins.php';
 
@@ -610,7 +612,7 @@ if ( ! empty( $invalid ) ) {
 			/* translators: 1: Plugin file, 2: Error message. */
 			__( 'The plugin %1$s has been deactivated due to an error: %2$s' ),
 			'<code>' . esc_html( $plugin_file ) . '</code>',
-			$error->get_error_message()
+			esc_html( $error->get_error_message() )
 		);
 		echo '</p></div>';
 	}
@@ -674,7 +676,7 @@ elseif ( isset( $_GET['deleted'] ) ) :
 				printf(
 					/* translators: %s: Error message. */
 					__( 'Plugin could not be deleted due to an error: %s' ),
-					$delete_result->get_error_message()
+					esc_html( $delete_result->get_error_message() )
 				);
 				?>
 			</p>

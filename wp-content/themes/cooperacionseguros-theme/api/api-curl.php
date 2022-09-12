@@ -5,7 +5,7 @@
  */
 
 // Incluir Wordpress para acceder a sus funciones y variables
-require_once(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/cooperacion_local/wp-load.php');
+require_once(rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/wordpress/wp-load.php');
 
 // Mostrar todos los errores
 error_reporting(E_ALL);

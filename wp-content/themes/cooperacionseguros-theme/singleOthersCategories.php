@@ -6,7 +6,7 @@ if ( have_posts() ) :
 
     echo '<div class="wp-block-cover has-parallax"';
     if (has_post_thumbnail($post->ID)) {
-      echo ' style="background-image:url(../../../../wp-content/themes/cooperacionseguros-theme/assets/img/fondos/'. $path_img .'); background-size: cover"';
+      echo ' style="background-image:url('.get_template_directory_uri().'/assets/img/fondos/'. $path_img .'); background-size: cover"';
     }
     echo ' >';
     echo '<div class="wp-block-cover__inner-container">';
@@ -25,9 +25,6 @@ if ( have_posts() ) :
     echo '<div class="grid-entrevistas">';
       echo '<div class="entry-content">';
         the_content();
-        echo '<div class="box_button">';
-          echo '<a class="link_button" href="./../../../../revista"><img class="img_button_return" src="../../../../wp-content/themes/cooperacionseguros-theme/assets/img/button-back/boton-back-02.png"/></a>';
-        echo '</div>';
       echo '</div>';
       echo '<div class="noticias-relacionadas">';
         echo '<p class="title-block">Notas relacionadas</p>';
