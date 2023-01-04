@@ -1,4 +1,4 @@
-<title>Seguro para Autos y Pick-ups – Cooperación Seguros</title>
+<!-- <title>Seguro para Autos y Pick-ups – Cooperación Seguros</title>
 <meta name="msapplication-TileImage" content="/wordpress/wp-content/uploads/2019/10/cropped-icon-270x270.png">
 <link rel="stylesheet" href="/wordpress/wp-content/themes/cooperacionseguros-theme/assets/css/new_cotizador.css">
 <?php   
@@ -49,6 +49,6 @@
     echo '<script src="/wordpress/wp-content/themes/cooperacionseguros-theme/assets/js/own/cotiza2.js"></script>';
         
 ?>
-
+ -->
 
 

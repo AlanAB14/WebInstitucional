@@ -30,7 +30,7 @@
         $miRespuesta=array("respuesta"=>"ok", "gnc"=>$GNC);
         echo json_encode($miRespuesta);
     }elseif($datos['action']=='buscarLocalidades'){
-        $resultLocalidades = coopseg_places_get_places_db('', 40, 1, 0);
+        $resultLocalidades = coopseg_places_get_places_db('', 20, 0, 0);
         $Localidades = json_decode($resultLocalidades, true);
         $miRespuesta=array("respuesta"=>"ok", "localidades"=>$Localidades);
         echo json_encode($miRespuesta);

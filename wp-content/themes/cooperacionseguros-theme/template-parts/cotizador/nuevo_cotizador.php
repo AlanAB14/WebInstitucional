@@ -1,5 +1,4 @@
 <?php
-  
  $form=isset($_POST['form'])? $_POST['form']: 1;
  $urlImg="/wordpress/wp-content/themes/cooperacionseguros-theme/assets/img/cotizador/svg/";
  switch($form){
@@ -68,9 +67,6 @@
 </div>
 
 <script>incioSeleccion();</script>
-<script>
-  document.getElementById('marca-nuevo').select2();
-</script>
 
 
 <?php include 'nuevo_footer.php'; ?>

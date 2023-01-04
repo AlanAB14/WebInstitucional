@@ -1,0 +1,120 @@
+
+.cuadro{
+    width: 550px !important;
+    /* height: 300px !important; */
+    background-color: #ffffff;
+    background-image: url("./../../img/cotizador/cuadros-data2.png") !important;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.pasos{
+    width: 548px !important;
+}
+#anclaBtn2 a{
+    text-decoration: none !important;
+}
+
+#anclaBtn2 a:hover{
+    text-decoration: none !important;
+    background-color: #f5a02e !important;
+    color: #ffffff !important;
+    transform: none !important;
+}
+
+#form2 #anclaBtn2 .btn-continuar-persona {
+    margin-top: 25px!important;
+}
+
+.msj-error-persona {
+    font-size: .8rem!important;
+    color: #86181b;
+}
+
+
+#form2 .msj-persona .msj-error-persona {
+    padding: 0!important;
+}
+
+.border-error {
+    border: 2px solid #86181b !important;
+}
+
+.input-phone-group {
+    display: flex;
+    width: 360px!important;
+}
+
+.input-phone-append {
+    display: flex;
+}
+
+.selectores-persona {
+    margin-top: 12px!important;
+}
+
+.selectores-phone-area {
+    width: 80px!important;
+    overflow: hidden;
+}
+
+
+
+.selectores-phone-number {
+    width: 186px!important;
+}
+
+.input-phone-static-numbers {
+    display: flex;
+    align-items: center;
+    height: 35.14px;
+    margin-top: 12px;
+    padding: 0.375rem 0.75rem;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+
+@media (max-width: 992px){
+    .cuadro{
+        background-image: none !important;
+        height: 200px;
+    } 
+    .ing_data{
+        height: 300px !important ;
+    }
+    .section-content{
+        height: 560px !important;
+    }
+}
+
+@media (max-width: 484px){
+    .selectores-phone-number {
+        width: 100%!important;
+    }
+}
+
+@media (max-width: 360px) {
+    #cuadro-persona #form2 {
+        overflow-x: initial;
+    }
+
+    .msj-persona .input-phone-group {
+        width: 80%!important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ing_data {
+        overflow-x: hidden;
+        height: 100%!important;
+    }
+
+    #form2 .titForm1 {
+        margin-bottom: 40px!important;
+    }
+    .flex-container {  
+        height: 100%!important;
+    }
+}

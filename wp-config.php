@@ -139,6 +139,7 @@ define('COOPSEG_CUSTOMER_URL', 'https://wstest.cooperacionseguros.com.ar/cmpServ
 /** Suscribir */
 define('COOPSEG_SUSCRIBIR_URL', 'https://wstest.cooperacionseguros.com.ar/cmpservicestest/api/propuesta/suscribir');
 define('COOPSEG_VALIDAR_URL', 'https://wstest.cooperacionseguros.com.ar/cmpServicesTest/api/Poliza/ValidarPropuesta');
+define('COOPSEG_VEHICLES_CEDULA_URL', 'https://wstest.cooperacionseguros.com.ar/cmpServicesTest/api/CmpGoogle/ExtraerInformacionCedulaVerde');
 
 /** ePagos */
 define('COOPSEG_CREAR_PREFERENCIA_PAGO', 'https://wstest.cooperacionseguros.com.ar/cmpservicestest/api/PreferenciaPagoOnline');

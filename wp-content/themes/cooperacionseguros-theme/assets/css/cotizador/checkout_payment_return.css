@@ -1,0 +1,71 @@
+.section_payment_return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 90px 0;
+}
+
+.box_response_title {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-size: 40px;
+    font-weight: bold;
+    color: #132942;
+}
+
+.box_response_image {
+    width: 80%;
+    margin: 40px 0;
+    padding: 0px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Titillium Web', sans-serif !important;
+}
+.box_response_image img {
+    width: 300px;
+}
+.box_response_text {
+    display: flex;
+    width: 80%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.response_text-line {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.response_text-line:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+#box_response_text .response_text-line p {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: bold;
+    margin: 0!important;
+    padding: 0!important;
+    width: 100%;
+}
+
+.icon-chevron {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+.icon-color {
+    fill: #f5a02e;
+}
+
+@media (max-width: 480px) {
+    .box_response_image {
+        padding: 0!important;
+    }
+}

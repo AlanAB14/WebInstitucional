@@ -5,6 +5,80 @@
  */
 
 //nuevo Cotizador
+function shortcode_checkout_payment_return($attr)
+{
+  ob_start();
+  get_template_part('template-parts/checkout-nuevo/fragments/fragment-checkout-payment-return');
+  return ob_get_clean();
+}
+add_shortcode('checkout-payment-return', 'shortcode_checkout_payment_return');
+
+function shortcode_checkout_pago($attr)
+{
+  ob_start();
+  get_template_part('template-parts/checkout-nuevo/fragments/fragment-checkout-pago');
+  return ob_get_clean();
+}
+add_shortcode('checkout-pago', 'shortcode_checkout_pago');
+
+function shortcode_checkout_resumen($attr)
+{
+  ob_start();
+  get_template_part('template-parts/checkout-nuevo/fragments/fragment-checkout-resumen');
+  return ob_get_clean();
+}
+add_shortcode('checkout-resumen', 'shortcode_checkout_resumen');
+
+function shortcode_checkout_asesores($attr)
+{
+  ob_start();
+  get_template_part('template-parts/checkout-nuevo/fragments/fragment-checkout-asesores');
+  return ob_get_clean();
+}
+add_shortcode('checkout-asesores', 'shortcode_checkout_asesores');
+
+function shortcode_checkout_vehiculo($attr)
+{
+  ob_start();
+  get_template_part('template-parts/checkout-nuevo/fragments/fragment-checkout-vehiculo');
+  return ob_get_clean();
+}
+add_shortcode('checkout-vehiculo', 'shortcode_checkout_vehiculo');
+
+function shortcode_checkout_solicitante($attr)
+{
+  ob_start();
+  get_template_part('template-parts/checkout-nuevo/fragments/fragment-checkout-solicitante');
+  return ob_get_clean();
+}
+add_shortcode('checkout-solicitante', 'shortcode_checkout_solicitante');
+
+function shortcode_cotizador_cotizacion($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/fragments/fragment-cotizador-cotizacion');
+  return ob_get_clean();
+}
+add_shortcode('cotizador-cotizacion', 'shortcode_cotizador_cotizacion');
+
+function shortcode_cotizador_persona($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/fragments/fragment-cotizador-persona');
+  return ob_get_clean();
+}
+add_shortcode('cotizador-persona', 'shortcode_cotizador_persona');
+
+function shortcode_cotizador_vehiculo($attr)
+{
+  ob_start();
+  get_template_part('template-parts/cotizador/fragments/fragment-cotizador-vehiculo');
+  return ob_get_clean();
+}
+add_shortcode('cotizador-vehiculo', 'shortcode_cotizador_vehiculo');
+
+// --------------------------
+
 function shortcode_cotizador($attr)
 {
   ob_start();
@@ -57,13 +131,13 @@ function shortcode_cotizador_datos_asesor($attr)
 }
 add_shortcode('cotizador_datos_asesor', 'shortcode_cotizador_datos_asesor');
 
-function shortcode_cotizador_resumen($attr)
-{
-  ob_start();
-  get_template_part('template-parts/cotizador/cotizador_resumen');
-  return ob_get_clean();
-}
-add_shortcode('cotizador_resumen', 'shortcode_cotizador_resumen');
+// function shortcode_cotizador_resumen($attr)
+// {
+//   ob_start();
+//   get_template_part('template-parts/cotizador/cotizador_resumen');
+//   return ob_get_clean();
+// }
+// add_shortcode('cotizador_resumen', 'shortcode_cotizador_resumen');
 
 function shortcode_cotizador_pago($attr)
 {

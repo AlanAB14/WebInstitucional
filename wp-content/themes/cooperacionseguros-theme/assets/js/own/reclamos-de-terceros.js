@@ -11,7 +11,7 @@ $.templates({
 });
 
 // Save step
-function saveStep(id, data) {
+function saveStep(id, data) {  
   let parsedData = {};
   data.forEach(({ name, value }) => {
     if (value != "" && value != '0') {

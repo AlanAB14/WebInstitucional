@@ -28,4 +28,5 @@ if( is_array($_FILES) )
         coopseg_send_inspeccion($token, $_POST['guid'], 1, $fotos);
         */
     }
+
 }

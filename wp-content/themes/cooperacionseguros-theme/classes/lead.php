@@ -103,7 +103,6 @@ class Lead {
 
   public function send_lead() {
     $token = get_token();
-
     return coopseg_lead_send($token, $this->lead);
   }
 }

@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+.mensaje{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.sinCotizacion{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #132942;
+}
+.sinCotizacion span{
+    font-weight: 700;
+    color: #132942;
+    display: contents;
+}
+.precios-conteiner{
+    height: 1324px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.data-plan{
+    width: 1000px;
+    height: 202px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.data-plan .pasos{
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: 0px !important;
+    align-items: flex-start !important;
+    
+}
+.titData{
+    width: 100%;
+    height: 48.84px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #132942;
+    
+}
+.auto-data{
+    width: 400px;
+    height: 39.90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+   
+}
+.auto-data div{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.015em;
+    color: #132942;
+    align-items: center;
+
+}
+
+.sel-plan, form{
+    width: 1000px;
+    height: 936px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+}
+
+.sel-plan div{
+    width: 320px;
+    height: 1025px;
+    border: 3px solid #73D0F6;
+    border-radius: 37px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+}
+
+.precio-abajo {
+    margin-right: 20px;
+}
+
+.txt-precio-abajo {
+    width: 100%;
+    margin-left: -20px;
+}
+
+.sel-plan div .titData{
+    width: 320px !important;
+    align-items: center;
+    margin-top: 27px;
+}
+.sel-plan div .boxPrecio{
+    width: 300px;
+    height: 73px;
+    border: initial;
+    border-radius: initial;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.sel-plan div .tit-precio{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 73px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #F5A02E;
+}
+.sel-plan div .txt-precio{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #F5A02E;
+    margin-top: -15px;
+}
+.sel-plan div .servicios{
+    border: initial;
+    border-radius: initial;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-right: -40px;
+}
+.tit-servicios{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.015em;
+    color: #132942;
+    margin-bottom: 15px;
+}
+
+.sel-plan div .servicios .text-servicios{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.015em;
+    color: #132942;
+    margin: 0px 20px 7px;
+}
+
+.sel-plan div .servicios img{
+    margin: 0px 10px 0px -25px !important;
+}
+
+.sel-plan div .servicios .text-servicios-cancel{
+    color: #DCD1D1 !important;
+    
+}
+.last-cancel{
+    margin: 0px 20px  3px!important;
+}
+.sel-plan div .check-cobertura{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 300px !important;
+    height: 42px !important;
+    border: initial;
+    border-radius: initial;
+}
+.sel-plan div .check-cobertura input[type="checkbox"] {
+    margin: 0px 5px 0px -5px !important;
+    border: 1px solid #F4AB48 !important;
+    color: #F4AB48;
+}
+.sel-plan div .check-cobertura label{
+    margin: -5px 5px 0px 8px !important;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.015em;
+    color: #132942;
+}
+.sel-plan div .servicios .check-cobertura .text-servicios{
+    margin:  -0px 20px 10px !important;
+}
+.sel-plan div .btn-contrata{
+    display: flex;
+    align-items: center;
+    width: 270px !important;
+    height: 52px !important;
+    border: initial;
+    border-radius: initial;
+}
+.sel-plan div .servicios .btn-contrata .btnCotiza{
+    font-family: 'Poppins' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    margin-top: 15px !important;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+.last-tit{
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.sel-plan .exclusive{
+    width: 320px;
+    height: 1070px;
+    border: 6px solid #73D0F6 !important;
+    border-radius: 37px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #EDFAFF;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.sel-plan .servicios .selectores{
+    width: 259px !important; 
+    border: 2px solid #F5A02E !important;
+    color: #132942 !important;
+    margin: initial;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+
+
+.sel-plan .servicios .th-tit{
+    margin-top: -10px !important;
+}
+.sel-plan .servicios .franquicia{
+    margin: initial;
+    margin-top: 10px !important;
+    
+}
+
+@media (max-width: 992px){ 
+    .precios-conteiner{
+        width: 100% !important;
+        height: 1324px !important;
+    }
+    .data-plan{
+        width: 100% !important;
+    }
+    .sel-plan, form{
+        width: 100% !important;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        height: 1100px;
+        margin-left: 10px !important;
+        justify-content: start;
+    }
+    .titData{
+        margin-top:50px;
+    }
+}

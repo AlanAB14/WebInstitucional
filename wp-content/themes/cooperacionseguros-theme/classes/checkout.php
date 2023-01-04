@@ -241,7 +241,7 @@ class Checkout {
   }
 
   private function redirect_error() {
-    header('Location: /hubo-un-problema');
+    header('Location: /wordpress/hubo-un-problema');
     exit;
   }
 

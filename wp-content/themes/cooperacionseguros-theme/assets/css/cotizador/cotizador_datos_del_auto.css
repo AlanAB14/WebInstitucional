@@ -1,0 +1,690 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+.caja2{
+    width: 914px;
+    height: 90px;
+}
+.caja2 .titData{
+    font-weight: 600 !important;
+    font-size: 32px !important;
+}
+.sup{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+.sub-texto{
+    display: flex;
+    width: 812px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
+.subtitulo{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.subtitulo img{
+    margin: 0px 9px;
+}
+.subtitulo label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    letter-spacing: -0.015em;
+
+    color: #132942;
+}
+.container-gris {
+    margin-top: 30px;
+}
+.container-gris .text-container-gris {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 5px 0;
+}
+.group{
+    height: 31px !important;
+    margin-bottom: 12px !important;
+}
+.form-control {
+    box-sizing: border-box !important;
+    width: 443px !important;
+    height: 31px !important;
+    background: #ffffff !important;
+    border: 2px solid #73D0F6 !important;
+    font-family: 'Poppins';
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 12px !important; 
+    border-radius: initial !important;
+}
+
+.form-control-dis {
+    box-sizing: border-box !important;
+    width: 443px !important;
+    height: 31px !important;
+    background: #ffffff !important;
+    border: 2px solid #73D0F6 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin-bottom: 30px !important;
+}
+
+
+.caja-grande {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.caja-grande .caja-grande-izq {
+    width: 445.50px;
+    
+}
+
+.caja-grande .caja-grande-der {
+    width: 445.50px;
+    
+}
+
+.media {
+    /* border: 1px solid #132942!important;
+    border-radius: 10px;
+    width: 443px !important;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    margin-top: 30px; */
+    width: 437px;
+    height: 219px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+/* .media img {
+    width: 40px!important;
+    height: 40px!important;
+} */
+
+
+
+.input-group-prepend button {
+    width: 138px!important;
+    height: 31px!important;
+    background: #73D0F6!important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+    color: #ffffff;
+    /* padding-top: 3px; */
+    border-radius: none !important;
+    border: 1px solid #73D0F6;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+.form-group{
+    margin: 0px 0px 12px !important;
+   
+    
+}
+.form-group p {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    /* margin-top: -32px; */
+}
+
+.form-group label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 16px;
+    line-height: 24px;
+    
+    letter-spacing: -0.015em;
+    color: #132942;
+}
+
+.icon-campana {
+    color: #F5A02E;
+}
+
+.icon-preg {
+    color: #F5A02E;
+    display: flex;
+    margin-left: 425px;
+    cursor: pointer;
+}
+
+.popover {
+    max-width: 100%;
+}
+
+.img-popover img {
+    height: auto;
+    width: 300px;
+}
+
+
+
+.genero {
+    display: flex;
+    margin-top: 30px;
+}
+
+.genero p {
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: #132942;
+}
+
+.error-validar-dni {
+    width: 434px !important;
+    height: 138px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(168, 0, 0);
+    background-color: #f8d7da;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    
+    margin-top: 30px;
+    margin-left: 65px;
+}
+
+.error-validar-dni label {
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    padding: 10px 0 !important;
+}
+
+
+
+.caja-adjuntar-img {
+    width: 914px;
+    margin: 0 auto;
+}
+
+.caja-adjuntar-img label {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 32px !important;
+    line-height: 48.67px !important;
+    letter-spacing: -0.015em;
+    color: #132942;
+    
+}
+.recuadro{
+    border: initial !important;
+}
+.recuadro label {
+    padding: 20px 0;
+    font-family: 'Inter' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+    text-align: center;
+    letter-spacing: -0.015em;
+
+    color: #000000;
+}
+
+.recuadro label span a {
+    color: #73D0F6;
+    text-decoration: underline !important;
+}
+
+.caja-inputs-file {
+    width: 891px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.caja-inputs-izq {
+    width: 445.50px;
+}
+
+.caja-inputs-der {
+    width: 445.50px;
+    padding-left: 120px;
+}
+
+
+
+.btn-añadir-img-adicionales {
+    box-sizing: border-box;
+    width: 321px;
+    height: 30px;
+    background: #c4c4c4;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    border: 1px solid #c4c4c4; 
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    padding-top: 3px;
+    
+}
+
+.text-inside-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.correct-class {
+    color: #3cbe5a!important;
+    border-color: #3cbe5a!important;
+}
+
+.check-style {
+    color: #3cbe5a;
+    display: flex;
+    align-items: center;
+}
+
+
+.btn-añadir-img-adicionales:hover {
+    color: #ffffff;
+}
+
+/*
+    Media querie - Mobile
+*/
+
+@media (max-width: 475px) {
+
+    .container-gris {
+        display: none;
+    }
+    .caja-grande {
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .caja-grande .caja-grande-izq {
+        width: 400px;
+    }
+    .caja-grande .caja-grande-der {
+        margin-top: 10px;
+        width: 300.75px;
+    }
+    .form-control {
+        width: 260px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        margin-bottom: 30px !important;
+    }
+    .error-validar-dni {
+        width: 367px;
+        height: 200px;
+        margin-left: 9px;
+        margin-bottom: 30px;
+    }
+    .caja-adjuntar-img {
+        width: 400px;
+    }
+    .caja-inputs-file {
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .caja-inputs-der {
+        width: 400px;
+        padding-left: 0;
+    }
+    .w-50 {
+        width: 25%!important;
+    }
+    .input-group-prepend .btn {
+        width: 119px!important;
+        height: 31px!important;
+        background: #73D0F6!important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+        color: #ffffff;
+        padding-top: 3px;
+    }
+    .media {
+        width: 380px !important;
+        margin-bottom: 35px!important;
+    }
+    .form-group p {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        margin-top: -32px;
+    }
+    .icon-preg {
+        margin-left: 360px;
+    }
+    .genero {
+        display: flex;
+        margin-left: 0;
+    }
+    .mr-4, .mx-4 {
+        margin-right: 4rem!important;
+    }
+    .form-control-dis {
+        width: 380px !important;
+    }
+    .pb-5, .py-5 {
+        padding-bottom: 0.5rem!important;
+    }
+    .btns {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .btn-continuar {
+        box-sizing: border-box;
+        width: 370px;
+        height: 40.49px;
+        background: #F5A02E;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        border-color: #F5A02E;
+        margin-left: 8px;
+    }
+    .btn-volver {
+        box-sizing: border-box;
+        width: 370px;
+        height: 40.49px;
+        background: #c4c4c4;
+        border-radius: 10px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.015em;
+        border-color: #c4c4c4;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+}
+
+.pasos {
+    font-family: 'Titillium Web' , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin: 40px 0;
+}
+
+.paso-1, .paso-2, .paso-3, .paso-4, .paso-5 {
+    width: 38px;
+    height: 38px;
+    color: white;
+    background-color: #c4c4c4;
+    border-radius: 50px;
+    font-size: 26px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paso-seleccionado {
+    background-color: #f5a02e;
+}
+
+.loader-checkout-vehiculo-cedula {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.loader-checkout-vehiculo-cedula-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border: 1px solid rgb(168, 0, 0);
+    background-color: #f8d7da;
+    box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.2);
+}
+
+.loader-checkout-vehiculo-cedula-error p {
+    margin: 0!important;
+    padding: 20px 10px;
+}
+
+.loader-checkout-vehiculo-cedula p {
+    margin: 0!important;
+
+}
+
+.loader-checkout-vehiculo-cedula img {
+    width: 80px;
+}
+
+.form-group .input-file-cedula {
+    position: relative;
+    cursor: pointer;
+    height: 31px !important;
+    background: #ffffff !important;
+    border: 2px solid #73D0F6;
+    padding: 0.12rem 0.75rem;
+    font-size: 14px!important;
+    width: 305px;
+    /* Style as you please, it will become the visible UI component. */
+ }
+
+.input-file-cedula-button {
+    position: absolute;
+    content: '';
+    right: -140px;
+    top: -2px;
+    width: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none!important;
+    height: 30px!important;
+    background: #73D0F6!important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+    color: #ffffff;
+}
+
+.form-group .input-file-cedula #label-foto-frente {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.caja-inputs-file .form-group #label-foto-frontal-izquierdo, .caja-inputs-file .form-group #label-foto-frontal-derecha, .caja-inputs-file .form-group #label-foto-frontal-frente, .caja-inputs-file .form-group #label-foto-parte-delantera, .caja-inputs-file .form-group #label-foto-parte-posterior {
+    padding: 0!important;
+    margin: 0!important;
+}
+ 
+ #upload-foto-cedula {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }
+
+.ocultar-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+@media (max-width: 1100px) {
+    .form-group .input-file-cedula {
+        width: 236px;
+    }
+}
+
+@media (max-width: 990px) {
+    .cedula-verde-dorso-label {
+        margin-left: 0!important;
+    }
+    .vehiculo-info-radio {
+        margin-left: 0!important;
+    }
+    .caja-grande {
+        align-items: center;
+    }
+    .caja2 {
+        width: 100%;
+    }
+    .caja2 .titData {
+        font-size: 28px!important;
+        width: 100%;
+    }
+    .sub-texto {
+        width: 100%;
+    }
+}
+
+@media (max-width: 780px) {
+    .caja2 .titData {
+        font-size: 26px!important;
+        height: auto;
+    }
+    .sub-texto label {
+        font-size: 11px!important;
+    }
+
+    .caja-adjuntar-img {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .caja-inputs-file {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .caja-inputs-der {
+        padding: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .container-gris {
+        width: auto;
+    }
+    .sub-texto label {
+        font-size: 11px!important;
+        margin: 12px 0;
+    }
+
+    .caja-adjuntar-img label{
+        font-size: 23px!important;
+    }
+
+    .text-center .recuadro label {
+        font-size: 16px!important;
+    }
+    #section-upload-images {
+        width: 100%;
+    }
+
+    .seccion-imagenes-caja-superior-recuadro {
+        width: 100%;
+    }
+}
+
+@media (max-width: 476px) {
+    .caja {
+        width: 360px;
+    }
+    .caja2 {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .caja-grande .caja-grande-der {
+        align-self: flex-start;
+    }
+
+    .container-fotos-vehiculo {
+        flex-direction: column;
+    }
+
+    #images-adicionales {
+        padding-left: 0!important;
+    }
+
+    #images-adicionales .input-file-cedula .text-inside-input {
+        padding: 0!important;
+    }
+}
+
+@media (max-width: 420px) {
+    .form-control-dis {
+        width: 100%!important;
+    }
+
+    .caja-grande .caja-grande-izq {
+        width: 300px;
+    }
+    .caja-grande .caja-grande-der {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .input-file-cedula-button {
+        right: -110px;
+        width: 109px;
+    }
+
+    .form-group .input-file-cedula{
+        width: 215px;
+    }
+
+    .input-file-cedula .text-inside-input {
+        font-size: 14px!important;
+    }
+
+    .media {
+        width: 320px!important;
+        margin-top: 20px;
+    }
+
+    .form-group label svg {
+        display: none;
+    }
+
+    .titData {
+        margin-bottom: 40px;
+    }
+
+}

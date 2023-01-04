@@ -309,3 +309,20 @@ if (isset($_GET['get']) && $_GET['get'] == 'quote') {
 
   exit;
 }
+
+
+/**
+ * Obtener datos de cédula verde
+ */
+if (isset($_GET['get']) && $_GET['get'] == 'cedula') {
+  if (isset($_FILES['image']) && isset($_GET['guid'])) {
+    $result = coopseg_send_cedula(get_token(), file_get_contents($_FILES['image']['tmp_name']), $_GET['guid']);
+
+    header('Content-Type: application/json');
+    echo json_encode($result);
+  } else {
+    http_response_code(500);
+  }
+
+  exit;
+}

@@ -2,6 +2,8 @@
 // Selección de productos
 // ********************** //
 
+
+
 // Constantes genéricas para la selección y muestra de productos
 const jsonFile = themePath + "data/products.json";
 const placesFile = themePath + "api/api.php?get=places&allowed=1";

@@ -186,7 +186,6 @@ function fixed_places()
  */
 function coopseg_places_get_places_db($q = '', $limit = '', $allowed = 0, $producers = 0)
 {
-     
   // Empezamos con un resultado vacío
   $result = array();
 

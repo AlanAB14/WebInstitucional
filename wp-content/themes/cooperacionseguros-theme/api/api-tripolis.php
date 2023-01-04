@@ -98,7 +98,7 @@ function tripolis_add($data)
   if ($response != '') {
     $doc = new DOMDocument();
     $doc->loadXML($response);
-    //print_r($response);
+    // print_r($response);
     $subscriberId = $doc->getElementsByTagName('response')->item(0)->nodeValue;
 
     if ($subscriberId != '') {

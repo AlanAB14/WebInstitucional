@@ -398,13 +398,13 @@ function custom_enqueue_styles() {
   );
   }
 
-  if (is_page(1019) || is_page(1056) || is_page(1058) || is_page(1077) || is_page(1086) || is_page(1090) || is_page(1093) || is_page(1139)) {
-    wp_enqueue_style( 'custom-style', 
-    get_stylesheet_directory_uri() . '/assets/css/new_cotizador.css',
-    array(), 
-    wp_get_theme()->get('Version')
-  );
-  }
+  // if (is_page(1210) || is_page(1187) || is_page(1191) ||     is_page(1056) || is_page(1058) || is_page(1077) || is_page(1086) || is_page(1090) || is_page(1093) || is_page(1139)) {
+  //   wp_enqueue_style( 'custom-style', 
+  //   get_stylesheet_directory_uri() . '/assets/css/new_cotizador.css',
+  //   array(), 
+  //   wp_get_theme()->get('Version')
+  // );
+  // }
   
 }
 
@@ -431,13 +431,15 @@ add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');
 
 function collectiveray_load_js_script() {
   if( is_page(1340) || is_single()) {
-    wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/revista.js');
+    wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/own-for-pages/revista.js');
   }
-  if( is_page(1019) || is_page(1058) || is_single()) {
-    wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/cotizador.js');
-  }
+  // if( is_page(1019) || is_page(1058) || is_single()) {
+  //   wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/cotizador.js');
+  // }
   
 }
+
+
 
 // FONT TITILIUM DIFERENTES WEIGHTS
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
@@ -467,16 +469,148 @@ if (class_exists('MultiPostThumbnails')) {
 }
 
 
+// JS RECLAMOS DE TERCEROS
+add_action('wp_enqueue_scripts', 'reclamos_de_terceros_js');
 
-// ------------------------
-// --------COTIZADOR-------
-// ------------------------
-
-add_action('wp_enqueue_scripts', 'scripts_cotizador');
-
-function scripts_cotizador() {
-  if( is_single('cotizador-personal-autos-y-pick-ups')) {
-    wp_enqueue_script( 'js-file', get_template_directory_uri() . '/assets/js/vendor/select2/js/select2.min.js');
-  }
+function reclamos_de_terceros_js() {
+  if( is_page('reclamos-de-terceros')) {
+      wp_enqueue_script( 'js-file-reclamos-terceros', get_template_directory_uri() . '/assets/js/own-for-pages/fragment-reclamos-procesar.js');
+  } 
 }
 
+
+// -----------------------------
+// -----------COTIZADOR---------
+// -----------------------------
+
+// PASAR VARIABLES A ARCHIVO JS
+function myprefix_variables_enqueue_scripts() {
+  wp_enqueue_script( 
+    'variables-script',
+    get_stylesheet_directory_uri() . '/assets/js/own/fragment-reclamos-procesar.js'
+  );
+  wp_localize_script( 'variables-script', 'php_data', array(
+        'templateUrl' => get_template_directory(),
+        'NuevaUrl' => get_template_directory_uri(),
+        'homeUrl' => home_url(),
+
+        // VARIABLES TOKEN
+        'COOPSEG_TOKEN_URL' => COOPSEG_TOKEN_URL,
+        'COOPSEG_CONFIG_GRANT_TYPE' => COOPSEG_CONFIG_GRANT_TYPE,
+        'COOPSEG_CONFIG_CLIENT_ID' => COOPSEG_CONFIG_CLIENT_ID,
+        'COOPSEG_CONFIG_CLIENT_SECRET' => COOPSEG_CONFIG_CLIENT_SECRET,
+
+        'COOPSEG_CONFIG_GRANT_TYPE' => COOPSEG_CONFIG_GRANT_TYPE,
+        'COOPSEG_CONFIG_TERCEROS_CLIENT_ID' => COOPSEG_CONFIG_TERCEROS_CLIENT_ID,
+        'COOPSEG_CONFIG_TERCEROS_CLIENT_SECRET' => COOPSEG_CONFIG_TERCEROS_CLIENT_SECRET,
+        'COOPSEG_LEADS_URL' => COOPSEG_LEADS_URL,
+        'COOPSEG_LEADS_GET_URL' => COOPSEG_LEADS_GET_URL,
+
+        'COOPSEG_RECLAMOS_AGREGAR' => COOPSEG_RECLAMOS_AGREGAR,
+        
+        'COOPSEG_QUOTE_IMAGES_URL' => COOPSEG_QUOTE_IMAGES_URL,
+        'COOPSEG_QUOTE_IMAGES_DIR' => COOPSEG_QUOTE_IMAGES_DIR,
+        'COOPSEG_RECLAMOS_INSPECCION' => COOPSEG_RECLAMOS_INSPECCION,
+        'COOPSEG_VEHICLES_CEDULA_URL' => COOPSEG_VEHICLES_CEDULA_URL,
+        'COOPSEG_VEHICLES_CARGAR_INSPECCION_URL' => COOPSEG_VEHICLES_CARGAR_INSPECCION_URL,
+        'COOPSEG_SUGGEST_PRODUCERS_URL' => COOPSEG_SUGGEST_PRODUCERS_URL,
+        'COOPSEG_SUSCRIBIR_URL' => COOPSEG_SUSCRIBIR_URL,
+        'COOPSEG_VALIDAR_URL' => COOPSEG_VALIDAR_URL,
+        'COOPSEG_CREAR_PREFERENCIA_PAGO' => COOPSEG_CREAR_PREFERENCIA_PAGO
+    )
+  );
+  }
+
+  add_action('wp_enqueue_scripts', 'myprefix_variables_enqueue_scripts');
+
+
+// JS SOLO COTIZADOR
+add_action('wp_enqueue_scripts', 'cotizador_solo_js');
+
+function cotizador_solo_js() {
+  if( is_page('cotizador-personal-autos-y-pick-ups')) {
+      wp_enqueue_script( 'js-file-cotizador-vehiculo', get_template_directory_uri() . '/assets/js/own-for-pages/cotizador/cotizador.js');
+  } 
+}
+
+
+// JS COTIZADOR VEHICULO
+
+add_action('wp_enqueue_scripts', 'cotizador_vehiculo_js');
+
+function cotizador_vehiculo_js() {
+  if( is_page('vehiculo')) {
+      wp_enqueue_script( 'js-file-cotizador-vehiculo', get_template_directory_uri() . '/assets/js/own-for-pages/cotizador/cotizadorVehiculo.js');
+      wp_enqueue_script( 'js-file-select2-fields', get_template_directory_uri() . '/assets/js/own-for-pages/select2Fields.js');
+  } 
+}
+
+// JS COTIZADOR PERSONA
+
+add_action('wp_enqueue_scripts', 'cotizador_persona_js');
+
+function cotizador_persona_js() {
+  if(is_page('persona')) {
+      wp_enqueue_script( 'js-file-cotizador-persona', get_template_directory_uri() . '/assets/js/own-for-pages/cotizador/cotizadorPersona.js');
+  } 
+}
+
+// JS COTIZADOR COTIZACION
+
+add_action('wp_enqueue_scripts', 'cotizador_cotizacion_js');
+
+function cotizador_cotizacion_js() {
+  if(is_page('cotizacion')) {
+      wp_enqueue_script( 'js-file-cotizador-cotizacion', get_template_directory_uri() . '/assets/js/own-for-pages/cotizador/cotizadorCotizacion.js');
+  } 
+}
+
+// JS CHEKCOUT SOLICITANTE
+
+add_action('wp_enqueue_scripts', 'checkout_solicitante_js');
+
+function checkout_solicitante_js() {
+  if(is_page('datos-solicitante')) {
+      wp_enqueue_script( 'js-file-cotizador-checkout', get_template_directory_uri() . '/assets/js/own-for-pages/checkout/checkoutDatosSolicitante.js');
+  } 
+}
+
+// JS CHEKCOUT VEHICULO
+
+add_action('wp_enqueue_scripts', 'checkout_vehiculo_js');
+
+function checkout_vehiculo_js() {
+  if(is_page('datos-vehiculo')) {
+      wp_enqueue_script( 'js-file-cotizador-checkout-vehiculo', get_template_directory_uri() . '/assets/js/own-for-pages/checkout/checkoutDatosVehiculo.js');
+  } 
+}
+
+// JS CHEKCOUT ASESORES
+
+add_action('wp_enqueue_scripts', 'checkout_asesores_js');
+
+function checkout_asesores_js() {
+  if(is_page('asesores')) {
+      wp_enqueue_script( 'js-file-cotizador-checkout-asesores', get_template_directory_uri() . '/assets/js/own-for-pages/checkout/checkoutDatosAsesores.js');
+  } 
+}
+
+// JS CHEKCOUT RESUMEN
+
+add_action('wp_enqueue_scripts', 'checkout_resumen_js');
+
+function checkout_resumen_js() {
+  if( is_page('resumen')) {
+      wp_enqueue_script( 'js-file-cotizador-checkout-resumen', get_template_directory_uri() . '/assets/js/own-for-pages/checkout/checkoutDatosResumen.js');
+  } 
+}
+
+// JS CHEKCOUT PAYMENT RETURN
+
+add_action('wp_enqueue_scripts', 'checkout_payment_return_js');
+
+function checkout_payment_return_js() {
+  if( is_page('payment')) {
+      wp_enqueue_script( 'js-file-cotizador-checkout-payment_return', get_template_directory_uri() . '/assets/js/own-for-pages/checkout/checkoutDatosPaymentReturn.js');
+  } 
+}

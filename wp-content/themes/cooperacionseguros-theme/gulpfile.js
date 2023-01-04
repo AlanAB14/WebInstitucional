@@ -45,8 +45,8 @@ function scripts() {
       "./assets/js/own/checkout.js",
       "./assets/js/own/validate.js",
       "./assets/js/own/quiero-que-me-llamen.js",
-      "./assets/js/own/reclamos-de-terceros.js",
       "./assets/js/own/cotiza2.js",
+      "./assets/js/own/cotizador.js",
     ])
     .pipe(plugins.plumber())
     .pipe(plugins.concat("main.js"))
