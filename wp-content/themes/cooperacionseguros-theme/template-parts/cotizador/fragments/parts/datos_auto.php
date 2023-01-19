@@ -45,26 +45,3 @@
             </div>
             
         </form>
-
-        <!-- <script>
-          var category = 'vehiculos';
-          var product = 'seguro-de-autos-y-pick-ups';
-          var commonEvent = {
-            'category': category,
-            'product': product,
-            'vehicleBrand': '<?php echo $quote['answers']['vehicleBrand']; ?>',
-            'vehicleModel': '<?php echo $quote['answers']['vehicleModel']; ?>',
-            'vehicleYear': '<?php echo $quote['answers']['vehicleYear']; ?>',
-            'vehicleVersion': '<?php echo $quote['answers']['vehicleVersion']; ?>',
-          };
-          var recommended = <?php echo json_encode($recommended) ?>;
-          var plans = <?php echo json_encode($plans); ?>;
-          var full = <?php echo json_encode($full) ?>;
-          var ap = <?php echo json_encode($ap); ?>;
-
-          pushDataLayer({
-            'event': 'trackEcommerceCheckPricing',
-            ...commonEvent,
-        });
-      </script>
-       -->

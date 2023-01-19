@@ -90,6 +90,7 @@ window.addEventListener('load', async() => {
                 </div>
                 `
             }
+            trackInitCheckout( lead.idLead );
             break;
 
         case "pending":
@@ -369,6 +370,31 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function trackInitCheckout( idLead ) {
+    // TRAIGO QUOTE
+    var request = new XMLHttpRequest();
+    request.open("GET", `${php_data.NuevaUrl}/quotes/${idLead.toUpperCase()}.json`, false);
+    request.send(null)
+    var my_JSON_object = JSON.parse(request.responseText);
+    var {answers} = my_JSON_object; 
+    var commonEvent = {
+        'event': 'trackEcommercePurchase',
+        'product': 'seguro-de-autos-y-pick-ups',
+        'vehicleBrand': answers.vehicleBrand,
+        'vehicleModel': answers.vehicleModel,
+        'vehiclePlan': answers.planCobertura,
+        'vehiclePlanPrice': answers.planPremioMensual,
+        'vehiclePlanPriceAP': answers.apPremioMensual,
+        'vehiclePlanPriceSubtotal': Number(answers.planPremioMensual) + Number(answers.apPremioMensual),
+        'vehicleVersion': answers.vehicleVersion,
+        'vehicleYear': answers.vehicleYear,
+        'localidad': `${answers.userCity},${answers.userState}`
+    };
+
+    pushDataLayer(commonEvent);
+}
+
+
 function borrarDatosTemporales() {
     localStorage.removeItem('gnc');
     localStorage.removeItem('marcas');
@@ -389,4 +415,4 @@ function borrarDatosTemporales() {
 
 function delete_cookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-  }
+}

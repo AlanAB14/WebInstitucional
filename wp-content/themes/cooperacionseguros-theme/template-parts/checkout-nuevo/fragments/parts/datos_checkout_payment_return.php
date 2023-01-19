@@ -20,7 +20,6 @@
     <div  class="box_response_image"
           id="box_response_image"
     >
-        ilustración
         <!-- <img src="" alt=""> -->
     </div>
 

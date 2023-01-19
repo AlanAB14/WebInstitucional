@@ -144,7 +144,7 @@ window.addEventListener('load', async() => {
             "departamento": personaDatos.depto,
             "genero": personaDatos.genero,
             "idNacionalidad": parseInt(personaDatos.idNacionalidad),
-            "LugarNacimiento": personaDatos.lugarNacimiento,
+            "lugarNacimiento": personaDatos.lugarNacimiento,
             "email": personaDatos.email,
             "idActividad": parseInt(personaDatos.idActividad),
             "idEstadoCivil": parseInt(personaDatos.idEstadoCivil),

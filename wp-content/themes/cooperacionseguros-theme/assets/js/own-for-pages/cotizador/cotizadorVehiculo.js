@@ -312,7 +312,8 @@ async function form1(event){
     
     document.cookie = "instanciaAlcanzada="+JSON.stringify(instanciaAlcanzada)+"; path = /";
     
-
+    trackInitCheckout(opcionesVehiculos);
+    
     window.location.href = `${php_data.NuevaUrl}/cotizador-personal-autos-y-pick-ups/persona/`;
 }
 
@@ -500,4 +501,19 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
 }
 
+function trackInitCheckout( data ) {
+
+    var commonEvent = {
+        'event': 'datos_vehiculo',
+        'product': 'seguro-de-autos-y-pick-ups',
+        'vehicleBrand': data.marca,
+        'vehicleModel': data.modelo,
+        'vehicleYear': data.agno,
+        'vehicleVersion': data.version,
+        'vehicleGnc': data.gnc,
+        'localidad': data.localidad
+    };
+
+    pushDataLayer(commonEvent);
+}
 

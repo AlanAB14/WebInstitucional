@@ -1,7 +1,6 @@
 // ********************** //
 // Selección de planes
 // ********************** //
-
 // Cuando carga la página...
 $(function () {
   var productoresContainer = $("#mapa-de-productores");
@@ -66,6 +65,7 @@ $(function () {
 
     // Si se selecciona una opción...
     $("#userZip").on("select2:select", function (e) {
+
       // El Select se mueve arriba
       $(productoresContainer).addClass("selected");
 

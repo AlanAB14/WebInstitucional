@@ -20,11 +20,7 @@
     $modelo = $datosVehiculo['modelo'];
     $anio = $datosVehiculo['agno'];
 
-
     $leyenda = $marca." ".$modelo." DE ".$anio;
-
-
-    
 
     $rates = Quote::get_vehicle_rates($quote);
     
@@ -373,6 +369,8 @@
         'vehicleModel': '<?php echo $quote['answers']['vehicleModel']; ?>',
         'vehicleYear': '<?php echo $quote['answers']['vehicleYear']; ?>',
         'vehicleVersion': '<?php echo $quote['answers']['vehicleVersion']; ?>',
+        'vehicleGnc': '<?php echo $quote['answers']['vehicleGnc']; ?>',
+        'localidad': '<?php echo $quote['answers']['userCity']; ?>,<?php echo $quote['answers']['userState']; ?>',
       };
       var recommended = <?php echo json_encode($recommended) ?>;
       var plans = <?php echo json_encode($plans); ?>;
@@ -387,7 +385,6 @@
   
     <?php 
         echo track_script($quote['guid']); 
-       
     ?>
 <?php  
     } 

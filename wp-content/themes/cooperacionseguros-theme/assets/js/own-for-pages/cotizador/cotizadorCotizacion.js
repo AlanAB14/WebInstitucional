@@ -335,14 +335,14 @@ function trackInitCheckout(selectedPlan) {
     const eventData = {
         ...commonEvent,
     }
-    eventData['event'] = 'trackEcommerceInitCheckout';
+    eventData['event'] = 'trackEcommerceCheckPricing';
     eventData['vehiclePlan'] = selectedPlan;
     eventData['vehiclePlanPrice'] = plans[selectedPlan].premioMensual;
     eventData['vehiclePlanPriceAP'] = ap.premioMensual ?? null;
     eventData['vehiclePlanIncludeAP'] = '';
 
     pushDataLayer(eventData);
-    }
+}
 
 
 function checkCoberturaAP(pack) {
