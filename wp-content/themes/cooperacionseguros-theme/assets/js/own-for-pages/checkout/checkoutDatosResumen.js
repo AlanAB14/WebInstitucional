@@ -26,7 +26,6 @@ window.addEventListener('load', async() => {
     // Pido token
     const token = await getToken();
     const lead = await getLead(JSON.parse(cookieGuid), token);
-    console.log(lead)
 
     // Traigo PAS seleciconado
     // Creo objeto con parametros para traer productores sugeridos
@@ -36,14 +35,12 @@ window.addEventListener('load', async() => {
         idLocalidad : lead.idLocalidad
     }
     const pas = devuelvePas(lead.codint)
-    console.log(pas)
 
     // TRAIGO QUOTE
     var request = new XMLHttpRequest();
     request.open("GET", `${php_data.NuevaUrl}/quotes/${lead.idLead.toUpperCase()}.json`, false);
     request.send(null)
     var my_JSON_object = JSON.parse(request.responseText);
-    console.log(my_JSON_object);
     var coberturaApDatos = my_JSON_object.answers;
     var personaDatos     = my_JSON_object;
 
@@ -89,7 +86,6 @@ window.addEventListener('load', async() => {
     // MOSTRAR IMAGENES
     const divImagenes = document.getElementById('imagenes-inspeccion')
 
-    console.log(my_JSON_object["fotos-vehiculo"])
     if (my_JSON_object["fotos-vehiculo"]) {
         Object.values(my_JSON_object["fotos-vehiculo"]).forEach(imagen => {
             divImagenes.innerHTML += `
@@ -112,8 +108,6 @@ window.addEventListener('load', async() => {
         // MUESTRO LOADER
         document.getElementById('loader-resumen').hidden = false;
         document.getElementById('section_resumen').hidden = true;
-
-        console.log('Datos enviados');
 
         const vehiculo = {
             "Codval": parseInt(personaDatos.answers.codVal),
@@ -173,8 +167,6 @@ window.addEventListener('load', async() => {
             "accidentePasajeros": accidentePasajeros
         }
 
-        console.log(datos)
-
         const idPropuesta = await suscribeDatos(datos,token);
 
         if (idPropuesta >= 1) {
@@ -192,26 +184,20 @@ window.addEventListener('load', async() => {
                 type: "POST",
                 data: {data},
                 success: async function (data) {
-                    console.log('SE HIZO')
 
                     // Valido Propuesta
                     const idPoliza = await validaPropuesta(token, idPropuesta);
                     if (idPoliza >= 1) {
-                        console.log(lead)
                         if (lead.codcli && lead.codcli !== "") {
                             userId = lead.codcli;
                         }else {
                             userId =  lead.dni;
                         }
 
-                        console.log(userId)
-                        console.log(formatDatePayment(new Date()));
 
                         var dateExpires = new Date();
                         dateExpires.setDate(dateExpires.getDate() + 30);
                         const datePlus30 = dateExpires.toISOString().split('T')[0]; 
-
-                        console.log(datePlus30);
 
                         const paymentAmount = my_JSON_object.answers.apPremioMensual ? parseFloat(Number(my_JSON_object.answers.planPremioMensual) + Number(my_JSON_object.answers.apPremioMensual)) : parseFloat(Number(my_JSON_object.answers.planPremioMensual));
 
@@ -232,8 +218,6 @@ window.addEventListener('load', async() => {
                             PaymentAmount: paymentAmount,
                             HabilitaRecurrencia: 'F'
                         }
-
-                        console.log(payment);
 
                         // Creo preferencia de pago
                         const preferenciaPagoLink = await crearPreferenciaDePago(token, payment);
@@ -258,9 +242,7 @@ window.addEventListener('load', async() => {
                                 url: themePath + "utils/save_quote_nuevo.php",
                                 type: "POST",
                                 data: {data},
-                                success: function (data) {
-                                    console.log('SE HIZO')
-                                },
+                                success: function (data) { },
                                 error: function (e) {
                                     console.log('HUBO ERROR')
                                 }
@@ -394,7 +376,6 @@ async function saveLead(token, data) {
             body
         })
         if (response.ok) {
-            console.log('Lead Actualizado');
             return response;
         }else {
             console.log('Error al Actualizar Lead');
@@ -444,7 +425,6 @@ function devuelvePas(codPas) {
 async function suscribeDatos(data, token) {
     const url  = php_data.COOPSEG_SUSCRIBIR_URL;
     const body = JSON.stringify(data);
-    console.log(body)
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -455,9 +435,7 @@ async function suscribeDatos(data, token) {
             },
             body
         })
-        console.log(response);
         const res = await response.json();
-        console.log(res);
         return res;
     } catch (error) {
         console.log(error)
@@ -473,7 +451,6 @@ async function validaPropuesta(token, idPropuesta) {
                 'Authorization' : `Bearer ${token}`
             },
         })
-        console.log(response);
         const res = await response.json();
         return res;
     } catch (error) {
@@ -484,7 +461,6 @@ async function validaPropuesta(token, idPropuesta) {
 async function crearPreferenciaDePago(token, data) {
     const url  = php_data.COOPSEG_CREAR_PREFERENCIA_PAGO;
     const body = JSON.stringify(data);
-    console.log(body)
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -495,9 +471,7 @@ async function crearPreferenciaDePago(token, data) {
             },
             body
         })
-        console.log(response);
         const res = await response.json();
-        console.log(res);
         return res;
     } catch (error) {
         console.log(error)

@@ -49,17 +49,13 @@ $(document).ready(async function(){
         if (nroDNI === '') {
             $('#msnDNI').html('<p>Debes ingresar el DNI</p>');
             $('#msnDNI').removeAttr('hidden');
-            console.log('Error DNI');
             return
         }        
 
         // Valido Genero
         if (document.getElementById('femenino').checked === false && document.getElementById('masculino').checked === false) {
-            console.log(document.getElementById('femenino').checked)
-            console.log(document.getElementById('masculino').checked)
             $('#msnDNI').html('<p>Debes seleccionar el género</p>');
             $('#msnDNI').removeAttr('hidden');
-            console.log('Error GENERO');
             return
         }        
   
@@ -102,12 +98,9 @@ function hiddenDniData() {
 }
 
 function buscaDNI(nroDNI, genero){
-    console.log('<-- funcion buscaDNI -->');
-
 
     const datosPersonales = JSON.parse(getCookie("datosPersonales"));
 
-    
     const fieldNombre       = $('#nombre_apellido');
     const fieldDia          = $('#dia');
     const fieldMes          = $('#mes');
@@ -130,8 +123,6 @@ function buscaDNI(nroDNI, genero){
         url: `${php_data.NuevaUrl}/api/api.php?get=customer&num_dni=${nroDNI}&sexo=${genero}`,
         context: document.body,
         success: async function (data) {
-            console.log('DNI exito..' );
-            console.log(data)
 
             if (data === 'Datos inválidos de la persona.') {
                 $('#msnDNI').html('<p>Hubo un problema al validar tus datos y no podemos continuar el proceso. <br>Revisá tus datos e intentá nuevamente o, si tenés alguna duda, comunícate con nuestro Departamento de Atención al Cliente. <br>0800-777-7070 de Lunes a Viernes 7.00 a 20.00 hs.</p>');
@@ -143,7 +134,6 @@ function buscaDNI(nroDNI, genero){
                 return;
             }
 
-            console.log(getAge(data.fechaNacimiento));
             // Verifico rangos de edad
             // TRAIGO QUOTE
             var request = new XMLHttpRequest();
@@ -151,7 +141,6 @@ function buscaDNI(nroDNI, genero){
             request.send(null)
             var my_JSON_object = JSON.parse(request.responseText);
             var personaDatos     = my_JSON_object;
-            console.log(personaDatos.product);
 
             if (personaDatos?.product === "seguro-de-autos-y-pick-ups" && (getAge(data.fechaNacimiento) < 17 || getAge(data.fechaNacimiento) > 70)) {
                 $('#msnDNI').html('<p>Hubo un problema al validar tus datos y no podemos continuar el proceso. <br>Revisá tus datos e intentá nuevamente o, si tenés alguna duda, comunícate con nuestro Departamento de Atención al Cliente. <br>0800-777-7070 de Lunes a Viernes 7.00 a 20.00 hs.</p>');
@@ -239,7 +228,6 @@ function buscaDNI(nroDNI, genero){
 }
 
 function validaEmail2(){
-    console.log('<-- funcion validaEmail -->');
     $email = document.getElementById("email_persona");
     const msjError = document.getElementById('msjErrorEmailBox');
     const emailBox = document.getElementById('email_persona')
@@ -349,8 +337,6 @@ async function submitDatosPersonales(e) {
                 ...personalData
             }
 
-            console.log(newLead)
-
             await grabarLead(newLead, token);
 
             // Guardo en quote
@@ -387,9 +373,7 @@ async function submitDatosPersonales(e) {
             url: themePath + "utils/save_quote_nuevo.php",
             type: "POST",
             data: {data},
-            success: function (data) {
-                console.log('SE HIZO')
-            },
+            success: function (data) {},
             error: function (e) {
             console.log('HUBO ERROR')
             }
@@ -493,7 +477,6 @@ async function grabarLead(data,token) {
             body
         })
         if (response.ok) {
-            console.log('Lead Actualizado');
         }else {
             console.log('Error al Actualizar Lead');
         }

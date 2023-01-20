@@ -54,9 +54,7 @@ window.addEventListener('load', async() => {
                 url: themePath + "utils/save_quote_nuevo.php",
                 type: "POST",
                 data: {data},
-                success: function (data) {
-                    console.log('SE HIZO')
-                },
+                success: function (data) { },
                 error: function (e) {
                     console.log('HUBO ERROR')
                 }
@@ -116,9 +114,7 @@ window.addEventListener('load', async() => {
                 url: themePath + "utils/save_quote_nuevo.php",
                 type: "POST",
                 data: {data},
-                success: function (data) {
-                    console.log('SE HIZO')
-                },
+                success: function (data) { },
                 error: function (e) {
                     console.log('HUBO ERROR')
                 }
@@ -171,9 +167,7 @@ window.addEventListener('load', async() => {
                 url: themePath + "utils/save_quote_nuevo.php",
                 type: "POST",
                 data: {data},
-                success: function (data) {
-                    console.log('SE HIZO')
-                },
+                success: function (data) { },
                 error: function (e) {
                     console.log('HUBO ERROR')
                 }
@@ -356,7 +350,6 @@ async function grabarLead(data,token) {
             body
         })
         if (response.ok) {
-            console.log('Lead Actualizado');
         }else {
             console.log('Error al Actualizar Lead');
         }

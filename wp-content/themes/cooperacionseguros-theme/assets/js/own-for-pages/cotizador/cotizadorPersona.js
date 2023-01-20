@@ -174,11 +174,7 @@
 
             document.cookie = "guid="+JSON.stringify(guid)+"; path = /";
 
-            console.log(guid)
-
             window.location.href = `${php_data.NuevaUrl}/cotizador-personal-autos-y-pick-ups/cotizacion?${guid}`;
-
-            console.log('ACTUALIZÓ QUOTE')
 
         },
         error: function (e) {

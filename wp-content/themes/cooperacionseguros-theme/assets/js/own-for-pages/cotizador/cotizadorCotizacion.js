@@ -228,7 +228,6 @@ async function envioPlan($index){
 
     // SI ESTA CHEKCEADO GRABO COBERTURA AP EN QUOTE
     if (coberturaApChecked) {
-        console.log('cobertura checked')
         const dataObject = {
             coberturaap: ap.premioMensual,
             apOnOff: 'on',
@@ -261,7 +260,6 @@ async function envioPlan($index){
             type: "POST",
             data: {data},
             success: function (data) {
-                console.log('ACTUALIZÓ QUOTE')
             },
             error: function (e) {
             console.log('HUBO ERROR')
@@ -269,7 +267,6 @@ async function envioPlan($index){
         });
 
     }else {
-        console.log('cobertura no checked')
 
         const dataObject = {
             planCobertura: $("input[name=planCobertura]").val(plan)[0].value,
@@ -297,8 +294,6 @@ async function envioPlan($index){
             type: "POST",
             data: {data},
             success: function (data) {
-
-                console.log('ACTUALIZÓ QUOTE')
 
             },
             error: function (e) {
@@ -460,7 +455,6 @@ async function grabarLead(data,token) {
             body
         })
         if (response.ok) {
-            console.log('Lead Actualizado');
         }else {
             console.log('Error al Actualizar Lead');
         }
@@ -471,7 +465,6 @@ async function grabarLead(data,token) {
 
     async function getLead(guid, token) {
     url = php_data.COOPSEG_LEADS_GET_URL;
-    console.log(url);
     try {
         const response = await fetch(`${url}?idLead=${guid}`, {
             method: 'GET',
@@ -491,7 +484,6 @@ async function grabarLead(data,token) {
                 
             },
         })
-        console.log(response);
         const res = await response.json();
         if (response.ok) {
             return res

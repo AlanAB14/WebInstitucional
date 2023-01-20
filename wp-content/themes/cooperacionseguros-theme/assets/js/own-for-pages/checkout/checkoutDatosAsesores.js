@@ -134,9 +134,7 @@ window.addEventListener('load', async() => {
       url: themePath + "utils/save_quote_nuevo.php",
       type: "POST",
       data: {data},
-      success: function (data) {
-          console.log('SE ACTUALIZO QUOTE')
-      },
+      success: function (data) { },
       error: function (e) {
       console.log('HUBO ERROR')
       }
@@ -203,7 +201,6 @@ async function saveLead(token, data) {
           body
       })
       if (response.ok) {
-          console.log('Lead Actualizado');
           return response;
       }else {
           console.log('Error al Actualizar Lead');

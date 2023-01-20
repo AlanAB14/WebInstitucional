@@ -249,8 +249,6 @@ async function buscar(action){
 async function form1(event){
     event.preventDefault();
 
-    console.log($('#localidad').find(':selected'));
-
     if (vehiculoMarca.value === '0' || vehiculoMarca.value === '') {
         return;
     }
@@ -279,7 +277,6 @@ async function form1(event){
 
     const versionCodes = versionSel.value.split(',');
     const idYQuote = localidadSel.value.split(',');
-    console.log(localidadSel.getAttribute("name"));
 
     const opcionesVehiculos = {
         idMarca : marcaSel.value,

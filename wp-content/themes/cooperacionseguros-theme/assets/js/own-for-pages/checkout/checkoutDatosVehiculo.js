@@ -34,7 +34,6 @@ window.addEventListener('load', async() => {
     request.send(null)
     var my_JSON_object = JSON.parse(request.responseText);
     const answersJSON = my_JSON_object.answers
-    console.log(my_JSON_object);
 
     const nombrePlan = devuelveNombrePlan(answersJSON.planCobertura)
 
@@ -134,8 +133,6 @@ window.addEventListener('load', async() => {
         formData.append('guid',  document.getElementById('guid_cedula_frente_hidden').value)
         formData.append('image_name', document.getElementById('image_name_cedula_frente_hidden').value)
        
-        console.log(document.getElementById('foto-cedula-frente').files[0]);
-
         $.ajax({
             url: themePath + "utils/upload_nuevo_checkout.php",
             type: "POST",
@@ -203,8 +200,6 @@ window.addEventListener('load', async() => {
         // Traigo datos de cédula
         const dataCedula = await getDataFromCedula(imageBase64, token);
         loader.hidden = true;
-
-        console.log(dataCedula)
 
         if (dataCedula === undefined) {
             // Muestro mensaje de error
@@ -382,9 +377,7 @@ window.addEventListener('load', async() => {
         url: themePath + "utils/save_quote_nuevo.php",
         type: "POST",
         data: {data},
-        success: function (data) {
-            console.log('SE HIZO')
-        },
+        success: function (data) {},
         error: function (e) {
         console.log('HUBO ERROR')
         }
@@ -676,7 +669,6 @@ window.addEventListener('load', async() => {
         type: "POST",
         data: {data},
         success: function (data) {
-            console.log('SE HIZO')
             Swal.fire({
                 text: `Enviaremos un mail a ${lead.email} para que puedas continuar con el proceso.`,
                 icon: 'success',
@@ -806,7 +798,6 @@ async function saveLead(token, data) {
             body
         })
         if (response.ok) {
-            console.log('Lead Actualizado');
             return response;
         }else {
             console.log('Error al Actualizar Lead');
@@ -858,13 +849,9 @@ async function uploadFotos(token, data) {
 
 
 
-
-// TODO: 
 async function procesarDatosAlInicio( guidParam ) {
     const token = await getToken();
     const lead  = await getLead( guidParam, token )
-
-    console.log(lead);
 
     // TRAIGO QUOTE
     var request = new XMLHttpRequest();
@@ -872,7 +859,6 @@ async function procesarDatosAlInicio( guidParam ) {
     request.send(null)
     var my_JSON_object = JSON.parse(request.responseText);
     const answersJSON = my_JSON_object.answers
-    console.log(my_JSON_object);
 
     if (!lead) {
         window.location.href = `${php_data.NuevaUrl}/cotizador-personal-autos-y-pick-ups/vehiculo/`;
